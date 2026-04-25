@@ -2,6 +2,8 @@
 
 A mobile-friendly, browser-based RPG inspired by Overlord’s YGGDRASIL system, combining multiple anime universes into one customizable build system.
 
+Game Link: http://buildyourlegend.org
+
 ⸻
 
 🌌 Overview
