@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+    <title>Build Your Legend</title>
+    <!-- Build Your Legend home-screen / PWA icons -->
+    <meta name="theme-color" content="#050810">
+    <meta name="application-name" content="Build Your Legend">
+    <meta name="apple-mobile-web-app-title" content="Build Your Legend">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="game">
+    <div id="game-header">
+        <h2>⚔ BUILD YOUR LEGEND ⚔</h2>
+        <div class="subtitle">Fantasy &nbsp;·&nbsp; Text-Based RPG &nbsp;·&nbsp; Forge Your Path</div>
+        <button id="settings-btn" onclick="toggleSettings()" title="Settings">⚙</button>
+    </div>
+
+    <!-- Settings Panel (fixed overlay) -->
+    <div id="settings-panel">
+        <div class="sp-header">
+            <span class="sp-title">SETTINGS</span>
+            <button class="sp-close" onclick="toggleSettings()">✕</button>
+        </div>
+
+        <div class="sp-section">
+            <h3>Display</h3>
+            <div class="sp-row">
+                <span class="sp-label">Text Size</span>
+                <input type="range" class="sp-slider" id="sz-slider" min="11" max="20" value="13"
+                       oninput="applyTextSize(this.value)">
+                <span class="sp-val" id="sz-val">13px</span>
+            </div>
+            <div class="sp-row">
+                <span class="sp-label">Font</span>
+                <select class="sp-select" onchange="applyFont(this.value)">
+                    <option value="'Rajdhani',monospace">Rajdhani (Default)</option>
+                    <option value="'Courier New',monospace">Courier New</option>
+                    <option value="Georgia,serif">Georgia</option>
+                    <option value="Arial,sans-serif">Arial</option>
+                    <option value="Verdana,sans-serif">Verdana</option>
+                    <option value="'Times New Roman',serif">Times New Roman</option>
+                </select>
+            </div>
+            <div class="sp-row">
+                <span class="sp-label">Box Height</span>
+                <input type="range" class="sp-slider" id="oh-slider" min="160" max="520" value="300" step="20"
+                       oninput="applyOutputHeight(this.value)">
+                <span class="sp-val" id="oh-val">300px</span>
+            </div>
+        </div>
+
+        <div class="sp-section">
+            <h3>Music</h3>
+            <div class="music-grid">
+                <button class="sp-btn" data-track="naruto"      onclick="MusicSystem.play('naruto')">🍃 Naruto</button>
+                <button class="sp-btn" data-track="bleach"      onclick="MusicSystem.play('bleach')">⚔ Bleach</button>
+                <button class="sp-btn" data-track="onepiece"    onclick="MusicSystem.play('onepiece')">🏴‍☠️ One Piece</button>
+                <button class="sp-btn" data-track="demonslayer" onclick="MusicSystem.play('demonslayer')">🌸 Demon Slayer</button>
+                <button class="sp-btn" data-track="jjk"         onclick="MusicSystem.play('jjk')">👁 JJK</button>
+                <button class="sp-btn" data-track="mha"         onclick="MusicSystem.play('mha')">💥 MHA</button>
+                <button class="sp-btn" data-track="dbz"         onclick="MusicSystem.play('dbz')">🔥 DBZ</button>
+                <button class="sp-btn" data-track="hxh"         onclick="MusicSystem.play('hxh')">🎭 HxH</button>
+                <button class="sp-btn" data-track="battle"      onclick="MusicSystem.play('battle')">⚡ Battle</button>
+                <button class="sp-btn" data-track="town"        onclick="MusicSystem.play('town')">🏰 Town</button>
+            </div>
+            <div class="sp-row">
+                <span class="sp-label">Volume</span>
+                <input type="range" class="sp-slider" id="vol-slider" min="0" max="100" value="20"
+                       oninput="MusicSystem.setVolume(+this.value); document.getElementById('vol-val').textContent=this.value">
+                <span class="sp-val" id="vol-val">20</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:4px">
+                <button class="sp-btn" onclick="MusicSystem.stop()">⏹ Stop</button>
+                <span id="now-playing" style="color:#5a7a98;font-size:11px;flex:1;text-align:right">No music</span>
+            </div>
+        </div>
+
+        <div class="sp-section">
+            <h3>Battle Speed</h3>
+            <div class="sp-row">
+                <span class="sp-label">Turn Delay</span>
+                <input type="range" class="sp-slider" id="spd-slider" min="100" max="1400" value="750" step="50"
+                       oninput="applyBattleSpeed(+this.value)">
+                <span class="sp-val" id="spd-val">0.75s</span>
+            </div>
+        </div>
+
+        <div class="sp-section">
+            <h3>Testing — Level Control</h3>
+            <div id="lvl-ctrl-area" style="margin-bottom:8px"></div>
+            <div style="display:flex;flex-wrap:wrap;gap:4px">
+                <button class="sp-btn" onclick="devGold(100)">+100g</button>
+                <button class="sp-btn" onclick="devGold(1000)">+1000g</button>
+                <button class="sp-btn" onclick="devGold(10000)">+10k g</button>
+                <button class="sp-btn" onclick="devGold(-100)">−100g</button>
+                <button class="sp-btn" onclick="devFillHP()">Fill HP/MP</button>
+                <button class="sp-btn" onclick="devGiveExp(500)">+500 EXP</button>
+            </div>
+        </div>
+
+        <div class="sp-section">
+            <h3>Help / Latest Update</h3>
+            <div style="font-size:11px;color:#8aaac8;line-height:1.55;margin-bottom:8px">
+                v0.4 update added: every base race now has unique active/passive skill trees, and every job path now has a distinct role, passive identity, starter skill, advanced art, and capstone.
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <button class="sp-btn" onclick="openHelpFromSettings()">❓ Open Help</button>
+                <button class="sp-btn" onclick="openRaceUpdateFromSettings()">🧬 Race Update</button>
+                <button class="sp-btn" onclick="openBuildGuideFromSettings()">📘 Build Guide</button>
+                <button class="sp-btn" onclick="window.open('https://github.com/malcolm12aa/anime-rpg-mobile/issues/new?title=Game%20Feedback%20%2F%20Update%20Request&body=What%20would%20you%20like%20to%20see%20changed%20or%20added%3F%0A%0A-%20Update%20idea%3A%0A-%20Bug%20found%3A%0A-%20Device%20%2F%20browser%3A', '_blank')">💬 Give Feedback</button>
+            </div>
+        </div>
+
+        <div class="sp-section">
+            <h3>Save / Load</h3>
+            <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <button class="sp-btn" onclick="saveGame()">💾 Save</button>
+                <button class="sp-btn" onclick="loadGame()">📂 Load</button>
+                <button class="sp-btn" style="color:#ff4757" onclick="confirmNewGame()">🗑 New Game</button>
+            </div>
+            <div id="save-msg" class="save-msg"></div>
+        </div>
+    </div>
+
+    <div id="stats-bar">
+        <div class="stat-cell"><span class="lbl">NAME</span><span class="val" id="s-name">—</span></div>
+        <div class="stat-cell"><span class="lbl">JOB</span><span class="val" id="s-class">—</span></div>
+        <div class="stat-cell"><span class="lbl">LEVEL</span><span class="val" id="s-level">1</span></div>
+        <div class="stat-cell"><span class="lbl">HP</span><span class="val" id="s-hp">—</span></div>
+        <div class="stat-cell"><span class="lbl">MP</span><span class="val" id="s-mp">—</span></div>
+        <div class="stat-cell"><span class="lbl">GOLD</span><span class="val" id="s-gold">0</span></div>
+    </div>
+
+    <div id="game-body">
+        <div id="battle-panel">
+            <!-- Enemy rows (rebuilt dynamically for multi-enemy) -->
+            <div id="b-enemy-area">
+            <div class="bp-row enemy-row">
+                <div class="bp-emoji" id="b-e-emoji">👹</div>
+                <div class="bp-info">
+                    <div class="bp-name enemy-col" id="b-e-name">Enemy</div>
+                    <div class="bar-label">HP</div>
+                    <div class="bar-track"><div class="bar-fill bar-hp-e" id="b-e-bar"></div></div>
+                    <div class="bar-text" id="b-e-hp">100 / 100</div>
+                    <div class="sfx-row" id="b-e-sfx"></div>
+                </div>
+            </div>
+            </div>
+            <!-- Player row -->
+            <div class="bp-row player-row">
+                <div class="bp-info">
+                    <div class="bp-name player-col" id="b-p-name">Player</div>
+                    <div class="bar-label">HP</div>
+                    <div class="bar-track"><div class="bar-fill bar-hp-p" id="b-p-hp-bar"></div></div>
+                    <div class="bar-text" id="b-p-hp">100 / 100</div>
+                    <div class="bar-label">MP</div>
+                    <div class="bar-track"><div class="bar-fill bar-mp-p" id="b-p-mp-bar"></div></div>
+                    <div class="bar-text" id="b-p-mp">100 / 100</div>
+                    <div class="sfx-row" id="b-p-sfx"></div>
+                </div>
+            </div>
+            <!-- Active recruit rows (rebuilt dynamically during battle) -->
+            <div id="b-recruit-area"></div>
+        </div>
+
+        <div id="output"><p id="quicklook-fallback" class="info"><strong>Loading game…</strong><br><br>If this text stays here and no buttons appear, iPhone Quick Look is previewing the file without running the game script. Open this HTML in Safari/Chrome or upload it to GitHub Pages/Netlify to play it.</p></div>
+        <div id="choices"></div>
+    </div>
+</div>
+
+<script src="js/core/state-and-stats.js"></script>
+
+<script src="js/data/races-and-jobs.js"></script>
+
+
+<script src="js/data/recruits-shops-items.js"></script>
+
+
+<script src="js/data/enemies-and-zones.js"></script>
+
+
+<script src="js/ui/ui-helpers.js"></script>
+
+
+<script src="js/systems/save-load-system.js"></script>
+
+
+<script src="js/systems/battle-system.js"></script>
+
+
+<script src="js/systems/skill-system.js"></script>
+
+
+<script src="js/screens/character-creation-screens.js"></script>
+
+
+<script src="js/screens/map-and-zone-screens.js"></script>
+
+
+<script src="js/systems/equipment-shop-map-status-system.js"></script>
+
+
+<script src="js/systems/race-job-progression-system.js"></script>
+
+</body>
+</html>
