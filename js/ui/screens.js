@@ -16,6 +16,28 @@ import { prepareRecruitOffer } from "../systems/party.js";
 import { button, nav, bar, statGrid, statusPills, inventoryList, skillList, combatLog } from "./components.js";
 import { escapeHtml } from "./dom.js";
 
+const CREATION_FILTER_DEFAULTS = {
+  raceSearch: "",
+  raceCategory: "all",
+  raceTier: "all",
+  raceFocus: "all",
+  jobSearch: "",
+  jobCategory: "all",
+  jobTier: "all",
+  jobFocus: "all"
+};
+
+const FOCUS_OPTIONS = ["all", "physical", "magic", "defense", "speed", "support", "balanced"];
+
+function uniqueSorted(values) {
+  return ["all", ...[...new Set(values.filter(Boolean))].sort((a, b) => String(a).localeCompare(String(b)))];
+}
+
+const RACE_CATEGORY_OPTIONS = uniqueSorted(RACES.map(item => item.category));
+const RACE_TIER_OPTIONS = uniqueSorted(RACES.map(item => item.tier));
+const JOB_CATEGORY_OPTIONS = uniqueSorted(JOBS.map(item => item.category));
+const JOB_TIER_OPTIONS = uniqueSorted(JOBS.map(item => item.tier));
+
 export function mainMenu(state) {
   return `<section class="screen">
     <div class="hero">
@@ -72,12 +94,29 @@ function saveSlotCard(slot, mode, canSave) {
 
 export function characterCreate(state) {
   const cc = state.characterCreation;
+  const filters = { ...CREATION_FILTER_DEFAULTS, ...(state.ui.creationFilters ?? {}) };
+  const filteredRaces = filterCreationChoices(RACES, filters, "race");
+  const filteredJobs = filterCreationChoices(JOBS, filters, "job");
+  const selectedRaceVisible = filteredRaces.some(item => item.id === cc.raceId);
+  const selectedJobVisible = filteredJobs.some(item => item.id === cc.jobId);
   return `<section class="screen">
-    <div class="hero"><h1>Create Your Legend</h1><p class="subtitle">Choose 1 starting race and 1 starting job. The preview updates instantly so each build feels different before you begin.</p></div>
+    <div class="hero"><h1>Create Your Legend</h1><p class="subtitle">Choose 1 starting race and 1 starting job. Use filters to search the imported Excel race/job list by name, category, tier, or build focus.</p></div>
     <section class="grid two"><div class="card"><label>Character Name</label><input data-input="characterName" value="${escapeHtml(cc.name)}" maxlength="24" /></div>${creationPreview(cc)}</section>
-    <h2>Starting Races</h2><div class="grid auto">${RACES.map(raceCard(cc.raceId, "selectRace")).join("")}</div>
-    <h2>Starting Jobs</h2><div class="grid auto">${JOBS.map(jobCard(cc.jobId, "selectJob")).join("")}</div>
-    <div class="actions">${button("Begin Legend", "startCharacter")} ${button("Back", "go", "main-menu", "secondary")}</div>
+    <section class="card">
+      <h2>Race Filters</h2>
+      ${creationFilterPanel("race", filters, filteredRaces.length, RACES.length)}
+    </section>
+    ${selectedRaceVisible ? "" : selectedChoiceNotice("race", cc.raceId, RACES)}
+    <h2>Starting Races <span class="pill">${filteredRaces.length}/${RACES.length} shown</span></h2>
+    <div class="grid auto">${filteredRaces.map(raceCard(cc.raceId, "selectRace")).join("") || emptyFilterCard("races")}</div>
+    <section class="card">
+      <h2>Job Filters</h2>
+      ${creationFilterPanel("job", filters, filteredJobs.length, JOBS.length)}
+    </section>
+    ${selectedJobVisible ? "" : selectedChoiceNotice("job", cc.jobId, JOBS)}
+    <h2>Starting Jobs <span class="pill">${filteredJobs.length}/${JOBS.length} shown</span></h2>
+    <div class="grid auto">${filteredJobs.map(jobCard(cc.jobId, "selectJob")).join("") || emptyFilterCard("jobs")}</div>
+    <div class="actions">${button("Begin Legend", "startCharacter")} ${button("Reset Filters", "resetCreationFilters", "", "secondary")} ${button("Back", "go", "main-menu", "ghost")}</div>
   </section>`;
 }
 
@@ -95,12 +134,109 @@ function creationPreview(cc) {
   </div>`;
 }
 
+function creationFilterPanel(type, filters, shown, total) {
+  const prefix = type === "race" ? "race" : "job";
+  const categoryOptions = type === "race" ? RACE_CATEGORY_OPTIONS : JOB_CATEGORY_OPTIONS;
+  const tierOptions = type === "race" ? RACE_TIER_OPTIONS : JOB_TIER_OPTIONS;
+  return `<div class="filter-grid creation-filter-grid">
+    <label>Search ${titleCase(type)}<input data-input="creation.${prefix}Search" value="${escapeHtml(filters[`${prefix}Search`] ?? "")}" placeholder="Search name, description, strength..." /></label>
+    ${selectField("Category", `creation.${prefix}Category`, categoryOptions, filters[`${prefix}Category`] ?? "all")}
+    ${selectField("Tier", `creation.${prefix}Tier`, tierOptions, filters[`${prefix}Tier`] ?? "all")}
+    ${selectField("Build Focus", `creation.${prefix}Focus`, FOCUS_OPTIONS, filters[`${prefix}Focus`] ?? "all")}
+    <div class="filter-count"><strong>${shown}</strong><span class="small">of ${total} ${type === "race" ? "races" : "jobs"}</span></div>
+  </div>`;
+}
+
+function filterCreationChoices(list, filters, type) {
+  const prefix = type === "race" ? "race" : "job";
+  const search = String(filters[`${prefix}Search`] ?? "").trim().toLowerCase();
+  const category = filters[`${prefix}Category`] ?? "all";
+  const tier = filters[`${prefix}Tier`] ?? "all";
+  const focus = filters[`${prefix}Focus`] ?? "all";
+  return list.filter(item => {
+    if (category !== "all" && item.category !== category) return false;
+    if (tier !== "all" && item.tier !== tier) return false;
+    if (focus !== "all" && getBuildFocus(item) !== focus) return false;
+    if (search) {
+      const haystack = `${item.name} ${item.category ?? ""} ${item.tier ?? ""} ${item.description ?? ""} ${(item.strengths ?? []).join(" ")} ${(item.weaknesses ?? []).join(" ")}`.toLowerCase();
+      if (!matchesSearchText(haystack, search)) return false;
+    }
+    return true;
+  });
+}
+
+function normalizeSearchText(text = "") {
+  return String(text).toLowerCase()
+    .replace(/elves/g, "elf")
+    .replace(/dwarves/g, "dwarf")
+    .replace(/fairies/g, "fairy")
+    .replace(/halflings/g, "halfling")
+    .replace(/gnomes/g, "gnome")
+    .replace(/spirits/g, "spirit")
+    .replace(/angels/g, "angel")
+    .replace(/demons/g, "demon")
+    .replace(/devils/g, "devil")
+    .replace(/orcs/g, "orc")
+    .replace(/ogres/g, "ogre")
+    .replace(/goblins/g, "goblin")
+    .replace(/kobolds/g, "kobold")
+    .replace(/giants/g, "giant")
+    .replace(/titans/g, "titan")
+    .replace(/mages/g, "mage");
+}
+
+function matchesSearchText(haystack, search) {
+  const normalizedSearch = normalizeSearchText(search).replace(/[^a-z0-9]+/g, " ").trim();
+  if (!normalizedSearch) return true;
+  const tokens = normalizeSearchText(haystack).replace(/[^a-z0-9]+/g, " ").split(/\s+/).filter(Boolean);
+  return tokens.some(token => token === normalizedSearch || token.startsWith(normalizedSearch));
+}
+
+export function getBuildFocus(item) {
+  const stats = item.stats ?? {};
+  const growth = item.levelGrowth ?? {};
+  const score = key => (stats[key] ?? 0) + (growth[key] ?? 0);
+  const str = score("str");
+  const dex = score("dex");
+  const int = score("int");
+  const wis = score("wis");
+  const con = score("con");
+  const cha = score("cha");
+  const text = `${item.name} ${item.category ?? ""} ${(item.strengths ?? []).join(" ")} ${item.description ?? ""}`.toLowerCase();
+
+  // Name/category heuristics make the Excel import easier to browse even when many imported
+  // races/jobs share similar starter stat templates.
+  if (text.match(/\b(heal|healer|support|bard|cleric|priest|tamer|summoner|summon|oracle|charm|inspire|celestial|celestian|spirit|spirits|kitsune)\b/)) return "support";
+  if (text.match(/\b(golem|golemforged|dwarf|dwarves|troll|turtle|fortress|guardian|knight|shield|stone|iron|armor|armored|construct)\b/)) return "defense";
+  if (text.match(/\b(beast|beastfolk|beastkin|wolf|cat|catfolk|fox|rabbit|bird|harpy|sylph|wind|ninja|rogue|assassin|scout|archer|ranger)\b/)) return "speed";
+  if (text.match(/\b(mage|wizard|sorcerer|sorcer|witch|elf|elve|elves|fairy|fairies|fae|fey|demon|demons|devil|devils|oni|yokai|tengu|kappa|tanuki|vampire|undead|lich|dragon|dragonoid|mermaid|siren|arcane|cultivation|cultivator|qi|sage)\b/)) return "magic";
+  if (text.match(/\b(warrior|fighter|swordsman|orc|orcs|ogre|ogres|goblin|goblins|kobold|kobolds|lizard|lizardman|lizardmen|giant|giants|titan|titans|minotaur|centaur|berserker|brawler|monk|martial|dragonkin)\b/)) return "physical";
+
+  const maxOtherForCha = Math.max(str, dex, int, wis, con);
+  if (cha > maxOtherForCha && cha >= 3) return "support";
+  if (con >= Math.max(str, dex, int, wis, cha) && con >= 3) return "defense";
+  if (dex >= Math.max(str, int, wis, con, cha) && dex >= 3) return "speed";
+  if (int + wis >= str + dex + con && (int >= 3 || wis >= 3)) return "magic";
+  if (str + dex >= int + wis + cha && (str >= 3 || dex >= 3)) return "physical";
+  return "balanced";
+}
+
+function selectedChoiceNotice(type, selectedId, list) {
+  const item = byId(list, selectedId);
+  if (!item) return "";
+  return `<section class="card selected-choice-warning"><p><strong>Selected ${type} is hidden by your filters:</strong> ${escapeHtml(item.name)}. It is still selected unless you choose another ${type}.</p></section>`;
+}
+
+function emptyFilterCard(label) {
+  return `<article class="card"><h3>No matching ${label}</h3><p>Try clearing search, changing category, or using All for build focus.</p></article>`;
+}
+
 function raceCard(selectedId, action) {
   return item => `<article class="card ${selectedId === item.id ? "selected" : ""}">
-    <h3>${item.name}</h3><p>${item.description}</p>
-    <p><span class="pill">Base cap ${item.maxLevel}</span></p>
-    <p class="small"><strong>Strong:</strong> ${item.strengths.join(", ")}</p>
-    <p class="small"><strong>Weak:</strong> ${item.weaknesses.join(", ")}</p>
+    <h3>${escapeHtml(item.name)}</h3><p>${escapeHtml(item.description)}</p>
+    <p><span class="pill">${escapeHtml(item.category ?? "Uncategorized")}</span> <span class="pill">${escapeHtml(titleCase(item.tier ?? "base"))}</span> <span class="pill">Cap ${item.maxLevel}</span> <span class="pill">Focus: ${titleCase(getBuildFocus(item))}</span></p>
+    <p class="small"><strong>Strong:</strong> ${escapeHtml((item.strengths ?? []).join(", ") || "Flexible growth")}</p>
+    <p class="small"><strong>Weak:</strong> ${escapeHtml((item.weaknesses ?? []).join(", ") || "Needs specialization")}</p>
     ${button(selectedId === item.id ? "Selected" : "Choose", action, item.id, selectedId === item.id ? "ghost" : "secondary")}
   </article>`;
 }

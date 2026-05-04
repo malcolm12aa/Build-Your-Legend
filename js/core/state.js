@@ -19,7 +19,18 @@ export function createInitialState() {
     player: null,
     run: null,
     combat: null,
-    ui: { selectedShop: "general_store", lastReward: null, saveMenuMode: "load", currentEvent: null, offeredRecruit: null, registryFilters: { search: "", kind: "all", category: "all", tier: "all" } },
+    ui: {
+      selectedShop: "general_store",
+      lastReward: null,
+      saveMenuMode: "load",
+      currentEvent: null,
+      offeredRecruit: null,
+      registryFilters: { search: "", kind: "all", category: "all", tier: "all" },
+      creationFilters: {
+        raceSearch: "", raceCategory: "all", raceTier: "all", raceFocus: "all",
+        jobSearch: "", jobCategory: "all", jobTier: "all", jobFocus: "all"
+      }
+    },
     meta: baseMeta(),
     log: []
   };
@@ -69,6 +80,8 @@ export function hydrateState(raw) {
   const state = { ...createInitialState(), ...deepClone(raw) };
   state.version = CONFIG.version;
   state.ui = { ...createInitialState().ui, ...(state.ui ?? {}) };
+  state.ui.registryFilters = { ...createInitialState().ui.registryFilters, ...(state.ui.registryFilters ?? {}) };
+  state.ui.creationFilters = { ...createInitialState().ui.creationFilters, ...(state.ui.creationFilters ?? {}) };
   state.meta = { ...baseMeta(), ...(state.meta ?? {}) };
   if (state.player) {
     state.player.inventory ??= {};

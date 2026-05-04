@@ -252,3 +252,33 @@ pre {
   gap: 6px;
   margin-top: 8px;
 }
+
+/* v0.3.1 creation filters */
+.filter-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  align-items: end;
+}
+.creation-filter-grid label {
+  display: grid;
+  gap: 6px;
+}
+.filter-count {
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: #100d18;
+  border: 1px solid rgba(255,255,255,.08);
+}
+.filter-count strong {
+  color: var(--accent-2);
+  font-size: 1.35rem;
+}
+.selected-choice-warning {
+  border-color: rgba(217,164,65,.55);
+  background: rgba(217,164,65,.12);
+}

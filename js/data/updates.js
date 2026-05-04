@@ -1,5 +1,16 @@
 export const UPDATE_NOTES = [
   {
+    version: "v0.3.1 — Race & Job Filter Update",
+    date: "2026-05-03",
+    notes: [
+      "Added race filters to Character Creation: search, category, tier, and build focus.",
+      "Added job filters to Character Creation: search, category, tier, and build focus.",
+      "Added result counts so large imported lists are easier to browse on mobile.",
+      "Added warnings when your currently selected race/job is hidden by filters but still selected.",
+      "Kept the full Class Registry filters for browsing every imported race evolution and job path."
+    ]
+  },
+  {
     version: "v0.3.0 — Excel Data Import",
     date: "2026-05-03",
     notes: [

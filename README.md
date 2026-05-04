@@ -1,7 +1,23 @@
 # Build Your Legend
 
-A modular, static, mobile-friendly text RPG foundation for GitHub Pages with Excel-imported race and job registry data.
+A modular, static, mobile-friendly text RPG foundation for GitHub Pages with Excel-imported race/job registry data and Character Creation filters.
 
+## v0.3.1 Race & Job Filter Update
+
+Added Character Creation filters so the large Excel import is easier to use on phones and desktops.
+
+New filters:
+
+- Race search by name, description, category, strengths, or weaknesses
+- Race category dropdown
+- Race tier dropdown
+- Race build-focus dropdown: physical, magic, defense, speed, support, balanced
+- Job search by name, description, category, strengths, or weaknesses
+- Job category dropdown
+- Job tier dropdown
+- Job build-focus dropdown
+- Result counts for both race and job lists
+- Warning card when the selected race/job is hidden by filters but still selected
 
 ## v0.3.0 Excel Data Import
 
@@ -68,8 +84,8 @@ Upload/replace the files in your GitHub repository root the same way as before. 
 - Main menu, new game, load, save, delete save
 - Mobile-first RPG interface
 - Browser save/load through `localStorage`
-- 10 starting races
-- 10 starting jobs
+- 69 imported starting races
+- 73 imported base starting jobs
 - Total Level = Race Levels + Job Levels
 - Overlord/YGGDRASIL-inspired class caps:
   - Base: 15

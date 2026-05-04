@@ -125,6 +125,12 @@ export function handleAction(state, action, value) {
     case "resetRegistryFilters":
       state.ui.registryFilters = { search: "", kind: "all", category: "all", tier: "all" };
       break;
+    case "resetCreationFilters":
+      state.ui.creationFilters = {
+        raceSearch: "", raceCategory: "all", raceTier: "all", raceFocus: "all",
+        jobSearch: "", jobCategory: "all", jobTier: "all", jobFocus: "all"
+      };
+      break;
     default:
       console.warn("Unknown action", action, value);
   }
@@ -138,6 +144,14 @@ export function handleInput(state, name, value) {
     const key = name.split(".")[1];
     state.ui.registryFilters ??= { search: "", kind: "all", category: "all", tier: "all" };
     state.ui.registryFilters[key] = value;
+  }
+  if (name?.startsWith("creation.")) {
+    const key = name.split(".")[1];
+    state.ui.creationFilters ??= {
+      raceSearch: "", raceCategory: "all", raceTier: "all", raceFocus: "all",
+      jobSearch: "", jobCategory: "all", jobTier: "all", jobFocus: "all"
+    };
+    state.ui.creationFilters[key] = value;
   }
   return state;
 }
