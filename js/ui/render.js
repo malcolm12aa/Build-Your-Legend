@@ -1,8 +1,9 @@
 import { app } from "./dom.js";
-import { mainMenu, characterCreate, hub, statusScreen, progressionScreen, skillsScreen, inventoryScreen, shopScreen, mapScreen, battleScreen, eventScreen, recruitScreen, notFound } from "./screens.js";
+import { mainMenu, saveMenu, characterCreate, hub, statusScreen, progressionScreen, skillsScreen, inventoryScreen, shopScreen, mapScreen, battleScreen, eventScreen, recruitScreen, achievementsScreen, updatesScreen, notFound } from "./screens.js";
 
 const screens = {
   "main-menu": mainMenu,
+  "save-menu": saveMenu,
   "character-create": characterCreate,
   hub,
   status: statusScreen,
@@ -13,7 +14,9 @@ const screens = {
   map: mapScreen,
   battle: battleScreen,
   event: eventScreen,
-  recruit: recruitScreen
+  recruit: recruitScreen,
+  achievements: achievementsScreen,
+  updates: updatesScreen
 };
 
 export function render(state) {

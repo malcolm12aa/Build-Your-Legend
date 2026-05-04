@@ -2,10 +2,28 @@ import { SKILLS } from "../data/skills.js";
 import { ITEMS } from "../data/items.js";
 import { byId, randInt, chance, addLog, clamp, choice } from "../core/utils.js";
 import { computeStats, syncResourcesToStats } from "./leveling.js";
-import { applyStatus, damageModsFromStatuses, getElementMultiplier, hasStatus, isTurnSkipped, tickStatuses } from "./effects.js";
+import { applyStatus, damageModsFromStatuses, getElementMultiplier, isTurnSkipped, tickStatuses } from "./effects.js";
 import { grantBattleRewards } from "./rewards.js";
 import { useItem } from "./inventory.js";
 import { endRunDefeat } from "./run-manager.js";
+
+function createEnemyIntent(enemy) {
+  const skillId = choice(enemy.skills ?? []);
+  const skill = byId(SKILLS, skillId);
+  if (skill && chance(72)) {
+    const statusEffect = (skill.effects ?? []).find(effect => effect.type === "status");
+    return {
+      type: "skill",
+      skillId: skill.id,
+      name: skill.name,
+      element: skill.element,
+      text: statusEffect
+        ? `${enemy.name} is preparing ${skill.name} and may inflict ${statusEffect.status}.`
+        : `${enemy.name} is preparing ${skill.name}.`
+    };
+  }
+  return { type: "attack", name: "Basic Attack", element: "physical", text: `${enemy.name} intends to attack directly.` };
+}
 
 export function startBattle(state, enemy, battleType = "normal") {
   syncResourcesToStats(state.player);
@@ -14,6 +32,7 @@ export function startBattle(state, enemy, battleType = "normal") {
     enemy,
     turn: "player",
     round: 1,
+    enemyIntent: createEnemyIntent(enemy),
     message: `${enemy.name} blocks the path!`
   };
   state.screen = "battle";
@@ -64,11 +83,15 @@ function partyAct(state) {
     const base = Math.floor((skill.power ?? 10) * 0.65 + (stats.str ?? 2) + (stats.dex ?? 2) + (stats.int ?? 0));
     const damage = dealDamage(member, state.combat.enemy, base, skill.element, stats, state.combat.enemy.stats);
     addLog(state, `${member.name} uses ${skill.name} for ${damage} damage.`);
-    if (skill.effects?.some(e => e.type === "heal") && chance(35)) {
+    if (skill.effects?.some(e => e.type === "heal") && chance(40)) {
       const playerStats = computeStats(state.player);
       const heal = Math.floor(playerStats.maxHp * 0.18);
       state.player.hp = clamp(state.player.hp + heal, 0, playerStats.maxHp);
       addLog(state, `${member.name} heals you for ${heal} HP.`);
+    }
+    if (member.role === "Support" && chance(30)) {
+      applyStatus(state.player, "focus", 2);
+      addLog(state, `${member.name}'s support grants Focus.`);
     }
   }
 }
@@ -85,12 +108,20 @@ function enemyTurn(state) {
     startPlayerTurn(state);
     return;
   }
-  const skillId = choice(enemy.skills ?? []);
-  const skill = byId(SKILLS, skillId);
-  if (skill && chance(72)) executeSkill(state, enemy, player, skill, false);
-  else {
+  const intent = state.combat.enemyIntent ?? createEnemyIntent(enemy);
+  if (intent.type === "skill") {
+    const skill = byId(SKILLS, intent.skillId);
+    if (skill) executeSkill(state, enemy, player, skill, false);
+  } else {
     const base = randInt(3, 7) + Math.floor((enemy.stats.str ?? 2) * 1.8);
-    const damage = dealDamage(enemy, player, base, "physical", enemy.stats, playerStats);
+    let damage = dealDamage(enemy, player, base, "physical", enemy.stats, playerStats);
+    const tank = (player.party ?? []).find(member => member.role === "Tank");
+    if (tank && chance(35)) {
+      const blocked = Math.max(1, Math.floor(damage * 0.18));
+      player.hp = clamp(player.hp + blocked, 0, playerStats.maxHp);
+      damage -= blocked;
+      addLog(state, `${tank.name} intercepts ${blocked} damage.`);
+    }
     addLog(state, `<span class="enemy-name">${enemy.name}</span> attacks for <strong>${damage}</strong> damage.`);
   }
   for (const msg of tickStatuses(player, playerStats)) addLog(state, msg);
@@ -105,6 +136,7 @@ function startPlayerTurn(state) {
   state.player.stamina = clamp(state.player.stamina + 8, 0, computeStats(state.player).maxStamina);
   state.combat.turn = "player";
   state.combat.round += 1;
+  state.combat.enemyIntent = createEnemyIntent(state.combat.enemy);
 }
 
 function executeSkill(state, attacker, defender, skill, isPlayer) {
@@ -171,6 +203,8 @@ function checkBattleEnd(state) {
   const enemy = state.combat.enemy;
   if (enemy.hp <= 0) {
     addLog(state, `<strong>${enemy.name} defeated.</strong>`);
+    state.meta.enemyKills = (state.meta.enemyKills ?? 0) + 1;
+    if (state.combat.type === "elite") state.meta.eliteKills = (state.meta.eliteKills ?? 0) + 1;
     if (state.combat.type === "boss") {
       state.meta.bossKills += 1;
       if (!state.player.defeatedBosses.includes(enemy.id)) state.player.defeatedBosses.push(enemy.id);

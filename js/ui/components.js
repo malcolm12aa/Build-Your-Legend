@@ -17,7 +17,9 @@ export function nav(state) {
     ${button("Inventory", "go", "inventory", "secondary")}
     ${button("Shop", "go", "shop", "secondary")}
     ${button("Map", "go", "map", "secondary")}
-    ${button("Save", "saveGame", "", "ghost")}
+    ${button("Achievements", "go", "achievements", "secondary")}
+    ${button("Updates", "go", "updates", "secondary")}
+    ${button("Save/Load", "openSaveMenu", "", "ghost")}
   </nav>`;
 }
 
@@ -44,8 +46,9 @@ export function inventoryList(player, mode = "normal") {
     const item = byId(ITEMS, itemId);
     if (!item) return "";
     const action = item.type === "consumable" ? (mode === "battle" ? "battleItem" : "useItem") : item.type === "equipment" ? "equipItem" : "";
+    const setText = item.set ? `<span class="pill">Set: ${titleCase(item.set)}</span>` : "";
     return `<div class="item-row card">
-      <div><strong>${item.name}</strong> <span class="pill">x${qty}</span><p>${item.description}</p></div>
+      <div><strong>${item.name}</strong> <span class="pill">x${qty}</span> ${setText}<p>${item.description}</p></div>
       ${action ? button(item.type === "equipment" ? "Equip" : "Use", action, item.id, "secondary") : `<span class="pill">Material</span>`}
     </div>`;
   }).join("");

@@ -2,7 +2,7 @@ import { MAPS } from "../data/maps.js";
 import { ENEMIES, ELITES, BOSSES } from "../data/enemies.js";
 import { EVENTS } from "../data/events.js";
 import { SHOPS } from "../data/shops.js";
-import { byId, choice, deepClone, randInt, weightedChoice, addLog, clamp } from "../core/utils.js";
+import { byId, choice, deepClone, randInt, weightedChoice, addLog, clamp, chance } from "../core/utils.js";
 import { startBattle } from "./battle.js";
 import { grantEventReward } from "./rewards.js";
 import { applyStatus } from "./effects.js";
@@ -18,6 +18,7 @@ export function exploreNextFloor(state) {
   }
   state.run.floor += 1;
   state.run.highestFloor = Math.max(state.run.highestFloor, state.run.floor);
+  state.meta.highestFloor = Math.max(state.meta.highestFloor ?? 0, state.run.floor);
   const floor = state.run.floor;
 
   if (map.bossFloors.includes(floor)) {
@@ -42,7 +43,7 @@ export function exploreNextFloor(state) {
   }
 
   const roll = Math.random();
-  if (roll < 0.68) startBattle(state, createEnemyForFloor(floor), "normal");
+  if (roll < 0.62) startBattle(state, createEnemyForFloor(floor), "normal");
   else resolveRandomEvent(state);
 }
 
@@ -95,7 +96,7 @@ export function resolveRandomEvent(state) {
     const damage = randInt(event.damage[0], event.damage[1]);
     state.player.hp = Math.max(1, state.player.hp - damage);
     if (event.status) applyStatus(state.player, event.status, 3);
-    addLog(state, `The trap deals ${damage} damage, but you still claim the reward.`);
+    addLog(state, `The danger deals ${damage} damage, but you still claim the reward.`);
   }
   if (event.type === "restore") {
     const stats = computeStats(state.player);
@@ -104,7 +105,27 @@ export function resolveRandomEvent(state) {
     state.player.stamina = clamp(state.player.stamina + (event.restore.stamina ?? 0), 0, stats.maxStamina);
   }
   if (event.type === "xp") gainXp(state, event.xp ?? 25);
+  if (event.type === "blessing") {
+    if (chance(65)) {
+      applyStatus(state.player, event.goodStatus ?? "focus", 4);
+      addLog(state, "The shrine blesses you for the next few rooms.");
+    } else {
+      applyStatus(state.player, event.badStatus ?? "weakened", 3);
+      addLog(state, "The shrine rejects your touch and leaves a curse behind.");
+    }
+  }
+  if (event.type === "portal") {
+    const damage = event.damage ? randInt(event.damage[0], event.damage[1]) : 0;
+    state.player.hp = Math.max(1, state.player.hp - damage);
+    state.run.floor = Math.min((byId(MAPS, state.run.mapId) ?? MAPS[0]).maxFloor, state.run.floor + (event.skipFloors ?? 1));
+    state.run.highestFloor = Math.max(state.run.highestFloor, state.run.floor);
+    state.meta.highestFloor = Math.max(state.meta.highestFloor ?? 0, state.run.floor);
+    addLog(state, `The portal throws you to floor ${state.run.floor}${damage ? ` and deals ${damage} damage` : ""}.`);
+  }
   grantEventReward(state, event);
-  if (event.type === "recruit") state.screen = "recruit";
+  if (event.type === "shop") {
+    state.ui.selectedShop = event.shopId ?? choice(SHOPS).id;
+    state.screen = "shop";
+  } else if (event.type === "recruit") state.screen = "recruit";
   else state.screen = "event";
 }

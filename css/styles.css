@@ -51,6 +51,7 @@ input, select {
   border-radius: 14px;
   padding: 12px 14px;
 }
+ul { margin: 0; padding-left: 1.3rem; color: var(--muted); line-height: 1.55; }
 
 .app-shell {
   width: min(1180px, 100%);
@@ -82,6 +83,7 @@ input, select {
   box-shadow: 0 10px 24px rgba(0,0,0,.18);
 }
 .card.selected { outline: 2px solid var(--accent); background: rgba(57,43,71,.96); }
+.locked-card { opacity: .78; filter: saturate(.75); }
 .card h2, .card h3, .card h4 { margin: 0 0 8px; }
 .card p { color: var(--muted); line-height: 1.45; }
 .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
@@ -93,6 +95,7 @@ input, select {
   padding: 5px 9px; border-radius: 999px;
   background: #2d253d; color: var(--muted); font-size: .86rem;
 }
+.pill.synergy { color: #ffe29c; background: rgba(217,164,65,.18); border: 1px solid rgba(217,164,65,.25); }
 .kpi { font-weight: 900; color: var(--accent-2); }
 .stat-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
 .stat { display: flex; justify-content: space-between; gap: 8px; background: #100d18; border-radius: 12px; padding: 8px 10px; }
@@ -134,6 +137,39 @@ input, select {
 .status { color: #ffdc8a; }
 .item-row, .skill-row, .class-row { display: grid; gap: 8px; grid-template-columns: 1fr auto; align-items: center; }
 .footer-note { color: var(--muted); text-align: center; padding: 12px; }
+.preview-card { border-color: rgba(139,211,255,.24); }
+.save-slot.filled { border-color: rgba(114,223,159,.25); }
+.mini-card {
+  background: #100d18;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 14px;
+  padding: 11px;
+  margin: 8px 0;
+}
+.intent-card {
+  background: rgba(217,164,65,.12);
+  border: 1px solid rgba(217,164,65,.22);
+  border-radius: 14px;
+  padding: 11px;
+  margin: 10px 0;
+}
+.tree-list { display: grid; gap: 10px; }
+.tree-node {
+  background: #100d18;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 10px;
+}
+.tree-node.known, .tree-child.known { border-color: rgba(114,223,159,.35); }
+.tree-children { margin-top: 8px; display: grid; gap: 6px; }
+.tree-child {
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.06);
+}
+.tree-child.locked { opacity: .68; }
+.active-bonus { color: var(--good); }
 
 @media (max-width: 760px) {
   .app-shell { padding-inline: 10px; }

@@ -28,6 +28,25 @@ python -m http.server 8000
 
 Then open `http://localhost:8000`.
 
+
+## v0.2.0 Improvement Pass
+
+Added in this package:
+
+- 5-slot save/load menu using browser `localStorage`
+- Character creation stat preview
+- Race evolution tree screen
+- Job/class tree screen
+- Race + job synergy bonuses
+- Enemy intent display in battle
+- More random dungeon events
+- Equipment set bonus system
+- Recruit roles, passives, and personality text
+- Achievements and selectable titles
+- Versioned update notes screen
+
+Upload/replace the files in your GitHub repository root the same way as before. Keep `index.html` at the repository root.
+
 ## Current systems included
 
 - Main menu, new game, load, save, delete save

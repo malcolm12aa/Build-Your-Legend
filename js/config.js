@@ -1,7 +1,8 @@
 export const CONFIG = Object.freeze({
   title: "Build Your Legend",
-  version: "0.1.0-foundation",
+  version: "0.2.0-improvement-pass",
   storageKey: "build-your-legend-save-v1",
+  saveSlotCount: 5,
   maxOverallLevel: 100,
   partyLimit: 2,
   startingGold: 120,

@@ -1,8 +1,9 @@
 import { CONFIG } from "../config.js";
 import { RACES, RACE_PATHS } from "../data/races.js";
 import { JOBS, JOB_PATHS } from "../data/jobs.js";
-import { ITEMS } from "../data/items.js";
+import { ITEMS, SET_BONUSES } from "../data/items.js";
 import { SKILLS } from "../data/skills.js";
+import { SYNERGIES } from "../data/synergies.js";
 import { addLog, byId, clamp } from "../core/utils.js";
 
 export function getTotalLevel(player) {
@@ -23,19 +24,51 @@ function getClassData(id) {
   return byId(allClassData(), id);
 }
 
+function addStats(target, source = {}, multiplier = 1) {
+  for (const [key, value] of Object.entries(source)) target[key] = (target[key] ?? 0) + value * multiplier;
+}
+
+export function getActiveSynergies(player) {
+  if (!player) return [];
+  const raceIds = new Set((player.raceLevels ?? []).map(cls => cls.id));
+  const jobIds = new Set((player.jobLevels ?? []).map(cls => cls.id));
+  return SYNERGIES.filter(synergy =>
+    (synergy.raceIds ?? []).some(id => raceIds.has(id)) &&
+    (synergy.jobIds ?? []).some(id => jobIds.has(id))
+  );
+}
+
+export function getEquippedSetBonuses(player) {
+  const counts = {};
+  for (const itemId of Object.values(player?.equipment ?? {})) {
+    const item = byId(ITEMS, itemId);
+    if (item?.set) counts[item.set] = (counts[item.set] ?? 0) + 1;
+  }
+  const active = [];
+  for (const set of SET_BONUSES) {
+    const pieces = counts[set.id] ?? 0;
+    for (const threshold of set.thresholds ?? []) {
+      if (pieces >= threshold.pieces) active.push({ ...threshold, setId: set.id, setName: set.name, pieces });
+    }
+  }
+  return active;
+}
+
 export function computeStats(player) {
   const stats = { ...player.baseStats };
   for (const cls of [...player.raceLevels, ...player.jobLevels]) {
     const data = getClassData(cls.id);
     if (!data) continue;
-    for (const [key, value] of Object.entries(data.stats ?? {})) stats[key] = (stats[key] ?? 0) + value;
-    for (const [key, value] of Object.entries(data.levelGrowth ?? {})) stats[key] = (stats[key] ?? 0) + value * Math.max(0, cls.level - 1);
+    addStats(stats, data.stats ?? {});
+    addStats(stats, data.levelGrowth ?? {}, Math.max(0, cls.level - 1));
   }
+  for (const synergy of getActiveSynergies(player)) addStats(stats, synergy.stats ?? {});
   for (const itemId of Object.values(player.equipment ?? {})) {
     const item = byId(ITEMS, itemId);
     if (!item?.stats) continue;
-    for (const [key, value] of Object.entries(item.stats)) stats[key] = (stats[key] ?? 0) + value;
+    addStats(stats, item.stats);
   }
+  for (const bonus of getEquippedSetBonuses(player)) addStats(stats, bonus.stats ?? {});
   const overall = getTotalLevel(player);
   stats.maxHp = Math.floor(65 + stats.con * 10 + overall * 5);
   stats.maxMana = Math.floor(35 + stats.int * 7 + stats.wis * 3 + overall * 2);
@@ -45,6 +78,27 @@ export function computeStats(player) {
   stats.defense = Math.floor(2 + stats.con * 1.5 + stats.wis * 0.3);
   stats.speed = Math.floor(3 + stats.dex * 1.5);
   return stats;
+}
+
+export function computeCreationPreview(raceId, jobId) {
+  const race = byId(RACES, raceId) ?? RACES[0];
+  const job = byId(JOBS, jobId) ?? JOBS[0];
+  const stats = { str: 4, dex: 4, int: 4, wis: 4, con: 4, cha: 4 };
+  addStats(stats, race.stats ?? {});
+  addStats(stats, job.stats ?? {});
+  const synergies = SYNERGIES.filter(s => (s.raceIds ?? []).includes(race.id) && (s.jobIds ?? []).includes(job.id));
+  for (const synergy of synergies) addStats(stats, synergy.stats ?? {});
+  const skillIds = [...new Set([...(race.startingSkills ?? []), ...(job.startingSkills ?? []), ...synergies.flatMap(s => s.skills ?? []), "basic_focus"])]
+    .filter(id => id === "basic_focus" || byId(SKILLS, id));
+  const totalLevel = 2;
+  stats.maxHp = Math.floor(65 + stats.con * 10 + totalLevel * 5);
+  stats.maxMana = Math.floor(35 + stats.int * 7 + stats.wis * 3 + totalLevel * 2);
+  stats.maxStamina = Math.floor(45 + stats.dex * 3 + stats.str * 4 + stats.con * 2 + totalLevel * 2);
+  stats.attack = Math.floor(5 + stats.str * 2 + stats.dex * 0.7);
+  stats.magic = Math.floor(5 + stats.int * 2 + stats.wis * 0.8);
+  stats.defense = Math.floor(2 + stats.con * 1.5 + stats.wis * 0.3);
+  stats.speed = Math.floor(3 + stats.dex * 1.5);
+  return { race, job, stats, synergies, skillIds };
 }
 
 export function syncResourcesToStats(player) {
@@ -118,7 +172,6 @@ export function getAvailableAdvancements(state, trackName) {
       unlocked.push({ ...path, sourceName: cls.name, canUnlock: meetsRequirements(state, path, cls), sourceLevel: cls.level });
     }
   }
-  // Hidden classes may come from wider requirements and should be visible as mysteries once boss kills begin.
   for (const path of paths.filter(p => p.tier === "hidden" && !track.some(existing => existing.id === p.id))) {
     const source = track.find(cls => cls.id === path.from) ?? track.at(-1);
     if (state.meta.bossKills > 0 || state.meta.relicDust > 0) {

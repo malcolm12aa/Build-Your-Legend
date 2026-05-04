@@ -9,6 +9,8 @@ import { useItem, equipItem, unequipSlot } from "../systems/inventory.js";
 import { buyItem } from "../systems/shop.js";
 import { spendClassPoint, addAdvancedClass } from "../systems/leveling.js";
 import { recruitMember, prepareRecruitOffer } from "../systems/party.js";
+import { checkAchievements } from "../systems/achievements.js";
+import { ACHIEVEMENTS } from "../data/achievements.js";
 
 export function handleAction(state, action, value) {
   switch (action) {
@@ -16,18 +18,32 @@ export function handleAction(state, action, value) {
       state = createInitialState();
       state.screen = "character-create";
       break;
-    case "loadGame": {
-      const loaded = loadGame();
+    case "openSaveMenu":
+      state.ui.saveMenuMode = "save";
+      state.screen = "save-menu";
+      break;
+    case "openLoadMenu":
+      state.ui.saveMenuMode = "load";
+      state.screen = "save-menu";
+      break;
+    case "loadGame":
+    case "loadSlot": {
+      const loaded = loadGame(value || 1);
       if (loaded) state = loaded;
-      else addLog(state, "No save file found.");
+      else addLog(state, `No save file found in slot ${value || 1}.`);
       break;
     }
     case "saveGame":
-      if (saveGame(state)) addLog(state, "Game saved to this browser.");
-      else addLog(state, "Save failed. Your browser may be blocking localStorage.");
+    case "saveSlot":
+      if (!state.player) {
+        addLog(state, "Create a character before saving.");
+      } else if (saveGame(state, value || 1)) {
+        addLog(state, `Game saved to slot ${value || 1}.`);
+      } else addLog(state, "Save failed. Your browser may be blocking localStorage.");
       break;
     case "deleteSave":
-      if (deleteSave()) addLog(state, "Save file deleted from this browser.");
+    case "deleteSlot":
+      if (deleteSave(value || 1)) addLog(state, `Save slot ${value || 1} deleted from this browser.`);
       else addLog(state, "Could not delete save. Your browser may be blocking localStorage.");
       break;
     case "go":
@@ -98,9 +114,18 @@ export function handleAction(state, action, value) {
       state.ui.offeredRecruit = null;
       state.screen = "map";
       break;
+    case "selectTitle": {
+      const achievement = ACHIEVEMENTS.find(a => a.id === value);
+      if (achievement && state.player?.achievements?.includes(value)) {
+        state.player.title = achievement.title;
+        addLog(state, `Title equipped: ${achievement.title}.`);
+      }
+      break;
+    }
     default:
       console.warn("Unknown action", action, value);
   }
+  checkAchievements(state);
   return state;
 }
 
