@@ -1,5 +1,6 @@
-// Auto-generated from build_your_legend_race_job_skill_spell_list.xlsx for v0.3.0.
-// JOBS contains base starting jobs. JOB_PATHS contains advanced/specialist/rare/hidden paths imported from Excel.
+// Auto-generated from Excel import and updated in v0.5.0.
+// JOBS contains base starting jobs. JOB_PATHS contains advanced/specialist/rare/hidden paths.
+// v0.5.0 adds Excel ability links, starting abilities, and learn tables.
 
 export const JOBS = [
   {
@@ -19,7 +20,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -31,6 +32,16 @@ export const JOBS = [
     "paths": [
       "job_path_1073_warrior_vanguard",
       "job_path_1077_warrior_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
     ]
   },
   {
@@ -50,7 +61,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -62,6 +73,16 @@ export const JOBS = [
     "paths": [
       "job_path_1081_swordsman_vanguard",
       "job_path_1085_swordsman_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
     ]
   },
   {
@@ -81,7 +102,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -93,6 +114,16 @@ export const JOBS = [
     "paths": [
       "job_path_1089_knight_vanguard",
       "job_path_1093_knight_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
     ]
   },
   {
@@ -113,7 +144,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -125,6 +156,16 @@ export const JOBS = [
     "paths": [
       "job_path_1097_paladin_vanguard",
       "job_path_1101_paladin_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
     ]
   },
   {
@@ -144,7 +185,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -156,6 +197,16 @@ export const JOBS = [
     "paths": [
       "job_path_1105_fighter_vanguard",
       "job_path_1109_fighter_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
     ]
   },
   {
@@ -175,7 +226,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -187,6 +238,16 @@ export const JOBS = [
     "paths": [
       "job_path_1113_spearman_vanguard",
       "job_path_1117_spearman_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_spear_3"
+      }
     ]
   },
   {
@@ -206,7 +267,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -218,6 +279,16 @@ export const JOBS = [
     "paths": [
       "job_path_1121_lancer_vanguard",
       "job_path_1125_lancer_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_spear_3"
+      }
     ]
   },
   {
@@ -239,7 +310,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "iron_palm"
+      "v50_unarmed_1"
     ],
     "strengths": [
       "Stamina economy",
@@ -251,6 +322,16 @@ export const JOBS = [
     "paths": [
       "job_path_1129_monk_vanguard",
       "job_path_1133_monk_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_unarmed_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_unarmed_3"
+      }
     ]
   },
   {
@@ -270,7 +351,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_axe_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -282,6 +363,16 @@ export const JOBS = [
     "paths": [
       "job_path_1137_berserker_vanguard",
       "job_path_1141_berserker_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_axe_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_axe_3"
+      }
     ]
   },
   {
@@ -302,7 +393,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -314,6 +405,16 @@ export const JOBS = [
     "paths": [
       "job_path_1145_mage_vanguard",
       "job_path_1149_mage_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
     ]
   },
   {
@@ -334,7 +435,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -346,6 +447,16 @@ export const JOBS = [
     "paths": [
       "job_path_1153_wizard_vanguard",
       "job_path_1157_wizard_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
     ]
   },
   {
@@ -366,7 +477,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -378,6 +489,16 @@ export const JOBS = [
     "paths": [
       "job_path_1161_sorcerer_vanguard",
       "job_path_1165_sorcerer_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
     ]
   },
   {
@@ -398,7 +519,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "sk_quick_slash"
     ],
     "strengths": [
       "High mana",
@@ -410,6 +531,16 @@ export const JOBS = [
     "paths": [
       "job_path_1169_elementalist_vanguard",
       "job_path_1173_elementalist_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -430,7 +561,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -442,6 +573,16 @@ export const JOBS = [
     "paths": [
       "job_path_1177_witch_vanguard",
       "job_path_1181_witch_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -463,7 +604,7 @@ export const JOBS = [
       "int": 1
     },
     "startingSkills": [
-      "pack_call"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Companion synergy",
@@ -475,6 +616,16 @@ export const JOBS = [
     "paths": [
       "job_path_1185_summoner_vanguard",
       "job_path_1189_summoner_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -495,7 +646,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -507,6 +658,16 @@ export const JOBS = [
     "paths": [
       "job_path_1193_barrier_mage_vanguard",
       "job_path_1197_barrier_mage_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
     ]
   },
   {
@@ -526,7 +687,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "v50_healing_1"
     ],
     "strengths": [
       "Party value",
@@ -538,6 +699,16 @@ export const JOBS = [
     "paths": [
       "job_path_1201_healer_vanguard",
       "job_path_1205_healer_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
     ]
   },
   {
@@ -558,7 +729,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -570,6 +741,16 @@ export const JOBS = [
     "paths": [
       "job_path_1209_cleric_vanguard",
       "job_path_1213_cleric_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
     ]
   },
   {
@@ -590,7 +771,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -602,6 +783,16 @@ export const JOBS = [
     "paths": [
       "job_path_1217_priest_vanguard",
       "job_path_1221_priest_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
     ]
   },
   {
@@ -621,7 +812,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -633,6 +824,16 @@ export const JOBS = [
     "paths": [
       "job_path_1225_bard_vanguard",
       "job_path_1229_bard_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -652,7 +853,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -664,6 +865,16 @@ export const JOBS = [
     "paths": [
       "job_path_1233_dancer_vanguard",
       "job_path_1237_dancer_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -683,7 +894,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -695,6 +906,16 @@ export const JOBS = [
     "paths": [
       "job_path_1241_strategist_vanguard",
       "job_path_1245_strategist_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -714,7 +935,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -726,6 +947,16 @@ export const JOBS = [
     "paths": [
       "job_path_1249_cook_vanguard",
       "job_path_1253_cook_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -745,7 +976,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -757,6 +988,16 @@ export const JOBS = [
     "paths": [
       "job_path_1257_buffer_vanguard",
       "job_path_1261_buffer_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -776,7 +1017,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -788,6 +1029,16 @@ export const JOBS = [
     "paths": [
       "job_path_1265_archer_vanguard",
       "job_path_1269_archer_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
     ]
   },
   {
@@ -807,7 +1058,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -819,6 +1070,16 @@ export const JOBS = [
     "paths": [
       "job_path_1273_hunter_vanguard",
       "job_path_1277_hunter_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
     ]
   },
   {
@@ -838,7 +1099,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -850,6 +1111,16 @@ export const JOBS = [
     "paths": [
       "job_path_1281_ranger_vanguard",
       "job_path_1285_ranger_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
     ]
   },
   {
@@ -869,7 +1140,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -881,6 +1152,16 @@ export const JOBS = [
     "paths": [
       "job_path_1289_sniper_vanguard",
       "job_path_1293_sniper_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
     ]
   },
   {
@@ -900,7 +1181,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -912,6 +1193,16 @@ export const JOBS = [
     "paths": [
       "job_path_1297_gunslinger_vanguard",
       "job_path_1301_gunslinger_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -931,7 +1222,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -943,6 +1234,16 @@ export const JOBS = [
     "paths": [
       "job_path_1305_magic_gunner_vanguard",
       "job_path_1309_magic_gunner_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -962,7 +1263,7 @@ export const JOBS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -974,6 +1275,16 @@ export const JOBS = [
     "paths": [
       "job_path_1313_rogue_vanguard",
       "job_path_1317_rogue_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
     ]
   },
   {
@@ -993,7 +1304,7 @@ export const JOBS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -1005,6 +1316,16 @@ export const JOBS = [
     "paths": [
       "job_path_1321_thief_vanguard",
       "job_path_1325_thief_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
     ]
   },
   {
@@ -1024,7 +1345,7 @@ export const JOBS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -1036,6 +1357,16 @@ export const JOBS = [
     "paths": [
       "job_path_1329_assassin_vanguard",
       "job_path_1333_assassin_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
     ]
   },
   {
@@ -1055,7 +1386,7 @@ export const JOBS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -1067,6 +1398,16 @@ export const JOBS = [
     "paths": [
       "job_path_1337_ninja_vanguard",
       "job_path_1341_ninja_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
     ]
   },
   {
@@ -1086,7 +1427,7 @@ export const JOBS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -1098,6 +1439,16 @@ export const JOBS = [
     "paths": [
       "job_path_1345_scout_vanguard",
       "job_path_1349_scout_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
     ]
   },
   {
@@ -1117,7 +1468,7 @@ export const JOBS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -1129,6 +1480,16 @@ export const JOBS = [
     "paths": [
       "job_path_1353_spy_vanguard",
       "job_path_1357_spy_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
     ]
   },
   {
@@ -1148,7 +1509,7 @@ export const JOBS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -1160,6 +1521,16 @@ export const JOBS = [
     "paths": [
       "job_path_1361_trickster_vanguard",
       "job_path_1365_trickster_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
     ]
   },
   {
@@ -1182,7 +1553,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -1194,6 +1565,16 @@ export const JOBS = [
     "paths": [
       "job_path_1369_blacksmith_vanguard",
       "job_path_1373_blacksmith_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -1216,7 +1597,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -1228,6 +1609,16 @@ export const JOBS = [
     "paths": [
       "job_path_1377_alchemist_vanguard",
       "job_path_1381_alchemist_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_catalyst_3"
+      }
     ]
   },
   {
@@ -1250,7 +1641,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -1262,6 +1653,16 @@ export const JOBS = [
     "paths": [
       "job_path_1385_enchanter_vanguard",
       "job_path_1389_enchanter_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -1284,7 +1685,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -1296,6 +1697,16 @@ export const JOBS = [
     "paths": [
       "job_path_1393_engineer_vanguard",
       "job_path_1397_engineer_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_catalyst_3"
+      }
     ]
   },
   {
@@ -1318,7 +1729,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -1330,6 +1741,16 @@ export const JOBS = [
     "paths": [
       "job_path_1401_tailor_vanguard",
       "job_path_1405_tailor_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -1352,7 +1773,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -1364,6 +1785,16 @@ export const JOBS = [
     "paths": [
       "job_path_1409_chef_vanguard",
       "job_path_1413_chef_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -1386,7 +1817,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -1398,6 +1829,16 @@ export const JOBS = [
     "paths": [
       "job_path_1417_appraiser_vanguard",
       "job_path_1421_appraiser_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -1420,7 +1861,7 @@ export const JOBS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -1432,6 +1873,16 @@ export const JOBS = [
     "paths": [
       "job_path_1425_merchant_vanguard",
       "job_path_1429_merchant_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -1452,7 +1903,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -1464,6 +1915,16 @@ export const JOBS = [
     "paths": [
       "job_path_1433_saint_vanguard",
       "job_path_1437_saint_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
     ]
   },
   {
@@ -1484,7 +1945,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -1496,6 +1957,16 @@ export const JOBS = [
     "paths": [
       "job_path_1441_exorcist_vanguard",
       "job_path_1445_exorcist_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
     ]
   },
   {
@@ -1516,7 +1987,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -1528,6 +1999,16 @@ export const JOBS = [
     "paths": [
       "job_path_1449_templar_vanguard",
       "job_path_1453_templar_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
     ]
   },
   {
@@ -1548,7 +2029,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -1560,6 +2041,16 @@ export const JOBS = [
     "paths": [
       "job_path_1457_oracle_vanguard",
       "job_path_1461_oracle_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
     ]
   },
   {
@@ -1580,7 +2071,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -1592,6 +2083,16 @@ export const JOBS = [
     "paths": [
       "job_path_1465_necromancer_vanguard",
       "job_path_1469_necromancer_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -1612,7 +2113,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -1624,6 +2125,16 @@ export const JOBS = [
     "paths": [
       "job_path_1473_warlock_vanguard",
       "job_path_1477_warlock_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -1644,7 +2155,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -1656,6 +2167,16 @@ export const JOBS = [
     "paths": [
       "job_path_1481_dark_knight_vanguard",
       "job_path_1485_dark_knight_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -1676,7 +2197,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -1688,6 +2209,16 @@ export const JOBS = [
     "paths": [
       "job_path_1489_curse_mage_vanguard",
       "job_path_1493_curse_mage_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -1708,7 +2239,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -1720,6 +2251,16 @@ export const JOBS = [
     "paths": [
       "job_path_1497_blood_mage_vanguard",
       "job_path_1501_blood_mage_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -1740,7 +2281,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -1752,6 +2293,16 @@ export const JOBS = [
     "paths": [
       "job_path_1505_reaper_vanguard",
       "job_path_1509_reaper_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -1772,7 +2323,7 @@ export const JOBS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -1784,6 +2335,16 @@ export const JOBS = [
     "paths": [
       "job_path_1513_demon_lord_vanguard",
       "job_path_1517_demon_lord_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -1804,7 +2365,7 @@ export const JOBS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -1816,6 +2377,16 @@ export const JOBS = [
     "paths": [
       "job_path_1521_vampire_lord_vanguard",
       "job_path_1525_vampire_lord_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -1836,7 +2407,7 @@ export const JOBS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -1848,6 +2419,16 @@ export const JOBS = [
     "paths": [
       "job_path_1529_oni_warrior_vanguard",
       "job_path_1533_oni_warrior_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -1868,7 +2449,7 @@ export const JOBS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Strong traits",
@@ -1880,6 +2461,16 @@ export const JOBS = [
     "paths": [
       "job_path_1537_goblin_champion_vanguard",
       "job_path_1541_goblin_champion_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -1900,7 +2491,7 @@ export const JOBS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_hunter_step"
     ],
     "strengths": [
       "Strong traits",
@@ -1912,6 +2503,16 @@ export const JOBS = [
     "paths": [
       "job_path_1545_slime_predator_vanguard",
       "job_path_1549_slime_predator_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -1932,7 +2533,7 @@ export const JOBS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_fire_1"
     ],
     "strengths": [
       "Strong traits",
@@ -1944,6 +2545,16 @@ export const JOBS = [
     "paths": [
       "job_path_1553_dragon_apostle_vanguard",
       "job_path_1557_dragon_apostle_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_3"
+      }
     ]
   },
   {
@@ -1965,7 +2576,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_sword_1"
     ],
     "strengths": [
       "Technique variety",
@@ -1977,6 +2588,16 @@ export const JOBS = [
     "paths": [
       "job_path_1561_samurai_vanguard",
       "job_path_1565_samurai_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
     ]
   },
   {
@@ -1998,7 +2619,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -2010,6 +2631,16 @@ export const JOBS = [
     "paths": [
       "job_path_1569_onmyoji_vanguard",
       "job_path_1573_onmyoji_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -2031,7 +2662,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -2043,6 +2674,16 @@ export const JOBS = [
     "paths": [
       "job_path_1577_miko_vanguard",
       "job_path_1581_miko_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -2064,7 +2705,7 @@ export const JOBS = [
       "con": 1
     },
     "startingSkills": [
-      "iron_palm"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Scaling",
@@ -2076,6 +2717,16 @@ export const JOBS = [
     "paths": [
       "job_path_1585_cultivator_vanguard",
       "job_path_1589_cultivator_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -2097,7 +2748,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -2109,6 +2760,16 @@ export const JOBS = [
     "paths": [
       "job_path_1593_esper_vanguard",
       "job_path_1597_esper_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -2130,7 +2791,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -2142,6 +2803,16 @@ export const JOBS = [
     "paths": [
       "job_path_1601_hero_student_vanguard",
       "job_path_1605_hero_student_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -2163,7 +2834,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -2175,6 +2846,16 @@ export const JOBS = [
     "paths": [
       "job_path_1609_pro_hero_vanguard",
       "job_path_1613_pro_hero_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -2197,7 +2878,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -2209,6 +2890,16 @@ export const JOBS = [
     "paths": [
       "job_path_1617_adventurer_vanguard",
       "job_path_1621_adventurer_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -2231,7 +2922,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -2243,6 +2934,16 @@ export const JOBS = [
     "paths": [
       "job_path_1625_villager_vanguard",
       "job_path_1629_villager_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -2265,7 +2966,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -2277,6 +2978,16 @@ export const JOBS = [
     "paths": [
       "job_path_1633_farmer_vanguard",
       "job_path_1637_farmer_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -2299,7 +3010,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -2311,6 +3022,16 @@ export const JOBS = [
     "paths": [
       "job_path_1641_mercenary_vanguard",
       "job_path_1645_mercenary_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -2333,7 +3054,7 @@ export const JOBS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_bow_1"
     ],
     "strengths": [
       "Utility",
@@ -2345,6 +3066,16 @@ export const JOBS = [
     "paths": [
       "job_path_1649_bounty_hunter_vanguard",
       "job_path_1653_bounty_hunter_adept"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
     ]
   }
 ];
@@ -2368,7 +3099,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2386,7 +3117,17 @@ export const JOB_PATHS = [
       "previousJobId": 1000,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1074_warrior_paragon",
@@ -2406,7 +3147,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2424,7 +3165,17 @@ export const JOB_PATHS = [
       "previousJobId": 1073,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1075_warrior_sovereign",
@@ -2444,7 +3195,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2462,7 +3213,17 @@ export const JOB_PATHS = [
       "previousJobId": 1074,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1076_world_crowned_warrior",
@@ -2482,7 +3243,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2502,7 +3263,17 @@ export const JOB_PATHS = [
       "previousJobId": 1075,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1077_warrior_adept",
@@ -2522,7 +3293,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2540,7 +3311,17 @@ export const JOB_PATHS = [
       "previousJobId": 1000,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1078_eclipse_warrior",
@@ -2560,7 +3341,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_dark_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2578,7 +3359,17 @@ export const JOB_PATHS = [
       "previousJobId": 1077,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1079_mythic_warrior",
@@ -2598,7 +3389,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2616,7 +3407,17 @@ export const JOB_PATHS = [
       "previousJobId": 1078,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1080_hidden_origin_warrior",
@@ -2636,7 +3437,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2656,7 +3457,17 @@ export const JOB_PATHS = [
       "previousJobId": 1079,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1081_swordsman_vanguard",
@@ -2676,7 +3487,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2694,7 +3505,17 @@ export const JOB_PATHS = [
       "previousJobId": 1001,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1082_swordsman_paragon",
@@ -2714,7 +3535,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2732,7 +3553,17 @@ export const JOB_PATHS = [
       "previousJobId": 1081,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1083_swordsman_sovereign",
@@ -2752,7 +3583,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2770,7 +3601,17 @@ export const JOB_PATHS = [
       "previousJobId": 1082,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1084_world_crowned_swordsman",
@@ -2790,7 +3631,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2810,7 +3651,17 @@ export const JOB_PATHS = [
       "previousJobId": 1083,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1085_swordsman_adept",
@@ -2830,7 +3681,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2848,7 +3699,17 @@ export const JOB_PATHS = [
       "previousJobId": 1001,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1086_eclipse_swordsman",
@@ -2868,7 +3729,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_dark_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2886,7 +3747,17 @@ export const JOB_PATHS = [
       "previousJobId": 1085,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1087_mythic_swordsman",
@@ -2906,7 +3777,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2924,7 +3795,17 @@ export const JOB_PATHS = [
       "previousJobId": 1086,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1088_hidden_origin_swordsman",
@@ -2944,7 +3825,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -2964,7 +3845,17 @@ export const JOB_PATHS = [
       "previousJobId": 1087,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1089_knight_vanguard",
@@ -2984,7 +3875,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3002,7 +3893,17 @@ export const JOB_PATHS = [
       "previousJobId": 1002,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1090_knight_paragon",
@@ -3022,7 +3923,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3040,7 +3941,17 @@ export const JOB_PATHS = [
       "previousJobId": 1089,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1091_knight_sovereign",
@@ -3060,7 +3971,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3078,7 +3989,17 @@ export const JOB_PATHS = [
       "previousJobId": 1090,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1092_world_crowned_knight",
@@ -3098,7 +4019,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3118,7 +4039,17 @@ export const JOB_PATHS = [
       "previousJobId": 1091,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1093_knight_adept",
@@ -3138,7 +4069,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3156,7 +4087,17 @@ export const JOB_PATHS = [
       "previousJobId": 1002,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1094_eclipse_knight",
@@ -3176,7 +4117,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_dark_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3194,7 +4135,17 @@ export const JOB_PATHS = [
       "previousJobId": 1093,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1095_mythic_knight",
@@ -3214,7 +4165,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3232,7 +4183,17 @@ export const JOB_PATHS = [
       "previousJobId": 1094,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1096_hidden_origin_knight",
@@ -3252,7 +4213,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3272,7 +4233,17 @@ export const JOB_PATHS = [
       "previousJobId": 1095,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1097_paladin_vanguard",
@@ -3293,7 +4264,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -3311,7 +4282,17 @@ export const JOB_PATHS = [
       "previousJobId": 1003,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1098_paladin_paragon",
@@ -3332,7 +4313,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -3350,7 +4331,17 @@ export const JOB_PATHS = [
       "previousJobId": 1097,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1099_paladin_sovereign",
@@ -3371,7 +4362,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -3389,7 +4380,17 @@ export const JOB_PATHS = [
       "previousJobId": 1098,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1100_world_crowned_paladin",
@@ -3410,7 +4411,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -3430,7 +4431,17 @@ export const JOB_PATHS = [
       "previousJobId": 1099,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1101_paladin_adept",
@@ -3451,7 +4462,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -3469,7 +4480,17 @@ export const JOB_PATHS = [
       "previousJobId": 1003,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1102_eclipse_paladin",
@@ -3490,7 +4511,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -3508,7 +4529,17 @@ export const JOB_PATHS = [
       "previousJobId": 1101,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1103_mythic_paladin",
@@ -3529,7 +4560,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -3547,7 +4578,17 @@ export const JOB_PATHS = [
       "previousJobId": 1102,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1104_hidden_origin_paladin",
@@ -3568,7 +4609,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -3588,7 +4629,17 @@ export const JOB_PATHS = [
       "previousJobId": 1103,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1105_fighter_vanguard",
@@ -3608,7 +4659,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3626,7 +4677,17 @@ export const JOB_PATHS = [
       "previousJobId": 1004,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1106_fighter_paragon",
@@ -3646,7 +4707,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3664,7 +4725,17 @@ export const JOB_PATHS = [
       "previousJobId": 1105,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1107_fighter_sovereign",
@@ -3684,7 +4755,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3702,7 +4773,17 @@ export const JOB_PATHS = [
       "previousJobId": 1106,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1108_world_crowned_fighter",
@@ -3722,7 +4803,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3742,7 +4823,17 @@ export const JOB_PATHS = [
       "previousJobId": 1107,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1109_fighter_adept",
@@ -3762,7 +4853,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3780,7 +4871,17 @@ export const JOB_PATHS = [
       "previousJobId": 1004,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1110_eclipse_fighter",
@@ -3800,7 +4901,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_dark_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3818,7 +4919,17 @@ export const JOB_PATHS = [
       "previousJobId": 1109,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1111_mythic_fighter",
@@ -3838,7 +4949,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3856,7 +4967,17 @@ export const JOB_PATHS = [
       "previousJobId": 1110,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1112_hidden_origin_fighter",
@@ -3876,7 +4997,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_sword_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3896,7 +5017,17 @@ export const JOB_PATHS = [
       "previousJobId": 1111,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1113_spearman_vanguard",
@@ -3916,7 +5047,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3934,7 +5065,17 @@ export const JOB_PATHS = [
       "previousJobId": 1005,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1114_spearman_paragon",
@@ -3954,7 +5095,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -3972,7 +5113,17 @@ export const JOB_PATHS = [
       "previousJobId": 1113,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1115_spearman_sovereign",
@@ -3992,7 +5143,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4010,7 +5161,17 @@ export const JOB_PATHS = [
       "previousJobId": 1114,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1116_world_crowned_spearman",
@@ -4030,7 +5191,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4050,7 +5211,17 @@ export const JOB_PATHS = [
       "previousJobId": 1115,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1117_spearman_adept",
@@ -4070,7 +5241,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4088,7 +5259,17 @@ export const JOB_PATHS = [
       "previousJobId": 1005,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1118_eclipse_spearman",
@@ -4108,7 +5289,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_dark_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4126,7 +5307,17 @@ export const JOB_PATHS = [
       "previousJobId": 1117,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1119_mythic_spearman",
@@ -4146,7 +5337,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4164,7 +5355,17 @@ export const JOB_PATHS = [
       "previousJobId": 1118,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1120_hidden_origin_spearman",
@@ -4184,7 +5385,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4204,7 +5405,17 @@ export const JOB_PATHS = [
       "previousJobId": 1119,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1121_lancer_vanguard",
@@ -4224,7 +5435,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4242,7 +5453,17 @@ export const JOB_PATHS = [
       "previousJobId": 1006,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1122_lancer_paragon",
@@ -4262,7 +5483,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4280,7 +5501,17 @@ export const JOB_PATHS = [
       "previousJobId": 1121,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1123_lancer_sovereign",
@@ -4300,7 +5531,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4318,7 +5549,17 @@ export const JOB_PATHS = [
       "previousJobId": 1122,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1124_world_crowned_lancer",
@@ -4338,7 +5579,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4358,7 +5599,17 @@ export const JOB_PATHS = [
       "previousJobId": 1123,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1125_lancer_adept",
@@ -4378,7 +5629,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4396,7 +5647,17 @@ export const JOB_PATHS = [
       "previousJobId": 1006,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1126_eclipse_lancer",
@@ -4416,7 +5677,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_dark_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4434,7 +5695,17 @@ export const JOB_PATHS = [
       "previousJobId": 1125,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1127_mythic_lancer",
@@ -4454,7 +5725,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4472,7 +5743,17 @@ export const JOB_PATHS = [
       "previousJobId": 1126,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1128_hidden_origin_lancer",
@@ -4492,7 +5773,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_spear_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4512,7 +5793,17 @@ export const JOB_PATHS = [
       "previousJobId": 1127,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_spear_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_spear_3"
+      }
+    ]
   },
   {
     "id": "job_path_1129_monk_vanguard",
@@ -4534,7 +5825,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "iron_palm"
+      "v50_unarmed_1"
     ],
     "strengths": [
       "Stamina economy",
@@ -4552,7 +5843,17 @@ export const JOB_PATHS = [
       "previousJobId": 1007,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_unarmed_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_unarmed_3"
+      }
+    ]
   },
   {
     "id": "job_path_1130_monk_paragon",
@@ -4574,7 +5875,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "iron_palm"
+      "v50_unarmed_1"
     ],
     "strengths": [
       "Stamina economy",
@@ -4592,7 +5893,17 @@ export const JOB_PATHS = [
       "previousJobId": 1129,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_unarmed_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_unarmed_3"
+      }
+    ]
   },
   {
     "id": "job_path_1131_monk_sovereign",
@@ -4614,7 +5925,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "iron_palm"
+      "v50_unarmed_1"
     ],
     "strengths": [
       "Stamina economy",
@@ -4632,7 +5943,17 @@ export const JOB_PATHS = [
       "previousJobId": 1130,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_unarmed_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_unarmed_3"
+      }
+    ]
   },
   {
     "id": "job_path_1132_world_crowned_monk",
@@ -4654,7 +5975,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "iron_palm"
+      "v50_unarmed_1"
     ],
     "strengths": [
       "Stamina economy",
@@ -4674,7 +5995,17 @@ export const JOB_PATHS = [
       "previousJobId": 1131,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_unarmed_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_unarmed_3"
+      }
+    ]
   },
   {
     "id": "job_path_1133_monk_adept",
@@ -4696,7 +6027,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "iron_palm"
+      "v50_unarmed_1"
     ],
     "strengths": [
       "Stamina economy",
@@ -4714,7 +6045,17 @@ export const JOB_PATHS = [
       "previousJobId": 1007,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_unarmed_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_unarmed_3"
+      }
+    ]
   },
   {
     "id": "job_path_1134_eclipse_monk",
@@ -4736,7 +6077,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "iron_palm"
+      "v50_dark_1"
     ],
     "strengths": [
       "Stamina economy",
@@ -4754,7 +6095,17 @@ export const JOB_PATHS = [
       "previousJobId": 1133,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1135_mythic_monk",
@@ -4776,7 +6127,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "iron_palm"
+      "v50_unarmed_1"
     ],
     "strengths": [
       "Stamina economy",
@@ -4794,7 +6145,17 @@ export const JOB_PATHS = [
       "previousJobId": 1134,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_unarmed_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_unarmed_3"
+      }
+    ]
   },
   {
     "id": "job_path_1136_hidden_origin_monk",
@@ -4816,7 +6177,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "iron_palm"
+      "v50_unarmed_1"
     ],
     "strengths": [
       "Stamina economy",
@@ -4836,7 +6197,17 @@ export const JOB_PATHS = [
       "previousJobId": 1135,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_unarmed_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_unarmed_3"
+      }
+    ]
   },
   {
     "id": "job_path_1137_berserker_vanguard",
@@ -4856,7 +6227,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_axe_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4874,7 +6245,17 @@ export const JOB_PATHS = [
       "previousJobId": 1008,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_axe_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_axe_3"
+      }
+    ]
   },
   {
     "id": "job_path_1138_berserker_paragon",
@@ -4894,7 +6275,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_axe_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4912,7 +6293,17 @@ export const JOB_PATHS = [
       "previousJobId": 1137,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_axe_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_axe_3"
+      }
+    ]
   },
   {
     "id": "job_path_1139_berserker_sovereign",
@@ -4932,7 +6323,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_axe_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4950,7 +6341,17 @@ export const JOB_PATHS = [
       "previousJobId": 1138,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_axe_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_axe_3"
+      }
+    ]
   },
   {
     "id": "job_path_1140_world_crowned_berserker",
@@ -4970,7 +6371,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_axe_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -4990,7 +6391,17 @@ export const JOB_PATHS = [
       "previousJobId": 1139,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_axe_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_axe_3"
+      }
+    ]
   },
   {
     "id": "job_path_1141_berserker_adept",
@@ -5010,7 +6421,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_axe_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -5028,7 +6439,17 @@ export const JOB_PATHS = [
       "previousJobId": 1008,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_axe_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_axe_3"
+      }
+    ]
   },
   {
     "id": "job_path_1142_eclipse_berserker",
@@ -5048,7 +6469,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "power_strike"
+      "v50_dark_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -5066,7 +6487,17 @@ export const JOB_PATHS = [
       "previousJobId": 1141,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1143_mythic_berserker",
@@ -5086,7 +6517,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_axe_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -5104,7 +6535,17 @@ export const JOB_PATHS = [
       "previousJobId": 1142,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_axe_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_axe_3"
+      }
+    ]
   },
   {
     "id": "job_path_1144_hidden_origin_berserker",
@@ -5124,7 +6565,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "power_strike"
+      "v50_axe_1"
     ],
     "strengths": [
       "Reliable physical damage",
@@ -5144,7 +6585,17 @@ export const JOB_PATHS = [
       "previousJobId": 1143,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_axe_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_axe_3"
+      }
+    ]
   },
   {
     "id": "job_path_1145_mage_vanguard",
@@ -5165,7 +6616,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5183,7 +6634,17 @@ export const JOB_PATHS = [
       "previousJobId": 1009,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1146_mage_paragon",
@@ -5204,7 +6665,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5222,7 +6683,17 @@ export const JOB_PATHS = [
       "previousJobId": 1145,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1147_mage_sovereign",
@@ -5243,7 +6714,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5261,7 +6732,17 @@ export const JOB_PATHS = [
       "previousJobId": 1146,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1148_world_crowned_mage",
@@ -5282,7 +6763,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5302,7 +6783,17 @@ export const JOB_PATHS = [
       "previousJobId": 1147,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1149_mage_adept",
@@ -5323,7 +6814,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5341,7 +6832,17 @@ export const JOB_PATHS = [
       "previousJobId": 1009,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1150_eclipse_mage",
@@ -5362,7 +6863,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_dark_1"
     ],
     "strengths": [
       "High mana",
@@ -5380,7 +6881,17 @@ export const JOB_PATHS = [
       "previousJobId": 1149,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1151_mythic_mage",
@@ -5401,7 +6912,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5419,7 +6930,17 @@ export const JOB_PATHS = [
       "previousJobId": 1150,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1152_hidden_origin_mage",
@@ -5440,7 +6961,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5460,7 +6981,17 @@ export const JOB_PATHS = [
       "previousJobId": 1151,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1153_wizard_vanguard",
@@ -5481,7 +7012,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5499,7 +7030,17 @@ export const JOB_PATHS = [
       "previousJobId": 1010,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1154_wizard_paragon",
@@ -5520,7 +7061,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5538,7 +7079,17 @@ export const JOB_PATHS = [
       "previousJobId": 1153,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1155_wizard_sovereign",
@@ -5559,7 +7110,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5577,7 +7128,17 @@ export const JOB_PATHS = [
       "previousJobId": 1154,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1156_world_crowned_wizard",
@@ -5598,7 +7159,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5618,7 +7179,17 @@ export const JOB_PATHS = [
       "previousJobId": 1155,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1157_wizard_adept",
@@ -5639,7 +7210,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5657,7 +7228,17 @@ export const JOB_PATHS = [
       "previousJobId": 1010,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1158_eclipse_wizard",
@@ -5678,7 +7259,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_dark_1"
     ],
     "strengths": [
       "High mana",
@@ -5696,7 +7277,17 @@ export const JOB_PATHS = [
       "previousJobId": 1157,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1159_mythic_wizard",
@@ -5717,7 +7308,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5735,7 +7326,17 @@ export const JOB_PATHS = [
       "previousJobId": 1158,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1160_hidden_origin_wizard",
@@ -5756,7 +7357,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5776,7 +7377,17 @@ export const JOB_PATHS = [
       "previousJobId": 1159,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1161_sorcerer_vanguard",
@@ -5797,7 +7408,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5815,7 +7426,17 @@ export const JOB_PATHS = [
       "previousJobId": 1011,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1162_sorcerer_paragon",
@@ -5836,7 +7457,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5854,7 +7475,17 @@ export const JOB_PATHS = [
       "previousJobId": 1161,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1163_sorcerer_sovereign",
@@ -5875,7 +7506,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5893,7 +7524,17 @@ export const JOB_PATHS = [
       "previousJobId": 1162,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1164_world_crowned_sorcerer",
@@ -5914,7 +7555,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5934,7 +7575,17 @@ export const JOB_PATHS = [
       "previousJobId": 1163,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1165_sorcerer_adept",
@@ -5955,7 +7606,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -5973,7 +7624,17 @@ export const JOB_PATHS = [
       "previousJobId": 1011,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1166_eclipse_sorcerer",
@@ -5994,7 +7655,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_dark_1"
     ],
     "strengths": [
       "High mana",
@@ -6012,7 +7673,17 @@ export const JOB_PATHS = [
       "previousJobId": 1165,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1167_mythic_sorcerer",
@@ -6033,7 +7704,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -6051,7 +7722,17 @@ export const JOB_PATHS = [
       "previousJobId": 1166,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1168_hidden_origin_sorcerer",
@@ -6072,7 +7753,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -6092,7 +7773,17 @@ export const JOB_PATHS = [
       "previousJobId": 1167,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1169_elementalist_vanguard",
@@ -6113,7 +7804,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "sk_quick_slash"
     ],
     "strengths": [
       "High mana",
@@ -6131,7 +7822,17 @@ export const JOB_PATHS = [
       "previousJobId": 1012,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1170_elementalist_paragon",
@@ -6152,7 +7853,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "sk_quick_slash"
     ],
     "strengths": [
       "High mana",
@@ -6170,7 +7871,17 @@ export const JOB_PATHS = [
       "previousJobId": 1169,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1171_elementalist_sovereign",
@@ -6191,7 +7902,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "sk_quick_slash"
     ],
     "strengths": [
       "High mana",
@@ -6209,7 +7920,17 @@ export const JOB_PATHS = [
       "previousJobId": 1170,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1172_world_crowned_elementalist",
@@ -6230,7 +7951,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "sk_quick_slash"
     ],
     "strengths": [
       "High mana",
@@ -6250,7 +7971,17 @@ export const JOB_PATHS = [
       "previousJobId": 1171,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1173_elementalist_adept",
@@ -6271,7 +8002,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "sk_quick_slash"
     ],
     "strengths": [
       "High mana",
@@ -6289,7 +8020,17 @@ export const JOB_PATHS = [
       "previousJobId": 1012,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1174_eclipse_elementalist",
@@ -6310,7 +8051,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_dark_1"
     ],
     "strengths": [
       "High mana",
@@ -6328,7 +8069,17 @@ export const JOB_PATHS = [
       "previousJobId": 1173,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1175_mythic_elementalist",
@@ -6349,7 +8100,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "sk_quick_slash"
     ],
     "strengths": [
       "High mana",
@@ -6367,7 +8118,17 @@ export const JOB_PATHS = [
       "previousJobId": 1174,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1176_hidden_origin_elementalist",
@@ -6388,7 +8149,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "sk_quick_slash"
     ],
     "strengths": [
       "High mana",
@@ -6408,7 +8169,17 @@ export const JOB_PATHS = [
       "previousJobId": 1175,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1177_witch_vanguard",
@@ -6429,7 +8200,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -6447,7 +8218,17 @@ export const JOB_PATHS = [
       "previousJobId": 1013,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1178_witch_paragon",
@@ -6468,7 +8249,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -6486,7 +8267,17 @@ export const JOB_PATHS = [
       "previousJobId": 1177,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1179_witch_sovereign",
@@ -6507,7 +8298,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -6525,7 +8316,17 @@ export const JOB_PATHS = [
       "previousJobId": 1178,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1180_world_crowned_witch",
@@ -6546,7 +8347,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -6566,7 +8367,17 @@ export const JOB_PATHS = [
       "previousJobId": 1179,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1181_witch_adept",
@@ -6587,7 +8398,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -6605,7 +8416,17 @@ export const JOB_PATHS = [
       "previousJobId": 1013,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1182_eclipse_witch",
@@ -6626,7 +8447,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -6644,7 +8465,17 @@ export const JOB_PATHS = [
       "previousJobId": 1181,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1183_mythic_witch",
@@ -6665,7 +8496,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -6683,7 +8514,17 @@ export const JOB_PATHS = [
       "previousJobId": 1182,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1184_hidden_origin_witch",
@@ -6704,7 +8545,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -6724,7 +8565,17 @@ export const JOB_PATHS = [
       "previousJobId": 1183,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1185_summoner_vanguard",
@@ -6746,7 +8597,7 @@ export const JOB_PATHS = [
       "int": 1
     },
     "startingSkills": [
-      "pack_call"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Companion synergy",
@@ -6764,7 +8615,17 @@ export const JOB_PATHS = [
       "previousJobId": 1014,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1186_summoner_paragon",
@@ -6786,7 +8647,7 @@ export const JOB_PATHS = [
       "int": 1
     },
     "startingSkills": [
-      "pack_call"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Companion synergy",
@@ -6804,7 +8665,17 @@ export const JOB_PATHS = [
       "previousJobId": 1185,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1187_summoner_sovereign",
@@ -6826,7 +8697,7 @@ export const JOB_PATHS = [
       "int": 2
     },
     "startingSkills": [
-      "pack_call"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Companion synergy",
@@ -6844,7 +8715,17 @@ export const JOB_PATHS = [
       "previousJobId": 1186,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1188_world_crowned_summoner",
@@ -6866,7 +8747,7 @@ export const JOB_PATHS = [
       "int": 2
     },
     "startingSkills": [
-      "pack_call"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Companion synergy",
@@ -6886,7 +8767,17 @@ export const JOB_PATHS = [
       "previousJobId": 1187,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1189_summoner_adept",
@@ -6908,7 +8799,7 @@ export const JOB_PATHS = [
       "int": 1
     },
     "startingSkills": [
-      "pack_call"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Companion synergy",
@@ -6926,7 +8817,17 @@ export const JOB_PATHS = [
       "previousJobId": 1014,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1190_eclipse_summoner",
@@ -6948,7 +8849,7 @@ export const JOB_PATHS = [
       "int": 1
     },
     "startingSkills": [
-      "pack_call"
+      "v50_dark_1"
     ],
     "strengths": [
       "Companion synergy",
@@ -6966,7 +8867,17 @@ export const JOB_PATHS = [
       "previousJobId": 1189,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1191_mythic_summoner",
@@ -6988,7 +8899,7 @@ export const JOB_PATHS = [
       "int": 2
     },
     "startingSkills": [
-      "pack_call"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Companion synergy",
@@ -7006,7 +8917,17 @@ export const JOB_PATHS = [
       "previousJobId": 1190,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1192_hidden_origin_summoner",
@@ -7028,7 +8949,7 @@ export const JOB_PATHS = [
       "int": 2
     },
     "startingSkills": [
-      "pack_call"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Companion synergy",
@@ -7048,7 +8969,17 @@ export const JOB_PATHS = [
       "previousJobId": 1191,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1193_barrier_mage_vanguard",
@@ -7069,7 +9000,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -7087,7 +9018,17 @@ export const JOB_PATHS = [
       "previousJobId": 1015,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1194_barrier_mage_paragon",
@@ -7108,7 +9049,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -7126,7 +9067,17 @@ export const JOB_PATHS = [
       "previousJobId": 1193,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1195_barrier_mage_sovereign",
@@ -7147,7 +9098,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -7165,7 +9116,17 @@ export const JOB_PATHS = [
       "previousJobId": 1194,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1196_world_crowned_barrier_mage",
@@ -7186,7 +9147,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -7206,7 +9167,17 @@ export const JOB_PATHS = [
       "previousJobId": 1195,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1197_barrier_mage_adept",
@@ -7227,7 +9198,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -7245,7 +9216,17 @@ export const JOB_PATHS = [
       "previousJobId": 1015,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1198_eclipse_barrier_mage",
@@ -7266,7 +9247,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "firebolt"
+      "v50_dark_1"
     ],
     "strengths": [
       "High mana",
@@ -7284,7 +9265,17 @@ export const JOB_PATHS = [
       "previousJobId": 1197,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1199_mythic_barrier_mage",
@@ -7305,7 +9296,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -7323,7 +9314,17 @@ export const JOB_PATHS = [
       "previousJobId": 1198,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1200_hidden_origin_barrier_mage",
@@ -7344,7 +9345,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "firebolt"
+      "v50_arcane_1"
     ],
     "strengths": [
       "High mana",
@@ -7364,7 +9365,17 @@ export const JOB_PATHS = [
       "previousJobId": 1199,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "job_path_1201_healer_vanguard",
@@ -7384,7 +9395,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "v50_healing_1"
     ],
     "strengths": [
       "Party value",
@@ -7402,7 +9413,17 @@ export const JOB_PATHS = [
       "previousJobId": 1016,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1202_healer_paragon",
@@ -7422,7 +9443,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "v50_healing_1"
     ],
     "strengths": [
       "Party value",
@@ -7440,7 +9461,17 @@ export const JOB_PATHS = [
       "previousJobId": 1201,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1203_healer_sovereign",
@@ -7460,7 +9491,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "v50_healing_1"
     ],
     "strengths": [
       "Party value",
@@ -7478,7 +9509,17 @@ export const JOB_PATHS = [
       "previousJobId": 1202,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1204_world_crowned_healer",
@@ -7498,7 +9539,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "v50_healing_1"
     ],
     "strengths": [
       "Party value",
@@ -7518,7 +9559,17 @@ export const JOB_PATHS = [
       "previousJobId": 1203,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1205_healer_adept",
@@ -7538,7 +9589,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "v50_healing_1"
     ],
     "strengths": [
       "Party value",
@@ -7556,7 +9607,17 @@ export const JOB_PATHS = [
       "previousJobId": 1016,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1206_eclipse_healer",
@@ -7576,7 +9637,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "v50_healing_1"
     ],
     "strengths": [
       "Party value",
@@ -7594,7 +9655,17 @@ export const JOB_PATHS = [
       "previousJobId": 1205,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1207_mythic_healer",
@@ -7614,7 +9685,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "v50_healing_1"
     ],
     "strengths": [
       "Party value",
@@ -7632,7 +9703,17 @@ export const JOB_PATHS = [
       "previousJobId": 1206,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1208_hidden_origin_healer",
@@ -7652,7 +9733,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "v50_healing_1"
     ],
     "strengths": [
       "Party value",
@@ -7672,7 +9753,17 @@ export const JOB_PATHS = [
       "previousJobId": 1207,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1209_cleric_vanguard",
@@ -7693,7 +9784,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -7711,7 +9802,17 @@ export const JOB_PATHS = [
       "previousJobId": 1017,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1210_cleric_paragon",
@@ -7732,7 +9833,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -7750,7 +9851,17 @@ export const JOB_PATHS = [
       "previousJobId": 1209,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1211_cleric_sovereign",
@@ -7771,7 +9882,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -7789,7 +9900,17 @@ export const JOB_PATHS = [
       "previousJobId": 1210,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1212_world_crowned_cleric",
@@ -7810,7 +9931,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -7830,7 +9951,17 @@ export const JOB_PATHS = [
       "previousJobId": 1211,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1213_cleric_adept",
@@ -7851,7 +9982,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -7869,7 +10000,17 @@ export const JOB_PATHS = [
       "previousJobId": 1017,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1214_eclipse_cleric",
@@ -7890,7 +10031,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -7908,7 +10049,17 @@ export const JOB_PATHS = [
       "previousJobId": 1213,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1215_mythic_cleric",
@@ -7929,7 +10080,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -7947,7 +10098,17 @@ export const JOB_PATHS = [
       "previousJobId": 1214,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1216_hidden_origin_cleric",
@@ -7968,7 +10129,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -7988,7 +10149,17 @@ export const JOB_PATHS = [
       "previousJobId": 1215,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1217_priest_vanguard",
@@ -8009,7 +10180,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -8027,7 +10198,17 @@ export const JOB_PATHS = [
       "previousJobId": 1018,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1218_priest_paragon",
@@ -8048,7 +10229,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -8066,7 +10247,17 @@ export const JOB_PATHS = [
       "previousJobId": 1217,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1219_priest_sovereign",
@@ -8087,7 +10278,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -8105,7 +10296,17 @@ export const JOB_PATHS = [
       "previousJobId": 1218,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1220_world_crowned_priest",
@@ -8126,7 +10327,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -8146,7 +10347,17 @@ export const JOB_PATHS = [
       "previousJobId": 1219,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1221_priest_adept",
@@ -8167,7 +10378,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -8185,7 +10396,17 @@ export const JOB_PATHS = [
       "previousJobId": 1018,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1222_eclipse_priest",
@@ -8206,7 +10427,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -8224,7 +10445,17 @@ export const JOB_PATHS = [
       "previousJobId": 1221,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1223_mythic_priest",
@@ -8245,7 +10476,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -8263,7 +10494,17 @@ export const JOB_PATHS = [
       "previousJobId": 1222,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1224_hidden_origin_priest",
@@ -8284,7 +10525,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_healing_1"
     ],
     "strengths": [
       "Healing",
@@ -8304,7 +10545,17 @@ export const JOB_PATHS = [
       "previousJobId": 1223,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_healing_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_healing_3"
+      }
+    ]
   },
   {
     "id": "job_path_1225_bard_vanguard",
@@ -8324,7 +10575,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8342,7 +10593,17 @@ export const JOB_PATHS = [
       "previousJobId": 1019,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1226_bard_paragon",
@@ -8362,7 +10623,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8380,7 +10641,17 @@ export const JOB_PATHS = [
       "previousJobId": 1225,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1227_bard_sovereign",
@@ -8400,7 +10671,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8418,7 +10689,17 @@ export const JOB_PATHS = [
       "previousJobId": 1226,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1228_world_crowned_bard",
@@ -8438,7 +10719,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8458,7 +10739,17 @@ export const JOB_PATHS = [
       "previousJobId": 1227,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1229_bard_adept",
@@ -8478,7 +10769,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8496,7 +10787,17 @@ export const JOB_PATHS = [
       "previousJobId": 1019,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1230_eclipse_bard",
@@ -8516,7 +10817,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "v50_dark_1"
     ],
     "strengths": [
       "Party value",
@@ -8534,7 +10835,17 @@ export const JOB_PATHS = [
       "previousJobId": 1229,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1231_mythic_bard",
@@ -8554,7 +10865,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8572,7 +10883,17 @@ export const JOB_PATHS = [
       "previousJobId": 1230,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1232_hidden_origin_bard",
@@ -8592,7 +10913,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8612,7 +10933,17 @@ export const JOB_PATHS = [
       "previousJobId": 1231,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1233_dancer_vanguard",
@@ -8632,7 +10963,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8650,7 +10981,17 @@ export const JOB_PATHS = [
       "previousJobId": 1020,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1234_dancer_paragon",
@@ -8670,7 +11011,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8688,7 +11029,17 @@ export const JOB_PATHS = [
       "previousJobId": 1233,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1235_dancer_sovereign",
@@ -8708,7 +11059,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8726,7 +11077,17 @@ export const JOB_PATHS = [
       "previousJobId": 1234,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1236_world_crowned_dancer",
@@ -8746,7 +11107,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8766,7 +11127,17 @@ export const JOB_PATHS = [
       "previousJobId": 1235,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1237_dancer_adept",
@@ -8786,7 +11157,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8804,7 +11175,17 @@ export const JOB_PATHS = [
       "previousJobId": 1020,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1238_eclipse_dancer",
@@ -8824,7 +11205,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "v50_dark_1"
     ],
     "strengths": [
       "Party value",
@@ -8842,7 +11223,17 @@ export const JOB_PATHS = [
       "previousJobId": 1237,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1239_mythic_dancer",
@@ -8862,7 +11253,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8880,7 +11271,17 @@ export const JOB_PATHS = [
       "previousJobId": 1238,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1240_hidden_origin_dancer",
@@ -8900,7 +11301,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8920,7 +11321,17 @@ export const JOB_PATHS = [
       "previousJobId": 1239,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1241_strategist_vanguard",
@@ -8940,7 +11351,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8958,7 +11369,17 @@ export const JOB_PATHS = [
       "previousJobId": 1021,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1242_strategist_paragon",
@@ -8978,7 +11399,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -8996,7 +11417,17 @@ export const JOB_PATHS = [
       "previousJobId": 1241,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1243_strategist_sovereign",
@@ -9016,7 +11447,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9034,7 +11465,17 @@ export const JOB_PATHS = [
       "previousJobId": 1242,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1244_world_crowned_strategist",
@@ -9054,7 +11495,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9074,7 +11515,17 @@ export const JOB_PATHS = [
       "previousJobId": 1243,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1245_strategist_adept",
@@ -9094,7 +11545,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9112,7 +11563,17 @@ export const JOB_PATHS = [
       "previousJobId": 1021,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1246_eclipse_strategist",
@@ -9132,7 +11593,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "v50_dark_1"
     ],
     "strengths": [
       "Party value",
@@ -9150,7 +11611,17 @@ export const JOB_PATHS = [
       "previousJobId": 1245,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1247_mythic_strategist",
@@ -9170,7 +11641,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9188,7 +11659,17 @@ export const JOB_PATHS = [
       "previousJobId": 1246,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1248_hidden_origin_strategist",
@@ -9208,7 +11689,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9228,7 +11709,17 @@ export const JOB_PATHS = [
       "previousJobId": 1247,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1249_cook_vanguard",
@@ -9248,7 +11739,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9266,7 +11757,17 @@ export const JOB_PATHS = [
       "previousJobId": 1022,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1250_cook_paragon",
@@ -9286,7 +11787,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9304,7 +11805,17 @@ export const JOB_PATHS = [
       "previousJobId": 1249,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1251_cook_sovereign",
@@ -9324,7 +11835,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9342,7 +11853,17 @@ export const JOB_PATHS = [
       "previousJobId": 1250,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1252_world_crowned_cook",
@@ -9362,7 +11883,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9382,7 +11903,17 @@ export const JOB_PATHS = [
       "previousJobId": 1251,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1253_cook_adept",
@@ -9402,7 +11933,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9420,7 +11951,17 @@ export const JOB_PATHS = [
       "previousJobId": 1022,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1254_eclipse_cook",
@@ -9440,7 +11981,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "v50_dark_1"
     ],
     "strengths": [
       "Party value",
@@ -9458,7 +11999,17 @@ export const JOB_PATHS = [
       "previousJobId": 1253,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1255_mythic_cook",
@@ -9478,7 +12029,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9496,7 +12047,17 @@ export const JOB_PATHS = [
       "previousJobId": 1254,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1256_hidden_origin_cook",
@@ -9516,7 +12077,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9536,7 +12097,17 @@ export const JOB_PATHS = [
       "previousJobId": 1255,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1257_buffer_vanguard",
@@ -9556,7 +12127,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9574,7 +12145,17 @@ export const JOB_PATHS = [
       "previousJobId": 1023,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1258_buffer_paragon",
@@ -9594,7 +12175,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9612,7 +12193,17 @@ export const JOB_PATHS = [
       "previousJobId": 1257,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1259_buffer_sovereign",
@@ -9632,7 +12223,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9650,7 +12241,17 @@ export const JOB_PATHS = [
       "previousJobId": 1258,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1260_world_crowned_buffer",
@@ -9670,7 +12271,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9690,7 +12291,17 @@ export const JOB_PATHS = [
       "previousJobId": 1259,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1261_buffer_adept",
@@ -9710,7 +12321,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9728,7 +12339,17 @@ export const JOB_PATHS = [
       "previousJobId": 1023,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1262_eclipse_buffer",
@@ -9748,7 +12369,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "inspire"
+      "v50_dark_1"
     ],
     "strengths": [
       "Party value",
@@ -9766,7 +12387,17 @@ export const JOB_PATHS = [
       "previousJobId": 1261,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1263_mythic_buffer",
@@ -9786,7 +12417,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9804,7 +12435,17 @@ export const JOB_PATHS = [
       "previousJobId": 1262,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1264_hidden_origin_buffer",
@@ -9824,7 +12465,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "inspire"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Party value",
@@ -9844,7 +12485,17 @@ export const JOB_PATHS = [
       "previousJobId": 1263,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1265_archer_vanguard",
@@ -9864,7 +12515,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -9882,7 +12533,17 @@ export const JOB_PATHS = [
       "previousJobId": 1024,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1266_archer_paragon",
@@ -9902,7 +12563,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -9920,7 +12581,17 @@ export const JOB_PATHS = [
       "previousJobId": 1265,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1267_archer_sovereign",
@@ -9940,7 +12611,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -9958,7 +12629,17 @@ export const JOB_PATHS = [
       "previousJobId": 1266,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1268_world_crowned_archer",
@@ -9978,7 +12659,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -9998,7 +12679,17 @@ export const JOB_PATHS = [
       "previousJobId": 1267,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1269_archer_adept",
@@ -10018,7 +12709,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10036,7 +12727,17 @@ export const JOB_PATHS = [
       "previousJobId": 1024,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1270_eclipse_archer",
@@ -10056,7 +12757,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_dark_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10074,7 +12775,17 @@ export const JOB_PATHS = [
       "previousJobId": 1269,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1271_mythic_archer",
@@ -10094,7 +12805,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10112,7 +12823,17 @@ export const JOB_PATHS = [
       "previousJobId": 1270,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1272_hidden_origin_archer",
@@ -10132,7 +12853,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10152,7 +12873,17 @@ export const JOB_PATHS = [
       "previousJobId": 1271,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1273_hunter_vanguard",
@@ -10172,7 +12903,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10190,7 +12921,17 @@ export const JOB_PATHS = [
       "previousJobId": 1025,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1274_hunter_paragon",
@@ -10210,7 +12951,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10228,7 +12969,17 @@ export const JOB_PATHS = [
       "previousJobId": 1273,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1275_hunter_sovereign",
@@ -10248,7 +12999,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10266,7 +13017,17 @@ export const JOB_PATHS = [
       "previousJobId": 1274,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1276_world_crowned_hunter",
@@ -10286,7 +13047,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10306,7 +13067,17 @@ export const JOB_PATHS = [
       "previousJobId": 1275,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1277_hunter_adept",
@@ -10326,7 +13097,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10344,7 +13115,17 @@ export const JOB_PATHS = [
       "previousJobId": 1025,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1278_eclipse_hunter",
@@ -10364,7 +13145,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_dark_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10382,7 +13163,17 @@ export const JOB_PATHS = [
       "previousJobId": 1277,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1279_mythic_hunter",
@@ -10402,7 +13193,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10420,7 +13211,17 @@ export const JOB_PATHS = [
       "previousJobId": 1278,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1280_hidden_origin_hunter",
@@ -10440,7 +13241,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10460,7 +13261,17 @@ export const JOB_PATHS = [
       "previousJobId": 1279,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1281_ranger_vanguard",
@@ -10480,7 +13291,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10498,7 +13309,17 @@ export const JOB_PATHS = [
       "previousJobId": 1026,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1282_ranger_paragon",
@@ -10518,7 +13339,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10536,7 +13357,17 @@ export const JOB_PATHS = [
       "previousJobId": 1281,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1283_ranger_sovereign",
@@ -10556,7 +13387,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10574,7 +13405,17 @@ export const JOB_PATHS = [
       "previousJobId": 1282,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1284_world_crowned_ranger",
@@ -10594,7 +13435,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10614,7 +13455,17 @@ export const JOB_PATHS = [
       "previousJobId": 1283,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1285_ranger_adept",
@@ -10634,7 +13485,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10652,7 +13503,17 @@ export const JOB_PATHS = [
       "previousJobId": 1026,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1286_eclipse_ranger",
@@ -10672,7 +13533,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_dark_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10690,7 +13551,17 @@ export const JOB_PATHS = [
       "previousJobId": 1285,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1287_mythic_ranger",
@@ -10710,7 +13581,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10728,7 +13599,17 @@ export const JOB_PATHS = [
       "previousJobId": 1286,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1288_hidden_origin_ranger",
@@ -10748,7 +13629,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10768,7 +13649,17 @@ export const JOB_PATHS = [
       "previousJobId": 1287,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1289_sniper_vanguard",
@@ -10788,7 +13679,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10806,7 +13697,17 @@ export const JOB_PATHS = [
       "previousJobId": 1027,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1290_sniper_paragon",
@@ -10826,7 +13727,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10844,7 +13745,17 @@ export const JOB_PATHS = [
       "previousJobId": 1289,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1291_sniper_sovereign",
@@ -10864,7 +13775,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10882,7 +13793,17 @@ export const JOB_PATHS = [
       "previousJobId": 1290,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1292_world_crowned_sniper",
@@ -10902,7 +13823,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10922,7 +13843,17 @@ export const JOB_PATHS = [
       "previousJobId": 1291,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1293_sniper_adept",
@@ -10942,7 +13873,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10960,7 +13891,17 @@ export const JOB_PATHS = [
       "previousJobId": 1027,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1294_eclipse_sniper",
@@ -10980,7 +13921,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_dark_1"
     ],
     "strengths": [
       "Safe damage",
@@ -10998,7 +13939,17 @@ export const JOB_PATHS = [
       "previousJobId": 1293,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1295_mythic_sniper",
@@ -11018,7 +13969,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -11036,7 +13987,17 @@ export const JOB_PATHS = [
       "previousJobId": 1294,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1296_hidden_origin_sniper",
@@ -11056,7 +14017,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_bow_1"
     ],
     "strengths": [
       "Safe damage",
@@ -11076,7 +14037,17 @@ export const JOB_PATHS = [
       "previousJobId": 1295,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1297_gunslinger_vanguard",
@@ -11096,7 +14067,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11114,7 +14085,17 @@ export const JOB_PATHS = [
       "previousJobId": 1028,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1298_gunslinger_paragon",
@@ -11134,7 +14115,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11152,7 +14133,17 @@ export const JOB_PATHS = [
       "previousJobId": 1297,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1299_gunslinger_sovereign",
@@ -11172,7 +14163,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11190,7 +14181,17 @@ export const JOB_PATHS = [
       "previousJobId": 1298,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1300_world_crowned_gunslinger",
@@ -11210,7 +14211,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11230,7 +14231,17 @@ export const JOB_PATHS = [
       "previousJobId": 1299,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1301_gunslinger_adept",
@@ -11250,7 +14261,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11268,7 +14279,17 @@ export const JOB_PATHS = [
       "previousJobId": 1028,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1302_eclipse_gunslinger",
@@ -11288,7 +14309,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_dark_1"
     ],
     "strengths": [
       "Safe damage",
@@ -11306,7 +14327,17 @@ export const JOB_PATHS = [
       "previousJobId": 1301,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1303_mythic_gunslinger",
@@ -11326,7 +14357,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11344,7 +14375,17 @@ export const JOB_PATHS = [
       "previousJobId": 1302,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1304_hidden_origin_gunslinger",
@@ -11364,7 +14405,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11384,7 +14425,17 @@ export const JOB_PATHS = [
       "previousJobId": 1303,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1305_magic_gunner_vanguard",
@@ -11404,7 +14455,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11422,7 +14473,17 @@ export const JOB_PATHS = [
       "previousJobId": 1029,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1306_magic_gunner_paragon",
@@ -11442,7 +14503,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11460,7 +14521,17 @@ export const JOB_PATHS = [
       "previousJobId": 1305,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1307_magic_gunner_sovereign",
@@ -11480,7 +14551,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11498,7 +14569,17 @@ export const JOB_PATHS = [
       "previousJobId": 1306,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1308_world_crowned_magic_gunner",
@@ -11518,7 +14599,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11538,7 +14619,17 @@ export const JOB_PATHS = [
       "previousJobId": 1307,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1309_magic_gunner_adept",
@@ -11558,7 +14649,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11576,7 +14667,17 @@ export const JOB_PATHS = [
       "previousJobId": 1029,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1310_eclipse_magic_gunner",
@@ -11596,7 +14697,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_dark_1"
     ],
     "strengths": [
       "Safe damage",
@@ -11614,7 +14715,17 @@ export const JOB_PATHS = [
       "previousJobId": 1309,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1311_mythic_magic_gunner",
@@ -11634,7 +14745,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11652,7 +14763,17 @@ export const JOB_PATHS = [
       "previousJobId": 1310,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1312_hidden_origin_magic_gunner",
@@ -11672,7 +14793,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Safe damage",
@@ -11692,7 +14813,17 @@ export const JOB_PATHS = [
       "previousJobId": 1311,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1313_rogue_vanguard",
@@ -11712,7 +14843,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -11730,7 +14861,17 @@ export const JOB_PATHS = [
       "previousJobId": 1030,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1314_rogue_paragon",
@@ -11750,7 +14891,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -11768,7 +14909,17 @@ export const JOB_PATHS = [
       "previousJobId": 1313,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1315_rogue_sovereign",
@@ -11788,7 +14939,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -11806,7 +14957,17 @@ export const JOB_PATHS = [
       "previousJobId": 1314,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1316_world_crowned_rogue",
@@ -11826,7 +14987,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -11846,7 +15007,17 @@ export const JOB_PATHS = [
       "previousJobId": 1315,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1317_rogue_adept",
@@ -11866,7 +15037,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -11884,7 +15055,17 @@ export const JOB_PATHS = [
       "previousJobId": 1030,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1318_eclipse_rogue",
@@ -11904,7 +15085,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dark_1"
     ],
     "strengths": [
       "Speed",
@@ -11922,7 +15103,17 @@ export const JOB_PATHS = [
       "previousJobId": 1317,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1319_mythic_rogue",
@@ -11942,7 +15133,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -11960,7 +15151,17 @@ export const JOB_PATHS = [
       "previousJobId": 1318,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1320_hidden_origin_rogue",
@@ -11980,7 +15181,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12000,7 +15201,17 @@ export const JOB_PATHS = [
       "previousJobId": 1319,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1321_thief_vanguard",
@@ -12020,7 +15231,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12038,7 +15249,17 @@ export const JOB_PATHS = [
       "previousJobId": 1031,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1322_thief_paragon",
@@ -12058,7 +15279,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12076,7 +15297,17 @@ export const JOB_PATHS = [
       "previousJobId": 1321,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1323_thief_sovereign",
@@ -12096,7 +15327,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12114,7 +15345,17 @@ export const JOB_PATHS = [
       "previousJobId": 1322,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1324_world_crowned_thief",
@@ -12134,7 +15375,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12154,7 +15395,17 @@ export const JOB_PATHS = [
       "previousJobId": 1323,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1325_thief_adept",
@@ -12174,7 +15425,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12192,7 +15443,17 @@ export const JOB_PATHS = [
       "previousJobId": 1031,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1326_eclipse_thief",
@@ -12212,7 +15473,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dark_1"
     ],
     "strengths": [
       "Speed",
@@ -12230,7 +15491,17 @@ export const JOB_PATHS = [
       "previousJobId": 1325,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1327_mythic_thief",
@@ -12250,7 +15521,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12268,7 +15539,17 @@ export const JOB_PATHS = [
       "previousJobId": 1326,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1328_hidden_origin_thief",
@@ -12288,7 +15569,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12308,7 +15589,17 @@ export const JOB_PATHS = [
       "previousJobId": 1327,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1329_assassin_vanguard",
@@ -12328,7 +15619,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12346,7 +15637,17 @@ export const JOB_PATHS = [
       "previousJobId": 1032,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1330_assassin_paragon",
@@ -12366,7 +15667,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12384,7 +15685,17 @@ export const JOB_PATHS = [
       "previousJobId": 1329,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1331_assassin_sovereign",
@@ -12404,7 +15715,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12422,7 +15733,17 @@ export const JOB_PATHS = [
       "previousJobId": 1330,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1332_world_crowned_assassin",
@@ -12442,7 +15763,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12462,7 +15783,17 @@ export const JOB_PATHS = [
       "previousJobId": 1331,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1333_assassin_adept",
@@ -12482,7 +15813,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12500,7 +15831,17 @@ export const JOB_PATHS = [
       "previousJobId": 1032,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1334_eclipse_assassin",
@@ -12520,7 +15861,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dark_1"
     ],
     "strengths": [
       "Speed",
@@ -12538,7 +15879,17 @@ export const JOB_PATHS = [
       "previousJobId": 1333,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1335_mythic_assassin",
@@ -12558,7 +15909,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12576,7 +15927,17 @@ export const JOB_PATHS = [
       "previousJobId": 1334,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1336_hidden_origin_assassin",
@@ -12596,7 +15957,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12616,7 +15977,17 @@ export const JOB_PATHS = [
       "previousJobId": 1335,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1337_ninja_vanguard",
@@ -12636,7 +16007,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12654,7 +16025,17 @@ export const JOB_PATHS = [
       "previousJobId": 1033,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1338_ninja_paragon",
@@ -12674,7 +16055,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12692,7 +16073,17 @@ export const JOB_PATHS = [
       "previousJobId": 1337,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1339_ninja_sovereign",
@@ -12712,7 +16103,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12730,7 +16121,17 @@ export const JOB_PATHS = [
       "previousJobId": 1338,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1340_world_crowned_ninja",
@@ -12750,7 +16151,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12770,7 +16171,17 @@ export const JOB_PATHS = [
       "previousJobId": 1339,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1341_ninja_adept",
@@ -12790,7 +16201,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12808,7 +16219,17 @@ export const JOB_PATHS = [
       "previousJobId": 1033,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1342_eclipse_ninja",
@@ -12828,7 +16249,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dark_1"
     ],
     "strengths": [
       "Speed",
@@ -12846,7 +16267,17 @@ export const JOB_PATHS = [
       "previousJobId": 1341,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1343_mythic_ninja",
@@ -12866,7 +16297,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12884,7 +16315,17 @@ export const JOB_PATHS = [
       "previousJobId": 1342,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1344_hidden_origin_ninja",
@@ -12904,7 +16345,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12924,7 +16365,17 @@ export const JOB_PATHS = [
       "previousJobId": 1343,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1345_scout_vanguard",
@@ -12944,7 +16395,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -12962,7 +16413,17 @@ export const JOB_PATHS = [
       "previousJobId": 1034,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1346_scout_paragon",
@@ -12982,7 +16443,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13000,7 +16461,17 @@ export const JOB_PATHS = [
       "previousJobId": 1345,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1347_scout_sovereign",
@@ -13020,7 +16491,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13038,7 +16509,17 @@ export const JOB_PATHS = [
       "previousJobId": 1346,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1348_world_crowned_scout",
@@ -13058,7 +16539,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13078,7 +16559,17 @@ export const JOB_PATHS = [
       "previousJobId": 1347,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1349_scout_adept",
@@ -13098,7 +16589,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13116,7 +16607,17 @@ export const JOB_PATHS = [
       "previousJobId": 1034,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1350_eclipse_scout",
@@ -13136,7 +16637,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dark_1"
     ],
     "strengths": [
       "Speed",
@@ -13154,7 +16655,17 @@ export const JOB_PATHS = [
       "previousJobId": 1349,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1351_mythic_scout",
@@ -13174,7 +16685,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13192,7 +16703,17 @@ export const JOB_PATHS = [
       "previousJobId": 1350,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1352_hidden_origin_scout",
@@ -13212,7 +16733,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13232,7 +16753,17 @@ export const JOB_PATHS = [
       "previousJobId": 1351,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1353_spy_vanguard",
@@ -13252,7 +16783,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13270,7 +16801,17 @@ export const JOB_PATHS = [
       "previousJobId": 1035,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1354_spy_paragon",
@@ -13290,7 +16831,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13308,7 +16849,17 @@ export const JOB_PATHS = [
       "previousJobId": 1353,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1355_spy_sovereign",
@@ -13328,7 +16879,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13346,7 +16897,17 @@ export const JOB_PATHS = [
       "previousJobId": 1354,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1356_world_crowned_spy",
@@ -13366,7 +16927,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13386,7 +16947,17 @@ export const JOB_PATHS = [
       "previousJobId": 1355,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1357_spy_adept",
@@ -13406,7 +16977,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13424,7 +16995,17 @@ export const JOB_PATHS = [
       "previousJobId": 1035,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1358_eclipse_spy",
@@ -13444,7 +17025,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dark_1"
     ],
     "strengths": [
       "Speed",
@@ -13462,7 +17043,17 @@ export const JOB_PATHS = [
       "previousJobId": 1357,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1359_mythic_spy",
@@ -13482,7 +17073,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13500,7 +17091,17 @@ export const JOB_PATHS = [
       "previousJobId": 1358,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1360_hidden_origin_spy",
@@ -13520,7 +17121,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13540,7 +17141,17 @@ export const JOB_PATHS = [
       "previousJobId": 1359,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1361_trickster_vanguard",
@@ -13560,7 +17171,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13578,7 +17189,17 @@ export const JOB_PATHS = [
       "previousJobId": 1036,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1362_trickster_paragon",
@@ -13598,7 +17219,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13616,7 +17237,17 @@ export const JOB_PATHS = [
       "previousJobId": 1361,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1363_trickster_sovereign",
@@ -13636,7 +17267,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13654,7 +17285,17 @@ export const JOB_PATHS = [
       "previousJobId": 1362,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1364_world_crowned_trickster",
@@ -13674,7 +17315,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13694,7 +17335,17 @@ export const JOB_PATHS = [
       "previousJobId": 1363,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1365_trickster_adept",
@@ -13714,7 +17365,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13732,7 +17383,17 @@ export const JOB_PATHS = [
       "previousJobId": 1036,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1366_eclipse_trickster",
@@ -13752,7 +17413,7 @@ export const JOB_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dark_1"
     ],
     "strengths": [
       "Speed",
@@ -13770,7 +17431,17 @@ export const JOB_PATHS = [
       "previousJobId": 1365,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1367_mythic_trickster",
@@ -13790,7 +17461,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13808,7 +17479,17 @@ export const JOB_PATHS = [
       "previousJobId": 1366,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1368_hidden_origin_trickster",
@@ -13828,7 +17509,7 @@ export const JOB_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dagger_1"
     ],
     "strengths": [
       "Speed",
@@ -13848,7 +17529,17 @@ export const JOB_PATHS = [
       "previousJobId": 1367,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dagger_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dagger_3"
+      }
+    ]
   },
   {
     "id": "job_path_1369_blacksmith_vanguard",
@@ -13871,7 +17562,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -13889,7 +17580,17 @@ export const JOB_PATHS = [
       "previousJobId": 1037,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1370_blacksmith_paragon",
@@ -13912,7 +17613,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -13930,7 +17631,17 @@ export const JOB_PATHS = [
       "previousJobId": 1369,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1371_blacksmith_sovereign",
@@ -13953,7 +17664,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -13971,7 +17682,17 @@ export const JOB_PATHS = [
       "previousJobId": 1370,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1372_world_crowned_blacksmith",
@@ -13994,7 +17715,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -14014,7 +17735,17 @@ export const JOB_PATHS = [
       "previousJobId": 1371,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1373_blacksmith_adept",
@@ -14037,7 +17768,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -14055,7 +17786,17 @@ export const JOB_PATHS = [
       "previousJobId": 1037,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1374_eclipse_blacksmith",
@@ -14078,7 +17819,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_dark_1"
     ],
     "strengths": [
       "Items",
@@ -14096,7 +17837,17 @@ export const JOB_PATHS = [
       "previousJobId": 1373,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1375_mythic_blacksmith",
@@ -14119,7 +17870,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -14137,7 +17888,17 @@ export const JOB_PATHS = [
       "previousJobId": 1374,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1376_hidden_origin_blacksmith",
@@ -14160,7 +17921,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -14180,7 +17941,17 @@ export const JOB_PATHS = [
       "previousJobId": 1375,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1377_alchemist_vanguard",
@@ -14203,7 +17974,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -14221,7 +17992,17 @@ export const JOB_PATHS = [
       "previousJobId": 1038,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1378_alchemist_paragon",
@@ -14244,7 +18025,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -14262,7 +18043,17 @@ export const JOB_PATHS = [
       "previousJobId": 1377,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1379_alchemist_sovereign",
@@ -14285,7 +18076,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -14303,7 +18094,17 @@ export const JOB_PATHS = [
       "previousJobId": 1378,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1380_world_crowned_alchemist",
@@ -14326,7 +18127,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -14346,7 +18147,17 @@ export const JOB_PATHS = [
       "previousJobId": 1379,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1381_alchemist_adept",
@@ -14369,7 +18180,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -14387,7 +18198,17 @@ export const JOB_PATHS = [
       "previousJobId": 1038,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1382_eclipse_alchemist",
@@ -14410,7 +18231,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_dark_1"
     ],
     "strengths": [
       "Items",
@@ -14428,7 +18249,17 @@ export const JOB_PATHS = [
       "previousJobId": 1381,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1383_mythic_alchemist",
@@ -14451,7 +18282,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -14469,7 +18300,17 @@ export const JOB_PATHS = [
       "previousJobId": 1382,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1384_hidden_origin_alchemist",
@@ -14492,7 +18333,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -14512,7 +18353,17 @@ export const JOB_PATHS = [
       "previousJobId": 1383,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1385_enchanter_vanguard",
@@ -14535,7 +18386,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -14553,7 +18404,17 @@ export const JOB_PATHS = [
       "previousJobId": 1039,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1386_enchanter_paragon",
@@ -14576,7 +18437,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -14594,7 +18455,17 @@ export const JOB_PATHS = [
       "previousJobId": 1385,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1387_enchanter_sovereign",
@@ -14617,7 +18488,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -14635,7 +18506,17 @@ export const JOB_PATHS = [
       "previousJobId": 1386,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1388_world_crowned_enchanter",
@@ -14658,7 +18539,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -14678,7 +18559,17 @@ export const JOB_PATHS = [
       "previousJobId": 1387,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1389_enchanter_adept",
@@ -14701,7 +18592,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -14719,7 +18610,17 @@ export const JOB_PATHS = [
       "previousJobId": 1039,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1390_eclipse_enchanter",
@@ -14742,7 +18643,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_dark_1"
     ],
     "strengths": [
       "Items",
@@ -14760,7 +18661,17 @@ export const JOB_PATHS = [
       "previousJobId": 1389,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1391_mythic_enchanter",
@@ -14783,7 +18694,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -14801,7 +18712,17 @@ export const JOB_PATHS = [
       "previousJobId": 1390,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1392_hidden_origin_enchanter",
@@ -14824,7 +18745,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -14844,7 +18765,17 @@ export const JOB_PATHS = [
       "previousJobId": 1391,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1393_engineer_vanguard",
@@ -14867,7 +18798,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -14885,7 +18816,17 @@ export const JOB_PATHS = [
       "previousJobId": 1040,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1394_engineer_paragon",
@@ -14908,7 +18849,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -14926,7 +18867,17 @@ export const JOB_PATHS = [
       "previousJobId": 1393,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1395_engineer_sovereign",
@@ -14949,7 +18900,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -14967,7 +18918,17 @@ export const JOB_PATHS = [
       "previousJobId": 1394,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1396_world_crowned_engineer",
@@ -14990,7 +18951,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -15010,7 +18971,17 @@ export const JOB_PATHS = [
       "previousJobId": 1395,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1397_engineer_adept",
@@ -15033,7 +19004,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -15051,7 +19022,17 @@ export const JOB_PATHS = [
       "previousJobId": 1040,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1398_eclipse_engineer",
@@ -15074,7 +19055,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_dark_1"
     ],
     "strengths": [
       "Items",
@@ -15092,7 +19073,17 @@ export const JOB_PATHS = [
       "previousJobId": 1397,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1399_mythic_engineer",
@@ -15115,7 +19106,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -15133,7 +19124,17 @@ export const JOB_PATHS = [
       "previousJobId": 1398,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1400_hidden_origin_engineer",
@@ -15156,7 +19157,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_catalyst_1"
     ],
     "strengths": [
       "Items",
@@ -15176,7 +19177,17 @@ export const JOB_PATHS = [
       "previousJobId": 1399,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_catalyst_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_catalyst_3"
+      }
+    ]
   },
   {
     "id": "job_path_1401_tailor_vanguard",
@@ -15199,7 +19210,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15217,7 +19228,17 @@ export const JOB_PATHS = [
       "previousJobId": 1041,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1402_tailor_paragon",
@@ -15240,7 +19261,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15258,7 +19279,17 @@ export const JOB_PATHS = [
       "previousJobId": 1401,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1403_tailor_sovereign",
@@ -15281,7 +19312,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15299,7 +19330,17 @@ export const JOB_PATHS = [
       "previousJobId": 1402,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1404_world_crowned_tailor",
@@ -15322,7 +19363,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15342,7 +19383,17 @@ export const JOB_PATHS = [
       "previousJobId": 1403,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1405_tailor_adept",
@@ -15365,7 +19416,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15383,7 +19434,17 @@ export const JOB_PATHS = [
       "previousJobId": 1041,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1406_eclipse_tailor",
@@ -15406,7 +19467,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_dark_1"
     ],
     "strengths": [
       "Items",
@@ -15424,7 +19485,17 @@ export const JOB_PATHS = [
       "previousJobId": 1405,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1407_mythic_tailor",
@@ -15447,7 +19518,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15465,7 +19536,17 @@ export const JOB_PATHS = [
       "previousJobId": 1406,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1408_hidden_origin_tailor",
@@ -15488,7 +19569,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15508,7 +19589,17 @@ export const JOB_PATHS = [
       "previousJobId": 1407,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1409_chef_vanguard",
@@ -15531,7 +19622,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15549,7 +19640,17 @@ export const JOB_PATHS = [
       "previousJobId": 1042,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1410_chef_paragon",
@@ -15572,7 +19673,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15590,7 +19691,17 @@ export const JOB_PATHS = [
       "previousJobId": 1409,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1411_chef_sovereign",
@@ -15613,7 +19724,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15631,7 +19742,17 @@ export const JOB_PATHS = [
       "previousJobId": 1410,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1412_world_crowned_chef",
@@ -15654,7 +19775,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15674,7 +19795,17 @@ export const JOB_PATHS = [
       "previousJobId": 1411,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1413_chef_adept",
@@ -15697,7 +19828,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15715,7 +19846,17 @@ export const JOB_PATHS = [
       "previousJobId": 1042,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1414_eclipse_chef",
@@ -15738,7 +19879,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_dark_1"
     ],
     "strengths": [
       "Items",
@@ -15756,7 +19897,17 @@ export const JOB_PATHS = [
       "previousJobId": 1413,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1415_mythic_chef",
@@ -15779,7 +19930,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15797,7 +19948,17 @@ export const JOB_PATHS = [
       "previousJobId": 1414,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1416_hidden_origin_chef",
@@ -15820,7 +19981,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15840,7 +20001,17 @@ export const JOB_PATHS = [
       "previousJobId": 1415,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1417_appraiser_vanguard",
@@ -15863,7 +20034,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15881,7 +20052,17 @@ export const JOB_PATHS = [
       "previousJobId": 1043,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1418_appraiser_paragon",
@@ -15904,7 +20085,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15922,7 +20103,17 @@ export const JOB_PATHS = [
       "previousJobId": 1417,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1419_appraiser_sovereign",
@@ -15945,7 +20136,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -15963,7 +20154,17 @@ export const JOB_PATHS = [
       "previousJobId": 1418,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1420_world_crowned_appraiser",
@@ -15986,7 +20187,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -16006,7 +20207,17 @@ export const JOB_PATHS = [
       "previousJobId": 1419,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1421_appraiser_adept",
@@ -16029,7 +20240,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -16047,7 +20258,17 @@ export const JOB_PATHS = [
       "previousJobId": 1043,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1422_eclipse_appraiser",
@@ -16070,7 +20291,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_dark_1"
     ],
     "strengths": [
       "Items",
@@ -16088,7 +20309,17 @@ export const JOB_PATHS = [
       "previousJobId": 1421,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1423_mythic_appraiser",
@@ -16111,7 +20342,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -16129,7 +20360,17 @@ export const JOB_PATHS = [
       "previousJobId": 1422,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1424_hidden_origin_appraiser",
@@ -16152,7 +20393,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -16172,7 +20413,17 @@ export const JOB_PATHS = [
       "previousJobId": 1423,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1425_merchant_vanguard",
@@ -16195,7 +20446,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -16213,7 +20464,17 @@ export const JOB_PATHS = [
       "previousJobId": 1044,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1426_merchant_paragon",
@@ -16236,7 +20497,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -16254,7 +20515,17 @@ export const JOB_PATHS = [
       "previousJobId": 1425,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1427_merchant_sovereign",
@@ -16277,7 +20548,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -16295,7 +20566,17 @@ export const JOB_PATHS = [
       "previousJobId": 1426,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1428_world_crowned_merchant",
@@ -16318,7 +20599,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -16338,7 +20619,17 @@ export const JOB_PATHS = [
       "previousJobId": 1427,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1429_merchant_adept",
@@ -16361,7 +20652,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -16379,7 +20670,17 @@ export const JOB_PATHS = [
       "previousJobId": 1044,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1430_eclipse_merchant",
@@ -16402,7 +20703,7 @@ export const JOB_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "brew_tonic"
+      "v50_dark_1"
     ],
     "strengths": [
       "Items",
@@ -16420,7 +20721,17 @@ export const JOB_PATHS = [
       "previousJobId": 1429,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1431_mythic_merchant",
@@ -16443,7 +20754,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -16461,7 +20772,17 @@ export const JOB_PATHS = [
       "previousJobId": 1430,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1432_hidden_origin_merchant",
@@ -16484,7 +20805,7 @@ export const JOB_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "brew_tonic"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Items",
@@ -16504,7 +20825,17 @@ export const JOB_PATHS = [
       "previousJobId": 1431,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1433_saint_vanguard",
@@ -16525,7 +20856,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -16543,7 +20874,17 @@ export const JOB_PATHS = [
       "previousJobId": 1045,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1434_saint_paragon",
@@ -16564,7 +20905,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -16582,7 +20923,17 @@ export const JOB_PATHS = [
       "previousJobId": 1433,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1435_saint_sovereign",
@@ -16603,7 +20954,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -16621,7 +20972,17 @@ export const JOB_PATHS = [
       "previousJobId": 1434,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1436_world_crowned_saint",
@@ -16642,7 +21003,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -16662,7 +21023,17 @@ export const JOB_PATHS = [
       "previousJobId": 1435,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1437_saint_adept",
@@ -16683,7 +21054,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -16701,7 +21072,17 @@ export const JOB_PATHS = [
       "previousJobId": 1045,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1438_eclipse_saint",
@@ -16722,7 +21103,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -16740,7 +21121,17 @@ export const JOB_PATHS = [
       "previousJobId": 1437,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1439_mythic_saint",
@@ -16761,7 +21152,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -16779,7 +21170,17 @@ export const JOB_PATHS = [
       "previousJobId": 1438,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1440_hidden_origin_saint",
@@ -16800,7 +21201,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -16820,7 +21221,17 @@ export const JOB_PATHS = [
       "previousJobId": 1439,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1441_exorcist_vanguard",
@@ -16841,7 +21252,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -16859,7 +21270,17 @@ export const JOB_PATHS = [
       "previousJobId": 1046,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1442_exorcist_paragon",
@@ -16880,7 +21301,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -16898,7 +21319,17 @@ export const JOB_PATHS = [
       "previousJobId": 1441,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1443_exorcist_sovereign",
@@ -16919,7 +21350,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -16937,7 +21368,17 @@ export const JOB_PATHS = [
       "previousJobId": 1442,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1444_world_crowned_exorcist",
@@ -16958,7 +21399,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -16978,7 +21419,17 @@ export const JOB_PATHS = [
       "previousJobId": 1443,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1445_exorcist_adept",
@@ -16999,7 +21450,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17017,7 +21468,17 @@ export const JOB_PATHS = [
       "previousJobId": 1046,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1446_eclipse_exorcist",
@@ -17038,7 +21499,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17056,7 +21517,17 @@ export const JOB_PATHS = [
       "previousJobId": 1445,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1447_mythic_exorcist",
@@ -17077,7 +21548,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17095,7 +21566,17 @@ export const JOB_PATHS = [
       "previousJobId": 1446,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1448_hidden_origin_exorcist",
@@ -17116,7 +21597,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17136,7 +21617,17 @@ export const JOB_PATHS = [
       "previousJobId": 1447,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1449_templar_vanguard",
@@ -17157,7 +21648,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17175,7 +21666,17 @@ export const JOB_PATHS = [
       "previousJobId": 1047,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1450_templar_paragon",
@@ -17196,7 +21697,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17214,7 +21715,17 @@ export const JOB_PATHS = [
       "previousJobId": 1449,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1451_templar_sovereign",
@@ -17235,7 +21746,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17253,7 +21764,17 @@ export const JOB_PATHS = [
       "previousJobId": 1450,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1452_world_crowned_templar",
@@ -17274,7 +21795,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17294,7 +21815,17 @@ export const JOB_PATHS = [
       "previousJobId": 1451,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1453_templar_adept",
@@ -17315,7 +21846,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17333,7 +21864,17 @@ export const JOB_PATHS = [
       "previousJobId": 1047,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1454_eclipse_templar",
@@ -17354,7 +21895,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17372,7 +21913,17 @@ export const JOB_PATHS = [
       "previousJobId": 1453,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1455_mythic_templar",
@@ -17393,7 +21944,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17411,7 +21962,17 @@ export const JOB_PATHS = [
       "previousJobId": 1454,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1456_hidden_origin_templar",
@@ -17432,7 +21993,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17452,7 +22013,17 @@ export const JOB_PATHS = [
       "previousJobId": 1455,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1457_oracle_vanguard",
@@ -17473,7 +22044,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17491,7 +22062,17 @@ export const JOB_PATHS = [
       "previousJobId": 1048,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1458_oracle_paragon",
@@ -17512,7 +22093,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17530,7 +22111,17 @@ export const JOB_PATHS = [
       "previousJobId": 1457,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1459_oracle_sovereign",
@@ -17551,7 +22142,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17569,7 +22160,17 @@ export const JOB_PATHS = [
       "previousJobId": 1458,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1460_world_crowned_oracle",
@@ -17590,7 +22191,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17610,7 +22211,17 @@ export const JOB_PATHS = [
       "previousJobId": 1459,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1461_oracle_adept",
@@ -17631,7 +22242,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17649,7 +22260,17 @@ export const JOB_PATHS = [
       "previousJobId": 1048,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1462_eclipse_oracle",
@@ -17670,7 +22291,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17688,7 +22309,17 @@ export const JOB_PATHS = [
       "previousJobId": 1461,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1463_mythic_oracle",
@@ -17709,7 +22340,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17727,7 +22358,17 @@ export const JOB_PATHS = [
       "previousJobId": 1462,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1464_hidden_origin_oracle",
@@ -17748,7 +22389,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -17768,7 +22409,17 @@ export const JOB_PATHS = [
       "previousJobId": 1463,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      }
+    ]
   },
   {
     "id": "job_path_1465_necromancer_vanguard",
@@ -17789,7 +22440,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -17807,7 +22458,17 @@ export const JOB_PATHS = [
       "previousJobId": 1049,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1466_necromancer_paragon",
@@ -17828,7 +22489,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -17846,7 +22507,17 @@ export const JOB_PATHS = [
       "previousJobId": 1465,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1467_necromancer_sovereign",
@@ -17867,7 +22538,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -17885,7 +22556,17 @@ export const JOB_PATHS = [
       "previousJobId": 1466,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1468_world_crowned_necromancer",
@@ -17906,7 +22587,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -17926,7 +22607,17 @@ export const JOB_PATHS = [
       "previousJobId": 1467,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1469_necromancer_adept",
@@ -17947,7 +22638,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -17965,7 +22656,17 @@ export const JOB_PATHS = [
       "previousJobId": 1049,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1470_eclipse_necromancer",
@@ -17986,7 +22687,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18004,7 +22705,17 @@ export const JOB_PATHS = [
       "previousJobId": 1469,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1471_mythic_necromancer",
@@ -18025,7 +22736,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18043,7 +22754,17 @@ export const JOB_PATHS = [
       "previousJobId": 1470,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1472_hidden_origin_necromancer",
@@ -18064,7 +22785,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18084,7 +22805,17 @@ export const JOB_PATHS = [
       "previousJobId": 1471,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1473_warlock_vanguard",
@@ -18105,7 +22836,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18123,7 +22854,17 @@ export const JOB_PATHS = [
       "previousJobId": 1050,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1474_warlock_paragon",
@@ -18144,7 +22885,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18162,7 +22903,17 @@ export const JOB_PATHS = [
       "previousJobId": 1473,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1475_warlock_sovereign",
@@ -18183,7 +22934,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18201,7 +22952,17 @@ export const JOB_PATHS = [
       "previousJobId": 1474,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1476_world_crowned_warlock",
@@ -18222,7 +22983,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18242,7 +23003,17 @@ export const JOB_PATHS = [
       "previousJobId": 1475,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1477_warlock_adept",
@@ -18263,7 +23034,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18281,7 +23052,17 @@ export const JOB_PATHS = [
       "previousJobId": 1050,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1478_eclipse_warlock",
@@ -18302,7 +23083,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18320,7 +23101,17 @@ export const JOB_PATHS = [
       "previousJobId": 1477,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1479_mythic_warlock",
@@ -18341,7 +23132,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18359,7 +23150,17 @@ export const JOB_PATHS = [
       "previousJobId": 1478,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1480_hidden_origin_warlock",
@@ -18380,7 +23181,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18400,7 +23201,17 @@ export const JOB_PATHS = [
       "previousJobId": 1479,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1481_dark_knight_vanguard",
@@ -18421,7 +23232,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18439,7 +23250,17 @@ export const JOB_PATHS = [
       "previousJobId": 1051,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1482_dark_knight_paragon",
@@ -18460,7 +23281,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18478,7 +23299,17 @@ export const JOB_PATHS = [
       "previousJobId": 1481,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1483_dark_knight_sovereign",
@@ -18499,7 +23330,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18517,7 +23348,17 @@ export const JOB_PATHS = [
       "previousJobId": 1482,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1484_world_crowned_dark_knight",
@@ -18538,7 +23379,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18558,7 +23399,17 @@ export const JOB_PATHS = [
       "previousJobId": 1483,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1485_dark_knight_adept",
@@ -18579,7 +23430,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18597,7 +23448,17 @@ export const JOB_PATHS = [
       "previousJobId": 1051,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1486_eclipse_dark_knight",
@@ -18618,7 +23479,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18636,7 +23497,17 @@ export const JOB_PATHS = [
       "previousJobId": 1485,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1487_mythic_dark_knight",
@@ -18657,7 +23528,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18675,7 +23546,17 @@ export const JOB_PATHS = [
       "previousJobId": 1486,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1488_hidden_origin_dark_knight",
@@ -18696,7 +23577,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18716,7 +23597,17 @@ export const JOB_PATHS = [
       "previousJobId": 1487,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1489_curse_mage_vanguard",
@@ -18737,7 +23628,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18755,7 +23646,17 @@ export const JOB_PATHS = [
       "previousJobId": 1052,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1490_curse_mage_paragon",
@@ -18776,7 +23677,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18794,7 +23695,17 @@ export const JOB_PATHS = [
       "previousJobId": 1489,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1491_curse_mage_sovereign",
@@ -18815,7 +23726,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18833,7 +23744,17 @@ export const JOB_PATHS = [
       "previousJobId": 1490,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1492_world_crowned_curse_mage",
@@ -18854,7 +23775,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18874,7 +23795,17 @@ export const JOB_PATHS = [
       "previousJobId": 1491,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1493_curse_mage_adept",
@@ -18895,7 +23826,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18913,7 +23844,17 @@ export const JOB_PATHS = [
       "previousJobId": 1052,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1494_eclipse_curse_mage",
@@ -18934,7 +23875,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18952,7 +23893,17 @@ export const JOB_PATHS = [
       "previousJobId": 1493,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1495_mythic_curse_mage",
@@ -18973,7 +23924,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -18991,7 +23942,17 @@ export const JOB_PATHS = [
       "previousJobId": 1494,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1496_hidden_origin_curse_mage",
@@ -19012,7 +23973,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19032,7 +23993,17 @@ export const JOB_PATHS = [
       "previousJobId": 1495,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1497_blood_mage_vanguard",
@@ -19053,7 +24024,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19071,7 +24042,17 @@ export const JOB_PATHS = [
       "previousJobId": 1053,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1498_blood_mage_paragon",
@@ -19092,7 +24073,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19110,7 +24091,17 @@ export const JOB_PATHS = [
       "previousJobId": 1497,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1499_blood_mage_sovereign",
@@ -19131,7 +24122,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19149,7 +24140,17 @@ export const JOB_PATHS = [
       "previousJobId": 1498,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1500_world_crowned_blood_mage",
@@ -19170,7 +24171,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19190,7 +24191,17 @@ export const JOB_PATHS = [
       "previousJobId": 1499,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1501_blood_mage_adept",
@@ -19211,7 +24222,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19229,7 +24240,17 @@ export const JOB_PATHS = [
       "previousJobId": 1053,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1502_eclipse_blood_mage",
@@ -19250,7 +24271,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19268,7 +24289,17 @@ export const JOB_PATHS = [
       "previousJobId": 1501,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1503_mythic_blood_mage",
@@ -19289,7 +24320,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19307,7 +24338,17 @@ export const JOB_PATHS = [
       "previousJobId": 1502,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1504_hidden_origin_blood_mage",
@@ -19328,7 +24369,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19348,7 +24389,17 @@ export const JOB_PATHS = [
       "previousJobId": 1503,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1505_reaper_vanguard",
@@ -19369,7 +24420,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19387,7 +24438,17 @@ export const JOB_PATHS = [
       "previousJobId": 1054,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1506_reaper_paragon",
@@ -19408,7 +24469,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19426,7 +24487,17 @@ export const JOB_PATHS = [
       "previousJobId": 1505,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1507_reaper_sovereign",
@@ -19447,7 +24518,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19465,7 +24536,17 @@ export const JOB_PATHS = [
       "previousJobId": 1506,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1508_world_crowned_reaper",
@@ -19486,7 +24567,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19506,7 +24587,17 @@ export const JOB_PATHS = [
       "previousJobId": 1507,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1509_reaper_adept",
@@ -19527,7 +24618,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19545,7 +24636,17 @@ export const JOB_PATHS = [
       "previousJobId": 1054,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1510_eclipse_reaper",
@@ -19566,7 +24667,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19584,7 +24685,17 @@ export const JOB_PATHS = [
       "previousJobId": 1509,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1511_mythic_reaper",
@@ -19605,7 +24716,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19623,7 +24734,17 @@ export const JOB_PATHS = [
       "previousJobId": 1510,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1512_hidden_origin_reaper",
@@ -19644,7 +24765,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_dark_1"
     ],
     "strengths": [
       "Curses",
@@ -19664,7 +24785,17 @@ export const JOB_PATHS = [
       "previousJobId": 1511,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1513_demon_lord_vanguard",
@@ -19685,7 +24816,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -19703,7 +24834,17 @@ export const JOB_PATHS = [
       "previousJobId": 1055,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1514_demon_lord_paragon",
@@ -19724,7 +24865,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -19742,7 +24883,17 @@ export const JOB_PATHS = [
       "previousJobId": 1513,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1515_demon_lord_sovereign",
@@ -19763,7 +24914,7 @@ export const JOB_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -19781,7 +24932,17 @@ export const JOB_PATHS = [
       "previousJobId": 1514,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1516_world_crowned_demon_lord",
@@ -19802,7 +24963,7 @@ export const JOB_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -19822,7 +24983,17 @@ export const JOB_PATHS = [
       "previousJobId": 1515,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1517_demon_lord_adept",
@@ -19843,7 +25014,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -19861,7 +25032,17 @@ export const JOB_PATHS = [
       "previousJobId": 1055,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1518_eclipse_demon_lord",
@@ -19882,7 +25063,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -19900,7 +25081,17 @@ export const JOB_PATHS = [
       "previousJobId": 1517,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1519_mythic_demon_lord",
@@ -19921,7 +25112,7 @@ export const JOB_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -19939,7 +25130,17 @@ export const JOB_PATHS = [
       "previousJobId": 1518,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1520_hidden_origin_demon_lord",
@@ -19960,7 +25161,7 @@ export const JOB_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -19980,7 +25181,17 @@ export const JOB_PATHS = [
       "previousJobId": 1519,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1521_vampire_lord_vanguard",
@@ -20001,7 +25212,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20019,7 +25230,17 @@ export const JOB_PATHS = [
       "previousJobId": 1056,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1522_vampire_lord_paragon",
@@ -20040,7 +25261,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20058,7 +25279,17 @@ export const JOB_PATHS = [
       "previousJobId": 1521,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1523_vampire_lord_sovereign",
@@ -20079,7 +25310,7 @@ export const JOB_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20097,7 +25328,17 @@ export const JOB_PATHS = [
       "previousJobId": 1522,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1524_world_crowned_vampire_lord",
@@ -20118,7 +25359,7 @@ export const JOB_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20138,7 +25379,17 @@ export const JOB_PATHS = [
       "previousJobId": 1523,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1525_vampire_lord_adept",
@@ -20159,7 +25410,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20177,7 +25428,17 @@ export const JOB_PATHS = [
       "previousJobId": 1056,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1526_eclipse_vampire_lord",
@@ -20198,7 +25459,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20216,7 +25477,17 @@ export const JOB_PATHS = [
       "previousJobId": 1525,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1527_mythic_vampire_lord",
@@ -20237,7 +25508,7 @@ export const JOB_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20255,7 +25526,17 @@ export const JOB_PATHS = [
       "previousJobId": 1526,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1528_hidden_origin_vampire_lord",
@@ -20276,7 +25557,7 @@ export const JOB_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20296,7 +25577,17 @@ export const JOB_PATHS = [
       "previousJobId": 1527,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1529_oni_warrior_vanguard",
@@ -20317,7 +25608,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20335,7 +25626,17 @@ export const JOB_PATHS = [
       "previousJobId": 1057,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1530_oni_warrior_paragon",
@@ -20356,7 +25657,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20374,7 +25675,17 @@ export const JOB_PATHS = [
       "previousJobId": 1529,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1531_oni_warrior_sovereign",
@@ -20395,7 +25706,7 @@ export const JOB_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20413,7 +25724,17 @@ export const JOB_PATHS = [
       "previousJobId": 1530,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1532_world_crowned_oni_warrior",
@@ -20434,7 +25755,7 @@ export const JOB_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20454,7 +25775,17 @@ export const JOB_PATHS = [
       "previousJobId": 1531,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1533_oni_warrior_adept",
@@ -20475,7 +25806,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20493,7 +25824,17 @@ export const JOB_PATHS = [
       "previousJobId": 1057,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1534_eclipse_oni_warrior",
@@ -20514,7 +25855,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20532,7 +25873,17 @@ export const JOB_PATHS = [
       "previousJobId": 1533,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1535_mythic_oni_warrior",
@@ -20553,7 +25904,7 @@ export const JOB_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20571,7 +25922,17 @@ export const JOB_PATHS = [
       "previousJobId": 1534,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1536_hidden_origin_oni_warrior",
@@ -20592,7 +25953,7 @@ export const JOB_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20612,7 +25973,17 @@ export const JOB_PATHS = [
       "previousJobId": 1535,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1537_goblin_champion_vanguard",
@@ -20633,7 +26004,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Strong traits",
@@ -20651,7 +26022,17 @@ export const JOB_PATHS = [
       "previousJobId": 1058,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1538_goblin_champion_paragon",
@@ -20672,7 +26053,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Strong traits",
@@ -20690,7 +26071,17 @@ export const JOB_PATHS = [
       "previousJobId": 1537,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1539_goblin_champion_sovereign",
@@ -20711,7 +26102,7 @@ export const JOB_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Strong traits",
@@ -20729,7 +26120,17 @@ export const JOB_PATHS = [
       "previousJobId": 1538,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1540_world_crowned_goblin_champion",
@@ -20750,7 +26151,7 @@ export const JOB_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Strong traits",
@@ -20770,7 +26171,17 @@ export const JOB_PATHS = [
       "previousJobId": 1539,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1541_goblin_champion_adept",
@@ -20791,7 +26202,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Strong traits",
@@ -20809,7 +26220,17 @@ export const JOB_PATHS = [
       "previousJobId": 1058,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1542_eclipse_goblin_champion",
@@ -20830,7 +26251,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -20848,7 +26269,17 @@ export const JOB_PATHS = [
       "previousJobId": 1541,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1543_mythic_goblin_champion",
@@ -20869,7 +26300,7 @@ export const JOB_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Strong traits",
@@ -20887,7 +26318,17 @@ export const JOB_PATHS = [
       "previousJobId": 1542,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1544_hidden_origin_goblin_champion",
@@ -20908,7 +26349,7 @@ export const JOB_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Strong traits",
@@ -20928,7 +26369,17 @@ export const JOB_PATHS = [
       "previousJobId": 1543,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1545_slime_predator_vanguard",
@@ -20949,7 +26400,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_hunter_step"
     ],
     "strengths": [
       "Strong traits",
@@ -20967,7 +26418,17 @@ export const JOB_PATHS = [
       "previousJobId": 1059,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "job_path_1546_slime_predator_paragon",
@@ -20988,7 +26449,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_hunter_step"
     ],
     "strengths": [
       "Strong traits",
@@ -21006,7 +26467,17 @@ export const JOB_PATHS = [
       "previousJobId": 1545,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "job_path_1547_slime_predator_sovereign",
@@ -21027,7 +26498,7 @@ export const JOB_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_hunter_step"
     ],
     "strengths": [
       "Strong traits",
@@ -21045,7 +26516,17 @@ export const JOB_PATHS = [
       "previousJobId": 1546,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "job_path_1548_world_crowned_slime_predator",
@@ -21066,7 +26547,7 @@ export const JOB_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_hunter_step"
     ],
     "strengths": [
       "Strong traits",
@@ -21086,7 +26567,17 @@ export const JOB_PATHS = [
       "previousJobId": 1547,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "job_path_1549_slime_predator_adept",
@@ -21107,7 +26598,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_hunter_step"
     ],
     "strengths": [
       "Strong traits",
@@ -21125,7 +26616,17 @@ export const JOB_PATHS = [
       "previousJobId": 1059,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "job_path_1550_eclipse_slime_predator",
@@ -21146,7 +26647,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -21164,7 +26665,17 @@ export const JOB_PATHS = [
       "previousJobId": 1549,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1551_mythic_slime_predator",
@@ -21185,7 +26696,7 @@ export const JOB_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_hunter_step"
     ],
     "strengths": [
       "Strong traits",
@@ -21203,7 +26714,17 @@ export const JOB_PATHS = [
       "previousJobId": 1550,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "job_path_1552_hidden_origin_slime_predator",
@@ -21224,7 +26745,7 @@ export const JOB_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_hunter_step"
     ],
     "strengths": [
       "Strong traits",
@@ -21244,7 +26765,17 @@ export const JOB_PATHS = [
       "previousJobId": 1551,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "job_path_1553_dragon_apostle_vanguard",
@@ -21265,7 +26796,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_fire_1"
     ],
     "strengths": [
       "Strong traits",
@@ -21283,7 +26814,17 @@ export const JOB_PATHS = [
       "previousJobId": 1060,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_3"
+      }
+    ]
   },
   {
     "id": "job_path_1554_dragon_apostle_paragon",
@@ -21304,7 +26845,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_fire_1"
     ],
     "strengths": [
       "Strong traits",
@@ -21322,7 +26863,17 @@ export const JOB_PATHS = [
       "previousJobId": 1553,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_3"
+      }
+    ]
   },
   {
     "id": "job_path_1555_dragon_apostle_sovereign",
@@ -21343,7 +26894,7 @@ export const JOB_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_fire_1"
     ],
     "strengths": [
       "Strong traits",
@@ -21361,7 +26912,17 @@ export const JOB_PATHS = [
       "previousJobId": 1554,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_fire_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_3"
+      }
+    ]
   },
   {
     "id": "job_path_1556_world_crowned_dragon_apostle",
@@ -21382,7 +26943,7 @@ export const JOB_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_fire_1"
     ],
     "strengths": [
       "Strong traits",
@@ -21402,7 +26963,17 @@ export const JOB_PATHS = [
       "previousJobId": 1555,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_fire_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_3"
+      }
+    ]
   },
   {
     "id": "job_path_1557_dragon_apostle_adept",
@@ -21423,7 +26994,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_fire_1"
     ],
     "strengths": [
       "Strong traits",
@@ -21441,7 +27012,17 @@ export const JOB_PATHS = [
       "previousJobId": 1060,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_3"
+      }
+    ]
   },
   {
     "id": "job_path_1558_eclipse_dragon_apostle",
@@ -21462,7 +27043,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_dark_1"
     ],
     "strengths": [
       "Strong traits",
@@ -21480,7 +27061,17 @@ export const JOB_PATHS = [
       "previousJobId": 1557,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1559_mythic_dragon_apostle",
@@ -21501,7 +27092,7 @@ export const JOB_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_fire_1"
     ],
     "strengths": [
       "Strong traits",
@@ -21519,7 +27110,17 @@ export const JOB_PATHS = [
       "previousJobId": 1558,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_fire_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_3"
+      }
+    ]
   },
   {
     "id": "job_path_1560_hidden_origin_dragon_apostle",
@@ -21540,7 +27141,7 @@ export const JOB_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "beast_claw"
+      "v50_fire_1"
     ],
     "strengths": [
       "Strong traits",
@@ -21560,7 +27161,17 @@ export const JOB_PATHS = [
       "previousJobId": 1559,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_fire_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_3"
+      }
+    ]
   },
   {
     "id": "job_path_1561_samurai_vanguard",
@@ -21582,7 +27193,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_sword_1"
     ],
     "strengths": [
       "Technique variety",
@@ -21600,7 +27211,17 @@ export const JOB_PATHS = [
       "previousJobId": 1061,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1562_samurai_paragon",
@@ -21622,7 +27243,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_sword_1"
     ],
     "strengths": [
       "Technique variety",
@@ -21640,7 +27261,17 @@ export const JOB_PATHS = [
       "previousJobId": 1561,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1563_samurai_sovereign",
@@ -21662,7 +27293,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_sword_1"
     ],
     "strengths": [
       "Technique variety",
@@ -21680,7 +27311,17 @@ export const JOB_PATHS = [
       "previousJobId": 1562,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1564_world_crowned_samurai",
@@ -21702,7 +27343,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_sword_1"
     ],
     "strengths": [
       "Technique variety",
@@ -21722,7 +27363,17 @@ export const JOB_PATHS = [
       "previousJobId": 1563,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1565_samurai_adept",
@@ -21744,7 +27395,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_sword_1"
     ],
     "strengths": [
       "Technique variety",
@@ -21762,7 +27413,17 @@ export const JOB_PATHS = [
       "previousJobId": 1061,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1566_eclipse_samurai",
@@ -21784,7 +27445,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dark_1"
     ],
     "strengths": [
       "Technique variety",
@@ -21802,7 +27463,17 @@ export const JOB_PATHS = [
       "previousJobId": 1565,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1567_mythic_samurai",
@@ -21824,7 +27495,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_sword_1"
     ],
     "strengths": [
       "Technique variety",
@@ -21842,7 +27513,17 @@ export const JOB_PATHS = [
       "previousJobId": 1566,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1568_hidden_origin_samurai",
@@ -21864,7 +27545,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_sword_1"
     ],
     "strengths": [
       "Technique variety",
@@ -21884,7 +27565,17 @@ export const JOB_PATHS = [
       "previousJobId": 1567,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_sword_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_sword_3"
+      }
+    ]
   },
   {
     "id": "job_path_1569_onmyoji_vanguard",
@@ -21906,7 +27597,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -21924,7 +27615,17 @@ export const JOB_PATHS = [
       "previousJobId": 1062,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1570_onmyoji_paragon",
@@ -21946,7 +27647,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -21964,7 +27665,17 @@ export const JOB_PATHS = [
       "previousJobId": 1569,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1571_onmyoji_sovereign",
@@ -21986,7 +27697,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -22004,7 +27715,17 @@ export const JOB_PATHS = [
       "previousJobId": 1570,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1572_world_crowned_onmyoji",
@@ -22026,7 +27747,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -22046,7 +27767,17 @@ export const JOB_PATHS = [
       "previousJobId": 1571,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1573_onmyoji_adept",
@@ -22068,7 +27799,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -22086,7 +27817,17 @@ export const JOB_PATHS = [
       "previousJobId": 1062,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1574_eclipse_onmyoji",
@@ -22108,7 +27849,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dark_1"
     ],
     "strengths": [
       "Technique variety",
@@ -22126,7 +27867,17 @@ export const JOB_PATHS = [
       "previousJobId": 1573,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1575_mythic_onmyoji",
@@ -22148,7 +27899,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -22166,7 +27917,17 @@ export const JOB_PATHS = [
       "previousJobId": 1574,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1576_hidden_origin_onmyoji",
@@ -22188,7 +27949,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -22208,7 +27969,17 @@ export const JOB_PATHS = [
       "previousJobId": 1575,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1577_miko_vanguard",
@@ -22230,7 +28001,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -22248,7 +28019,17 @@ export const JOB_PATHS = [
       "previousJobId": 1063,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1578_miko_paragon",
@@ -22270,7 +28051,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -22288,7 +28069,17 @@ export const JOB_PATHS = [
       "previousJobId": 1577,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1579_miko_sovereign",
@@ -22310,7 +28101,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -22328,7 +28119,17 @@ export const JOB_PATHS = [
       "previousJobId": 1578,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1580_world_crowned_miko",
@@ -22350,7 +28151,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -22370,7 +28171,17 @@ export const JOB_PATHS = [
       "previousJobId": 1579,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1581_miko_adept",
@@ -22392,7 +28203,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -22410,7 +28221,17 @@ export const JOB_PATHS = [
       "previousJobId": 1063,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1582_eclipse_miko",
@@ -22432,7 +28253,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "quick_stab"
+      "v50_dark_1"
     ],
     "strengths": [
       "Technique variety",
@@ -22450,7 +28271,17 @@ export const JOB_PATHS = [
       "previousJobId": 1581,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1583_mythic_miko",
@@ -22472,7 +28303,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -22490,7 +28321,17 @@ export const JOB_PATHS = [
       "previousJobId": 1582,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1584_hidden_origin_miko",
@@ -22512,7 +28353,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "quick_stab"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Technique variety",
@@ -22532,7 +28373,17 @@ export const JOB_PATHS = [
       "previousJobId": 1583,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1585_cultivator_vanguard",
@@ -22554,7 +28405,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "iron_palm"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Scaling",
@@ -22572,7 +28423,17 @@ export const JOB_PATHS = [
       "previousJobId": 1064,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1586_cultivator_paragon",
@@ -22594,7 +28455,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "iron_palm"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Scaling",
@@ -22612,7 +28473,17 @@ export const JOB_PATHS = [
       "previousJobId": 1585,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1587_cultivator_sovereign",
@@ -22634,7 +28505,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "iron_palm"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Scaling",
@@ -22652,7 +28523,17 @@ export const JOB_PATHS = [
       "previousJobId": 1586,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1588_world_crowned_cultivator",
@@ -22674,7 +28555,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "iron_palm"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Scaling",
@@ -22694,7 +28575,17 @@ export const JOB_PATHS = [
       "previousJobId": 1587,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1589_cultivator_adept",
@@ -22716,7 +28607,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "iron_palm"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Scaling",
@@ -22734,7 +28625,17 @@ export const JOB_PATHS = [
       "previousJobId": 1064,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1590_eclipse_cultivator",
@@ -22756,7 +28657,7 @@ export const JOB_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "iron_palm"
+      "v50_dark_1"
     ],
     "strengths": [
       "Scaling",
@@ -22774,7 +28675,17 @@ export const JOB_PATHS = [
       "previousJobId": 1589,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1591_mythic_cultivator",
@@ -22796,7 +28707,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "iron_palm"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Scaling",
@@ -22814,7 +28725,17 @@ export const JOB_PATHS = [
       "previousJobId": 1590,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1592_hidden_origin_cultivator",
@@ -22836,7 +28757,7 @@ export const JOB_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "iron_palm"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Scaling",
@@ -22856,7 +28777,17 @@ export const JOB_PATHS = [
       "previousJobId": 1591,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1593_esper_vanguard",
@@ -22878,7 +28809,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -22896,7 +28827,17 @@ export const JOB_PATHS = [
       "previousJobId": 1065,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1594_esper_paragon",
@@ -22918,7 +28859,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -22936,7 +28877,17 @@ export const JOB_PATHS = [
       "previousJobId": 1593,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1595_esper_sovereign",
@@ -22958,7 +28909,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -22976,7 +28927,17 @@ export const JOB_PATHS = [
       "previousJobId": 1594,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1596_world_crowned_esper",
@@ -22998,7 +28959,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23018,7 +28979,17 @@ export const JOB_PATHS = [
       "previousJobId": 1595,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1597_esper_adept",
@@ -23040,7 +29011,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23058,7 +29029,17 @@ export const JOB_PATHS = [
       "previousJobId": 1065,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1598_eclipse_esper",
@@ -23080,7 +29061,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_dark_1"
     ],
     "strengths": [
       "Flexible tools",
@@ -23098,7 +29079,17 @@ export const JOB_PATHS = [
       "previousJobId": 1597,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1599_mythic_esper",
@@ -23120,7 +29111,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23138,7 +29129,17 @@ export const JOB_PATHS = [
       "previousJobId": 1598,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1600_hidden_origin_esper",
@@ -23160,7 +29161,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23180,7 +29181,17 @@ export const JOB_PATHS = [
       "previousJobId": 1599,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1601_hero_student_vanguard",
@@ -23202,7 +29213,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23220,7 +29231,17 @@ export const JOB_PATHS = [
       "previousJobId": 1066,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1602_hero_student_paragon",
@@ -23242,7 +29263,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23260,7 +29281,17 @@ export const JOB_PATHS = [
       "previousJobId": 1601,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1603_hero_student_sovereign",
@@ -23282,7 +29313,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23300,7 +29331,17 @@ export const JOB_PATHS = [
       "previousJobId": 1602,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1604_world_crowned_hero_student",
@@ -23322,7 +29363,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23342,7 +29383,17 @@ export const JOB_PATHS = [
       "previousJobId": 1603,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1605_hero_student_adept",
@@ -23364,7 +29415,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23382,7 +29433,17 @@ export const JOB_PATHS = [
       "previousJobId": 1066,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1606_eclipse_hero_student",
@@ -23404,7 +29465,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_dark_1"
     ],
     "strengths": [
       "Flexible tools",
@@ -23422,7 +29483,17 @@ export const JOB_PATHS = [
       "previousJobId": 1605,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1607_mythic_hero_student",
@@ -23444,7 +29515,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23462,7 +29533,17 @@ export const JOB_PATHS = [
       "previousJobId": 1606,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1608_hidden_origin_hero_student",
@@ -23484,7 +29565,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23504,7 +29585,17 @@ export const JOB_PATHS = [
       "previousJobId": 1607,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1609_pro_hero_vanguard",
@@ -23526,7 +29617,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23544,7 +29635,17 @@ export const JOB_PATHS = [
       "previousJobId": 1067,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1610_pro_hero_paragon",
@@ -23566,7 +29667,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23584,7 +29685,17 @@ export const JOB_PATHS = [
       "previousJobId": 1609,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1611_pro_hero_sovereign",
@@ -23606,7 +29717,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23624,7 +29735,17 @@ export const JOB_PATHS = [
       "previousJobId": 1610,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1612_world_crowned_pro_hero",
@@ -23646,7 +29767,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23666,7 +29787,17 @@ export const JOB_PATHS = [
       "previousJobId": 1611,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1613_pro_hero_adept",
@@ -23688,7 +29819,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23706,7 +29837,17 @@ export const JOB_PATHS = [
       "previousJobId": 1067,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1614_eclipse_pro_hero",
@@ -23728,7 +29869,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "aimed_shot"
+      "v50_dark_1"
     ],
     "strengths": [
       "Flexible tools",
@@ -23746,7 +29887,17 @@ export const JOB_PATHS = [
       "previousJobId": 1613,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1615_mythic_pro_hero",
@@ -23768,7 +29919,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23786,7 +29937,17 @@ export const JOB_PATHS = [
       "previousJobId": 1614,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1616_hidden_origin_pro_hero",
@@ -23808,7 +29969,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "aimed_shot"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible tools",
@@ -23828,7 +29989,17 @@ export const JOB_PATHS = [
       "previousJobId": 1615,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1617_adventurer_vanguard",
@@ -23851,7 +30022,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -23869,7 +30040,17 @@ export const JOB_PATHS = [
       "previousJobId": 1068,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1618_adventurer_paragon",
@@ -23892,7 +30073,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -23910,7 +30091,17 @@ export const JOB_PATHS = [
       "previousJobId": 1617,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1619_adventurer_sovereign",
@@ -23933,7 +30124,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -23951,7 +30142,17 @@ export const JOB_PATHS = [
       "previousJobId": 1618,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1620_world_crowned_adventurer",
@@ -23974,7 +30175,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -23994,7 +30195,17 @@ export const JOB_PATHS = [
       "previousJobId": 1619,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1621_adventurer_adept",
@@ -24017,7 +30228,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24035,7 +30246,17 @@ export const JOB_PATHS = [
       "previousJobId": 1068,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1622_eclipse_adventurer",
@@ -24058,7 +30279,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_dark_1"
     ],
     "strengths": [
       "Utility",
@@ -24076,7 +30297,17 @@ export const JOB_PATHS = [
       "previousJobId": 1621,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1623_mythic_adventurer",
@@ -24099,7 +30330,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24117,7 +30348,17 @@ export const JOB_PATHS = [
       "previousJobId": 1622,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1624_hidden_origin_adventurer",
@@ -24140,7 +30381,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24160,7 +30401,17 @@ export const JOB_PATHS = [
       "previousJobId": 1623,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1625_villager_vanguard",
@@ -24183,7 +30434,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24201,7 +30452,17 @@ export const JOB_PATHS = [
       "previousJobId": 1069,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1626_villager_paragon",
@@ -24224,7 +30485,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24242,7 +30503,17 @@ export const JOB_PATHS = [
       "previousJobId": 1625,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1627_villager_sovereign",
@@ -24265,7 +30536,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24283,7 +30554,17 @@ export const JOB_PATHS = [
       "previousJobId": 1626,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1628_world_crowned_villager",
@@ -24306,7 +30587,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24326,7 +30607,17 @@ export const JOB_PATHS = [
       "previousJobId": 1627,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1629_villager_adept",
@@ -24349,7 +30640,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24367,7 +30658,17 @@ export const JOB_PATHS = [
       "previousJobId": 1069,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1630_eclipse_villager",
@@ -24390,7 +30691,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_dark_1"
     ],
     "strengths": [
       "Utility",
@@ -24408,7 +30709,17 @@ export const JOB_PATHS = [
       "previousJobId": 1629,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1631_mythic_villager",
@@ -24431,7 +30742,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24449,7 +30760,17 @@ export const JOB_PATHS = [
       "previousJobId": 1630,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1632_hidden_origin_villager",
@@ -24472,7 +30793,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24492,7 +30813,17 @@ export const JOB_PATHS = [
       "previousJobId": 1631,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1633_farmer_vanguard",
@@ -24515,7 +30846,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24533,7 +30864,17 @@ export const JOB_PATHS = [
       "previousJobId": 1070,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1634_farmer_paragon",
@@ -24556,7 +30897,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24574,7 +30915,17 @@ export const JOB_PATHS = [
       "previousJobId": 1633,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1635_farmer_sovereign",
@@ -24597,7 +30948,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24615,7 +30966,17 @@ export const JOB_PATHS = [
       "previousJobId": 1634,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1636_world_crowned_farmer",
@@ -24638,7 +30999,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24658,7 +31019,17 @@ export const JOB_PATHS = [
       "previousJobId": 1635,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1637_farmer_adept",
@@ -24681,7 +31052,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24699,7 +31070,17 @@ export const JOB_PATHS = [
       "previousJobId": 1070,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1638_eclipse_farmer",
@@ -24722,7 +31103,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_dark_1"
     ],
     "strengths": [
       "Utility",
@@ -24740,7 +31121,17 @@ export const JOB_PATHS = [
       "previousJobId": 1637,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1639_mythic_farmer",
@@ -24763,7 +31154,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24781,7 +31172,17 @@ export const JOB_PATHS = [
       "previousJobId": 1638,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1640_hidden_origin_farmer",
@@ -24804,7 +31205,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24824,7 +31225,17 @@ export const JOB_PATHS = [
       "previousJobId": 1639,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1641_mercenary_vanguard",
@@ -24847,7 +31258,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24865,7 +31276,17 @@ export const JOB_PATHS = [
       "previousJobId": 1071,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1642_mercenary_paragon",
@@ -24888,7 +31309,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24906,7 +31327,17 @@ export const JOB_PATHS = [
       "previousJobId": 1641,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1643_mercenary_sovereign",
@@ -24929,7 +31360,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24947,7 +31378,17 @@ export const JOB_PATHS = [
       "previousJobId": 1642,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1644_world_crowned_mercenary",
@@ -24970,7 +31411,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -24990,7 +31431,17 @@ export const JOB_PATHS = [
       "previousJobId": 1643,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1645_mercenary_adept",
@@ -25013,7 +31464,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -25031,7 +31482,17 @@ export const JOB_PATHS = [
       "previousJobId": 1071,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1646_eclipse_mercenary",
@@ -25054,7 +31515,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_dark_1"
     ],
     "strengths": [
       "Utility",
@@ -25072,7 +31533,17 @@ export const JOB_PATHS = [
       "previousJobId": 1645,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1647_mythic_mercenary",
@@ -25095,7 +31566,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -25113,7 +31584,17 @@ export const JOB_PATHS = [
       "previousJobId": 1646,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1648_hidden_origin_mercenary",
@@ -25136,7 +31617,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Utility",
@@ -25156,7 +31637,17 @@ export const JOB_PATHS = [
       "previousJobId": 1647,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "job_path_1649_bounty_hunter_vanguard",
@@ -25179,7 +31670,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_bow_1"
     ],
     "strengths": [
       "Utility",
@@ -25197,7 +31688,17 @@ export const JOB_PATHS = [
       "previousJobId": 1072,
       "stage": 0,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1650_bounty_hunter_paragon",
@@ -25220,7 +31721,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_bow_1"
     ],
     "strengths": [
       "Utility",
@@ -25238,7 +31739,17 @@ export const JOB_PATHS = [
       "previousJobId": 1649,
       "stage": 1,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1651_bounty_hunter_sovereign",
@@ -25261,7 +31772,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_bow_1"
     ],
     "strengths": [
       "Utility",
@@ -25279,7 +31790,17 @@ export const JOB_PATHS = [
       "previousJobId": 1650,
       "stage": 2,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1652_world_crowned_bounty_hunter",
@@ -25302,7 +31823,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_bow_1"
     ],
     "strengths": [
       "Utility",
@@ -25322,7 +31843,17 @@ export const JOB_PATHS = [
       "previousJobId": 1651,
       "stage": 3,
       "branch": 0
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1653_bounty_hunter_adept",
@@ -25345,7 +31876,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_bow_1"
     ],
     "strengths": [
       "Utility",
@@ -25363,7 +31894,17 @@ export const JOB_PATHS = [
       "previousJobId": 1072,
       "stage": 0,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1654_eclipse_bounty_hunter",
@@ -25386,7 +31927,7 @@ export const JOB_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_dark_1"
     ],
     "strengths": [
       "Utility",
@@ -25404,7 +31945,17 @@ export const JOB_PATHS = [
       "previousJobId": 1653,
       "stage": 1,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "job_path_1655_mythic_bounty_hunter",
@@ -25427,7 +31978,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_bow_1"
     ],
     "strengths": [
       "Utility",
@@ -25445,7 +31996,17 @@ export const JOB_PATHS = [
       "previousJobId": 1654,
       "stage": 2,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   },
   {
     "id": "job_path_1656_hidden_origin_bounty_hunter",
@@ -25468,7 +32029,7 @@ export const JOB_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_bow_1"
     ],
     "strengths": [
       "Utility",
@@ -25488,6 +32049,16 @@ export const JOB_PATHS = [
       "previousJobId": 1655,
       "stage": 3,
       "branch": 1
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_bow_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_bow_3"
+      }
+    ]
   }
 ];

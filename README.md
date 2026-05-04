@@ -2,6 +2,18 @@
 
 A modular, static, mobile-friendly text RPG foundation for GitHub Pages with Excel-imported race/job registry data, Character Creation filters, and Main Menu quick filters.
 
+## v0.5.0 Ability Linking
+
+Added in this package:
+
+- Excel ability links for race and job data
+- Starting abilities from the Excel Ability Shops sheet
+- Level-up learn tables for imported races, race evolutions, jobs, and job paths
+- Skill/spell shop libraries in the Shop screen
+- Ability shop filters for search, library, kind, and rank
+- Combined Character Status and Race/Job Progression into one Status / Class screen
+- Top-right testing menu icon for adding/removing gold, EXP, and class level points
+
 ## v0.4.0 New Game Menu Filters
 
 Added the race/job filter system directly to the Main Menu so players can browse and select a starting build before opening the full New Game builder.
@@ -108,7 +120,7 @@ Upload/replace the files in your GitHub repository root the same way as before. 
   - Specialist: 10
   - Rare: 5
   - Hidden: 5
-- Race/job stat bonuses, starting skills, descriptions, strengths, weaknesses, and unlock paths
+- Race/job stat bonuses, Excel-linked starting abilities, descriptions, strengths, weaknesses, level-up learns, and unlock paths
 - Turn-based battle system
 - HP, mana, stamina
 - Physical skills use stamina
@@ -128,7 +140,7 @@ Upload/replace the files in your GitHub repository root the same way as before. 
 
 - `js/data/races.js` — races and race evolution paths
 - `js/data/jobs.js` — jobs and job class paths
-- `js/data/skills.js` — physical skills and magic spells
+- `js/data/skills.js` — legacy abilities plus Excel-imported physical skills, magic spells, and skill/spell shop libraries
 - `js/data/enemies.js` — normal enemies, elites, bosses
 - `js/data/items.js` — consumables and equipment
 - `js/data/shops.js` — shop stock

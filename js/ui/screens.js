@@ -1,7 +1,7 @@
 import { CONFIG } from "../config.js";
 import { RACES, RACE_PATHS } from "../data/races.js";
 import { JOBS, JOB_PATHS } from "../data/jobs.js";
-import { SKILLS } from "../data/skills.js";
+import { SKILLS, SKILL_SHOP_LIBRARIES } from "../data/skills.js";
 import { ITEMS, EQUIPMENT_SLOTS, SET_BONUSES } from "../data/items.js";
 import { SHOPS } from "../data/shops.js";
 import { MAPS } from "../data/maps.js";
@@ -60,7 +60,7 @@ export function mainMenu(state) {
 function newsCard() {
   return `<section class="card">
     <h2>Improvement Build</h2>
-    <p>Total Level = Race Levels + Job Levels. This version adds the Excel race/job data import, 5 save slots, class trees, synergies, set bonuses, achievements, enemy intent, expanded events, recruit personality, update notes, and v0.4.0 real unlock conditions.</p>
+    <p>Total Level = Race Levels + Job Levels. This version adds the Excel race/job data import, 5 save slots, class trees, synergies, set bonuses, achievements, enemy intent, expanded events, recruit personality, update notes, v0.4.0 real unlock conditions, and v0.5.0 ability linking with skill/spell shops.</p>
   </section>`;
 }
 
@@ -313,7 +313,7 @@ export function hub(state) {
     <div class="hero"><h1>Guild Hub</h1><p class="subtitle">Prepare, spend class levels, recruit allies, buy supplies, or enter the shifting tower.</p></div>
     <section class="grid two">
       <div class="card"><h2>${escapeHtml(p.title)} ${escapeHtml(p.name)}</h2><p>Total Level <span class="kpi">${getTotalLevel(p)}</span> · Gold <span class="kpi">${p.gold}</span> · Relic Dust <span class="kpi">${state.meta.relicDust}</span></p>${resourceBars(p, stats)}</div>
-      <div class="card"><h2>Next Goal</h2><p>Gain XP in the dungeon, then spend class points on race or job levels. Maxed base classes can unlock advanced paths.</p><p class="small"><strong>Active Synergies:</strong> ${synergies.length ? synergies.map(s => s.name).join(", ") : "None"}</p><div class="actions">${button("Enter Dungeon", "startRun")} ${button("Progression", "go", "progression", "secondary")}</div></div>
+      <div class="card"><h2>Next Goal</h2><p>Gain XP in the dungeon, then spend class points on race or job levels. Maxed base classes can unlock advanced paths.</p><p class="small"><strong>Active Synergies:</strong> ${synergies.length ? synergies.map(s => s.name).join(", ") : "None"}</p><div class="actions">${button("Enter Dungeon", "startRun")} ${button("Status / Class", "go", "status", "secondary")}</div></div>
     </section>
     ${partyCard(p)}
     ${combatLog(state)}
@@ -333,40 +333,45 @@ export function statusScreen(state) {
   const p = state.player;
   const stats = computeStats(p);
   const synergies = getActiveSynergies(p);
+  const raceAdv = getAvailableAdvancements(state, "race");
+  const jobAdv = getAvailableAdvancements(state, "job");
   return `<section class="screen">${nav(state)}
-    <div class="hero"><h1>Character Status</h1><p class="subtitle">Overall Level ${getTotalLevel(p)} = ${p.raceLevels.reduce((a,c)=>a+c.level,0)} race levels + ${p.jobLevels.reduce((a,c)=>a+c.level,0)} job levels.</p></div>
+    <div class="hero"><h1>Status / Race & Job Progression</h1><p class="subtitle">Overall Level ${getTotalLevel(p)} = ${p.raceLevels.reduce((a,c)=>a+c.level,0)} race levels + ${p.jobLevels.reduce((a,c)=>a+c.level,0)} job levels. Unspent class levels: <span class="kpi">${p.unspentClassLevels}</span>.</p></div>
     <section class="grid two">
       <div class="card"><h2>${escapeHtml(p.title)} ${escapeHtml(p.name)}</h2>${resourceBars(p, stats)}<p>Status: ${statusPills(p.statusEffects)}</p></div>
       <div class="card"><h2>Stats</h2>${statGrid(stats)}</div>
     </section>
     <section class="card"><h2>Current Build</h2>${classRows(p.raceLevels, "Race")}${classRows(p.jobLevels, "Job")}</section>
     <section class="card"><h2>Build Synergies</h2>${synergies.length ? synergies.map(s => `<article class="mini-card"><h3>${s.name}</h3><p>${s.description}</p><p class="small">Bonus: ${statsText(s.stats)}</p></article>`).join("") : `<p class="small">No active race/job synergy yet.</p>`}</section>
-  </section>`;
-}
-
-function classRows(classes, label) {
-  return `<h3>${label} Levels</h3>${classes.map(cls => `<div class="class-row"><div><strong>${cls.name}</strong> <span class="pill">${cls.tier}</span><div class="small">Level ${cls.level}/${cls.maxLevel}</div></div></div>`).join("")}`;
-}
-
-export function progressionScreen(state) {
-  const p = state.player;
-  const raceAdv = getAvailableAdvancements(state, "race");
-  const jobAdv = getAvailableAdvancements(state, "job");
-  return `<section class="screen">${nav(state)}
-    <div class="hero"><h1>Race / Job Progression</h1><p class="subtitle">Unspent class levels: <span class="kpi">${p.unspentClassLevels}</span>. Base max is 15, Advanced/Specialist max is 10, Rare/Hidden max is 5.</p></div>
     <section class="grid two">
-      <div class="card"><h2>Race Levels</h2>${progressRows(p.raceLevels, "race")}</div>
-      <div class="card"><h2>Job Levels</h2>${progressRows(p.jobLevels, "job")}</div>
+      <div class="card"><h2>Spend Race Levels</h2>${progressRows(p.raceLevels, "race")}</div>
+      <div class="card"><h2>Spend Job Levels</h2>${progressRows(p.jobLevels, "job")}</div>
     </section>
     <section class="grid two">
-      <div class="card"><h2>Race Unlocks</h2>${advancementRows(raceAdv, "race")}</div>
-      <div class="card"><h2>Job Unlocks</h2>${advancementRows(jobAdv, "job")}</div>
+      <div class="card"><h2>Valid Race Upgrades</h2>${advancementRows(raceAdv, "race")}</div>
+      <div class="card"><h2>Valid Job Upgrades</h2>${advancementRows(jobAdv, "job")}</div>
     </section>
     <section class="grid two">
       <div class="card"><h2>Race Evolution Tree</h2>${classTree(state, "race")}</div>
       <div class="card"><h2>Job Class Tree</h2>${classTree(state, "job")}</div>
     </section>
   </section>`;
+}
+
+function classRows(classes, label) {
+  return `<h3>${label} Levels</h3>${classes.map(cls => {
+    const data = [...RACES, ...RACE_PATHS, ...JOBS, ...JOB_PATHS].find(item => item.id === cls.id);
+    const abilityNames = [
+      ...(data?.startingSkills ?? []),
+      ...(data?.learns ?? []).map(learn => learn.skillId)
+    ].slice(0, 5).map(id => byId(SKILLS, id)?.name ?? titleCase(id)).join(", ");
+    return `<div class="class-row"><div><strong>${cls.name}</strong> <span class="pill">${cls.tier}</span><div class="small">Level ${cls.level}/${cls.maxLevel}</div><div class="small"><strong>Linked abilities:</strong> ${escapeHtml(abilityNames || "None")}</div></div></div>`;
+  }).join("")}`;
+}
+
+export function progressionScreen(state) {
+  // v0.5.0: Race/Job progression was merged into the Status screen.
+  return statusScreen(state);
 }
 
 function progressRows(classes, track) {
@@ -426,12 +431,24 @@ function registryStatsText(entry) {
   return statsText(data?.stats ?? {});
 }
 
+
+function registryAbilityText(entry) {
+  const data = [...RACES, ...RACE_PATHS, ...JOBS, ...JOB_PATHS].find(item => item.id === entry.id);
+  const ids = [
+    ...(data?.startingSkills ?? []),
+    ...(data?.learns ?? []).map(learn => learn.skillId)
+  ];
+  const names = [...new Set(ids)].slice(0, 6).map(id => byId(SKILLS, id)?.name ?? titleCase(id));
+  return names.join(", ") || "No linked ability yet";
+}
+
 function registryCard(entry) {
   return `<article class="card registry-card">
     <div class="row between"><h3>${escapeHtml(entry.name)}</h3><span class="pill">Excel ${entry.excelId}</span></div>
     <p><span class="pill">${escapeHtml(entry.kind)}</span> <span class="pill">${escapeHtml(titleCase(entry.tier))}</span> <span class="pill">${escapeHtml(entry.category)}</span> <span class="pill">Cap ${entry.maxLevel}</span></p>
     <p>${escapeHtml(entry.description)}</p>
     <p class="small"><strong>Stats:</strong> ${escapeHtml(registryStatsText(entry))}</p>
+    <p class="small"><strong>Abilities:</strong> ${escapeHtml(registryAbilityText(entry))}</p>
     <p class="small"><strong>Strengths:</strong> ${escapeHtml((entry.strengths ?? []).join(", ") || "Flexible")}</p>
     <p class="small"><strong>Weaknesses:</strong> ${escapeHtml((entry.weaknesses ?? []).join(", ") || "Needs specialization")}</p>
     <p class="small"><strong>Requirement:</strong> ${escapeHtml(registryRequirementText(entry))}</p>
@@ -505,10 +522,60 @@ function setBonusRows(player) {
 
 export function shopScreen(state) {
   const shop = byId(SHOPS, state.ui.selectedShop) ?? SHOPS[0];
-  return `<section class="screen">${nav(state)}<div class="hero"><h1>Shop</h1><p class="subtitle">Gold: <span class="kpi">${state.player.gold}</span>. Shops can appear during dungeon runs too.</p></div>
+  return `<section class="screen">${nav(state)}<div class="hero"><h1>Shop</h1><p class="subtitle">Gold: <span class="kpi">${state.player.gold}</span>. Buy items, equipment, and Excel-imported abilities.</p></div>
     <div class="actions">${SHOPS.map(s => button(s.name, "selectShop", s.id, s.id === shop.id ? "ghost" : "secondary")).join("")}</div>
     <section class="card"><h2>${shop.name}</h2><p>${shop.description}</p>${shop.stock.map(itemId => shopItem(itemId, state.player.gold)).join("")}</section>
+    ${abilityShopSection(state)}
   </section>`;
+}
+
+function abilityShopSection(state) {
+  const filters = { search: "", library: "all", kind: "all", rank: "all", ...(state.ui.abilityFilters ?? {}) };
+  const libraryOptions = ["all", ...SKILL_SHOP_LIBRARIES.map(lib => lib.id)];
+  const kindOptions = ["all", ...[...new Set(SKILLS.filter(s => Number(s.price ?? 0) > 0).map(s => s.kind))].sort()];
+  const rankOptions = ["all", ...[...new Set(SKILLS.filter(s => Number(s.price ?? 0) > 0).map(s => s.rank))].sort()];
+  const stockIds = new Set(SKILL_SHOP_LIBRARIES
+    .filter(lib => filters.library === "all" || lib.id === filters.library)
+    .flatMap(lib => lib.stock ?? []));
+  const search = String(filters.search ?? "").trim().toLowerCase();
+  const filtered = SKILLS.filter(skill => {
+    if (!stockIds.has(skill.id)) return false;
+    if (Number(skill.price ?? 0) <= 0) return false;
+    if (filters.kind !== "all" && skill.kind !== filters.kind) return false;
+    if (filters.rank !== "all" && skill.rank !== filters.rank) return false;
+    if (search) {
+      const haystack = `${skill.name} ${skill.kind} ${skill.rank} ${skill.element} ${skill.description} ${(skill.tags ?? []).join(" ")}`.toLowerCase();
+      if (!haystack.includes(search)) return false;
+    }
+    return true;
+  });
+  const visible = filtered.slice(0, 80);
+  return `<section class="card ability-shop">
+    <div class="row between"><div><h2>Skill / Spell Shop Libraries</h2><p class="small">Imported from the Excel Ability Shops sheet. Physical skills use stamina. Magic spells use mana. Passive/intrinsic abilities are shown when available.</p></div><span class="pill">${visible.length}/${filtered.length} shown</span></div>
+    <div class="filter-grid">
+      <label>Search Abilities<input data-input="ability.search" value="${escapeHtml(filters.search)}" placeholder="fire, sword, heal, passive..." /></label>
+      ${selectField("Library", "ability.library", libraryOptions, filters.library)}
+      ${selectField("Kind", "ability.kind", kindOptions, filters.kind)}
+      ${selectField("Rank", "ability.rank", rankOptions, filters.rank)}
+    </div>
+    <div class="actions">${button("Reset Ability Filters", "resetAbilityFilters", "", "secondary")}</div>
+    ${filtered.length > visible.length ? `<p class="small">Large ability list capped at 80 cards for mobile performance. Use filters to narrow it down.</p>` : ""}
+    <div class="grid auto">${visible.map(skill => abilityShopCard(skill, state.player)).join("") || `<article class="card"><h3>No abilities found</h3><p>Try a different search, library, kind, or rank filter.</p></article>`}</div>
+  </section>`;
+}
+
+function abilityShopCard(skill, player) {
+  const known = player.skills?.includes(skill.id);
+  const price = Number(skill.price ?? 0);
+  const tags = (skill.tags ?? []).slice(0, 4).map(tag => `<span class="pill">${escapeHtml(tag)}</span>`).join(" ");
+  return `<article class="card skill-shop-card ${known ? "selected" : ""}">
+    <h3>${escapeHtml(skill.name)}</h3>
+    <p><span class="pill">${escapeHtml(skill.kind)}</span> <span class="pill">${escapeHtml(skill.rank)}</span> <span class="pill">${escapeHtml(skill.element)}</span> <span class="pill">${price} gold</span></p>
+    <p>${escapeHtml(skill.description)}</p>
+    <p class="small">Cost: ${skill.resource === "none" ? "Passive" : `${skill.cost} ${skill.resource}`} · Cooldown: ${skill.cooldown} · Source: ${escapeHtml(skill.source ?? "Ability Library")}</p>
+    <p class="small">${tags}</p>
+    ${known ? `<span class="pill">Known</span>` : button(player.gold >= price ? "Buy Ability" : "Too Expensive", "buyAbility", skill.id, player.gold >= price ? "" : "ghost")}
+  </article>`;
 }
 
 function shopItem(itemId, gold) {

@@ -11,8 +11,7 @@ export function nav(state) {
   if (!state.player) return "";
   return `<nav class="navbar">
     ${button("Hub", "go", "hub", "secondary")}
-    ${button("Status", "go", "status", "secondary")}
-    ${button("Race/Job", "go", "progression", "secondary")}
+    ${button("Status / Class", "go", "status", "secondary")}
     ${button("Registry", "go", "class-registry", "secondary")}
     ${button("Skills", "go", "skills", "secondary")}
     ${button("Inventory", "go", "inventory", "secondary")}
@@ -21,8 +20,24 @@ export function nav(state) {
     ${button("Achievements", "go", "achievements", "secondary")}
     ${button("Updates", "go", "updates", "secondary")}
     ${button("Save/Load", "openSaveMenu", "", "ghost")}
-  </nav>`;
+  </nav>${devMenu(state)}`;
 }
+
+function devMenu(state) {
+  const open = Boolean(state.ui?.devMenuOpen);
+  return `<button class="dev-fab" data-action="toggleDevMenu" title="Open testing menu" aria-label="Open testing menu">⚙️</button>
+  ${open ? `<aside class="dev-panel card">
+    <div class="row between"><h3>Testing Menu</h3><button class="ghost mini-button" data-action="toggleDevMenu">✕</button></div>
+    <p class="small">Use this for testing builds. It changes only the current character/save.</p>
+    <h4>Money</h4>
+    <div class="dev-actions">${button("+100 Gold", "devAdjust", "gold:100", "secondary")}${button("-100 Gold", "devAdjust", "gold:-100", "ghost")}${button("+1000 Gold", "devAdjust", "gold:1000", "secondary")}</div>
+    <h4>EXP</h4>
+    <div class="dev-actions">${button("+100 EXP", "devAdjust", "xp:100", "secondary")}${button("-100 EXP", "devAdjust", "xp:-100", "ghost")}${button("+1000 EXP", "devAdjust", "xp:1000", "secondary")}</div>
+    <h4>Class Levels</h4>
+    <div class="dev-actions">${button("+1 Level Point", "devAdjust", "level:1", "secondary")}${button("-1 Level", "devAdjust", "level:-1", "ghost")}${button("+10 Level Points", "devAdjust", "level:10", "secondary")}</div>
+  </aside>` : ""}`;
+}
+
 
 export function bar(label, current, max, type = "hp") {
   const safeMax = Math.max(1, max ?? 1);
@@ -61,14 +76,15 @@ export function skillList(player, mode = "normal") {
   return skills.map(skill => {
     const cd = player.cooldowns?.[skill.id] ?? 0;
     const disabled = mode === "battle" && cd > 0 ? "disabled" : "";
-    const cost = skill.resource ? `${skill.cost} ${skill.resource}` : "Free";
+    const isPassive = skill.kind === "passive" || skill.resource === "none";
+    const cost = isPassive ? "Passive" : (skill.resource ? `${skill.cost} ${skill.resource}` : "Free");
     return `<div class="skill-row card">
       <div>
         <strong>${skill.name}</strong> <span class="pill">${skill.rank}</span> <span class="pill">${skill.element}</span>
         <p>${skill.description}</p>
         <div class="small">Cost: ${cost} · Cooldown: ${skill.cooldown} ${cd ? `· Current: ${cd}` : ""}</div>
       </div>
-      ${mode === "battle" ? `<button ${disabled} data-action="skill" data-value="${skill.id}">Use</button>` : ""}
+      ${mode === "battle" && !isPassive ? `<button ${disabled} data-action="skill" data-value="${skill.id}">Use</button>` : (isPassive ? `<span class="pill">Passive</span>` : "")}
     </div>`;
   }).join("");
 }

@@ -1,6 +1,6 @@
 export const CONFIG = Object.freeze({
   title: "Build Your Legend",
-  version: "v0.4.0-unlock-system",
+  version: "v0.5.0-ability-linking",
   storageKey: "build-your-legend-save-v1",
   saveSlotCount: 5,
   maxOverallLevel: 100,
@@ -8,7 +8,7 @@ export const CONFIG = Object.freeze({
   startingGold: 120,
   defeatGoldLossRate: 0.12,
   statKeys: ["str", "dex", "int", "wis", "con", "cha"],
-  elements: ["physical", "fire", "ice", "lightning", "wind", "earth", "light", "dark", "arcane", "poison"],
+  elements: ["physical", "fire", "ice", "lightning", "wind", "earth", "water", "light", "dark", "arcane", "poison"],
   classCaps: {
     base: 15,
     advanced: 10,

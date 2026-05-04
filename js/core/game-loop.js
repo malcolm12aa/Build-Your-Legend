@@ -6,8 +6,8 @@ import { startRun, leaveRun } from "../systems/run-manager.js";
 import { exploreNextFloor, restAtCamp } from "../systems/map.js";
 import { playerBasicAttack, playerUseSkill, playerUseItem } from "../systems/battle.js";
 import { useItem, equipItem, unequipSlot } from "../systems/inventory.js";
-import { buyItem } from "../systems/shop.js";
-import { spendClassPoint, addAdvancedClass } from "../systems/leveling.js";
+import { buyItem, buyAbility } from "../systems/shop.js";
+import { spendClassPoint, addAdvancedClass, gainXp, syncResourcesToStats } from "../systems/leveling.js";
 import { recruitMember, prepareRecruitOffer } from "../systems/party.js";
 import { checkAchievements } from "../systems/achievements.js";
 import { ACHIEVEMENTS } from "../data/achievements.js";
@@ -92,6 +92,9 @@ export function handleAction(state, action, value) {
     case "buyItem":
       buyItem(state, value);
       break;
+    case "buyAbility":
+      buyAbility(state, value);
+      break;
     case "selectShop":
       state.ui.selectedShop = value;
       break;
@@ -131,6 +134,15 @@ export function handleAction(state, action, value) {
         jobSearch: "", jobCategory: "all", jobTier: "all", jobFocus: "all"
       };
       break;
+    case "resetAbilityFilters":
+      state.ui.abilityFilters = { search: "", library: "all", kind: "all", rank: "all" };
+      break;
+    case "toggleDevMenu":
+      state.ui.devMenuOpen = !state.ui.devMenuOpen;
+      break;
+    case "devAdjust":
+      devAdjust(state, value);
+      break;
     default:
       console.warn("Unknown action", action, value);
   }
@@ -145,6 +157,11 @@ export function handleInput(state, name, value) {
     state.ui.registryFilters ??= { search: "", kind: "all", category: "all", tier: "all" };
     state.ui.registryFilters[key] = value;
   }
+  if (name?.startsWith("ability.")) {
+    const key = name.split(".")[1];
+    state.ui.abilityFilters ??= { search: "", library: "all", kind: "all", rank: "all" };
+    state.ui.abilityFilters[key] = value;
+  }
   if (name?.startsWith("creation.")) {
     const key = name.split(".")[1];
     state.ui.creationFilters ??= {
@@ -154,4 +171,51 @@ export function handleInput(state, name, value) {
     state.ui.creationFilters[key] = value;
   }
   return state;
+}
+
+
+function devAdjust(state, value) {
+  if (!state.player) return;
+  const [target, rawAmount] = String(value).split(":");
+  const amount = Number(rawAmount);
+  if (!Number.isFinite(amount)) return;
+  if (target === "gold") {
+    state.player.gold = Math.max(0, Math.floor((state.player.gold ?? 0) + amount));
+    addLog(state, `<strong>Test Menu:</strong> Gold adjusted by ${amount}. Current gold: ${state.player.gold}.`);
+  }
+  if (target === "xp") {
+    if (amount >= 0) gainXp(state, amount);
+    else state.player.xp = Math.max(0, Math.floor((state.player.xp ?? 0) + amount));
+    addLog(state, `<strong>Test Menu:</strong> XP adjusted by ${amount}. Current XP: ${state.player.xp}.`);
+  }
+  if (target === "level") {
+    if (amount > 0) {
+      state.player.unspentClassLevels = (state.player.unspentClassLevels ?? 0) + amount;
+      addLog(state, `<strong>Test Menu:</strong> Added ${amount} unspent class level point(s).`);
+    } else {
+      for (let i = 0; i < Math.abs(amount); i += 1) removeOneTestLevel(state);
+    }
+  }
+  syncResourcesToStats(state.player);
+}
+
+function removeOneTestLevel(state) {
+  const player = state.player;
+  if ((player.unspentClassLevels ?? 0) > 0) {
+    player.unspentClassLevels -= 1;
+    addLog(state, "<strong>Test Menu:</strong> Removed 1 unspent class level point.");
+    return;
+  }
+  const tracks = [player.jobLevels, player.raceLevels];
+  for (const track of tracks) {
+    for (let i = track.length - 1; i >= 0; i -= 1) {
+      if ((track[i].level ?? 1) > 1) {
+        track[i].level -= 1;
+        player.xp = 0;
+        addLog(state, `<strong>Test Menu:</strong> Removed 1 level from ${track[i].name}.`);
+        return;
+      }
+    }
+  }
+  addLog(state, "<strong>Test Menu:</strong> No removable levels found.");
 }

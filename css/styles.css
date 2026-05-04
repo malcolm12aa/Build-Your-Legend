@@ -352,3 +352,66 @@ pre {
 .current-tree .tree-node {
   margin-bottom: 12px;
 }
+
+
+/* v0.5.0 testing and ability-shop UI */
+.dev-fab {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  right: max(12px, env(safe-area-inset-right));
+  z-index: 50;
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,.38);
+}
+.dev-panel {
+  position: fixed;
+  top: calc(max(12px, env(safe-area-inset-top)) + 56px);
+  right: max(12px, env(safe-area-inset-right));
+  z-index: 49;
+  width: min(360px, calc(100vw - 24px));
+  max-height: min(680px, calc(100svh - 90px));
+  overflow: auto;
+  border-color: rgba(217,164,65,.35);
+}
+.dev-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+.dev-actions button {
+  min-height: 38px;
+  padding: 8px;
+  font-size: .82rem;
+}
+.mini-button {
+  min-height: 34px;
+  padding: 6px 10px;
+  flex: 0 0 auto !important;
+}
+.ability-shop {
+  border-color: rgba(139,211,255,.22);
+}
+.skill-shop-card {
+  min-height: 285px;
+}
+.skill-shop-card.selected {
+  border-color: rgba(114,223,159,.35);
+}
+@media (max-width: 760px) {
+  .dev-panel {
+    left: 10px;
+    right: 10px;
+    width: auto;
+  }
+  .dev-actions {
+    grid-template-columns: 1fr;
+  }
+}

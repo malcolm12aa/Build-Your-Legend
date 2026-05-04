@@ -26,6 +26,8 @@ export function createInitialState() {
       currentEvent: null,
       offeredRecruit: null,
       registryFilters: { search: "", kind: "all", category: "all", tier: "all" },
+      abilityFilters: { search: "", library: "all", kind: "all", rank: "all" },
+      devMenuOpen: false,
       creationFilters: {
         raceSearch: "", raceCategory: "all", raceTier: "all", raceFocus: "all",
         jobSearch: "", jobCategory: "all", jobTier: "all", jobFocus: "all"
@@ -81,6 +83,8 @@ export function hydrateState(raw) {
   state.version = CONFIG.version;
   state.ui = { ...createInitialState().ui, ...(state.ui ?? {}) };
   state.ui.registryFilters = { ...createInitialState().ui.registryFilters, ...(state.ui.registryFilters ?? {}) };
+  state.ui.abilityFilters = { ...createInitialState().ui.abilityFilters, ...(state.ui.abilityFilters ?? {}) };
+  state.ui.devMenuOpen ??= false;
   state.ui.creationFilters = { ...createInitialState().ui.creationFilters, ...(state.ui.creationFilters ?? {}) };
   state.meta = { ...baseMeta(), ...(state.meta ?? {}) };
   if (state.player) {

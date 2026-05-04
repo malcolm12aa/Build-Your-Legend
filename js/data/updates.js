@@ -1,5 +1,16 @@
 export const UPDATE_NOTES = [
   {
+    version: "v0.5.0 — Ability Linking",
+    date: "2026-05-04",
+    notes: [
+      "Connected imported Excel race/job classes to starting abilities and level-up learn tables.",
+      "Added Excel skill/spell shop libraries to the Shop screen with search, library, kind, and rank filters.",
+      "Added starting abilities from the Excel Ability Shops sheet.",
+      "Combined Character Status and Race/Job Progression into one Status / Class screen.",
+      "Added a top-right testing menu icon that can add/remove gold, EXP, and class level points for debugging."
+    ]
+  },
+  {
     version: "v0.4.0 — Unlock System",
     date: "2026-05-04",
     notes: [

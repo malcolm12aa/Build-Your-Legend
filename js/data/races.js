@@ -1,5 +1,5 @@
-// Auto-generated from build_your_legend_race_job_skill_spell_list.xlsx for v0.3.0.
-// Edit the Excel source or this file to rebalance imported races.
+// Auto-generated from Excel import and updated in v0.5.0.
+// v0.5.0 adds Excel ability links, starting abilities, and learn tables.
 
 export const RACES = [
   {
@@ -27,7 +27,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -41,6 +41,20 @@ export const RACES = [
     "paths": [
       "race_path_10000_awakened_human",
       "race_path_10004_human_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -68,7 +82,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "strengths": [
       "Flexible growth",
@@ -82,6 +96,20 @@ export const RACES = [
     "paths": [
       "race_path_10008_awakened_elve",
       "race_path_10012_elve_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_arcane_3"
+      }
     ]
   },
   {
@@ -109,7 +137,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "strengths": [
       "Flexible growth",
@@ -123,6 +151,20 @@ export const RACES = [
     "paths": [
       "race_path_10016_awakened_dark_elve",
       "race_path_10020_dark_elve_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -150,7 +192,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "in_stoneblood"
     ],
     "strengths": [
       "Flexible growth",
@@ -164,6 +206,20 @@ export const RACES = [
     "paths": [
       "race_path_10024_awakened_dwarve",
       "race_path_10028_dwarve_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_guard_stance"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_shield_bash"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_kings_guard"
+      }
     ]
   },
   {
@@ -188,7 +244,7 @@ export const RACES = [
       "str": 1
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -202,6 +258,20 @@ export const RACES = [
     "paths": [
       "race_path_10032_awakened_halfling",
       "race_path_10036_halfling_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -226,7 +296,7 @@ export const RACES = [
       "str": 1
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -240,6 +310,20 @@ export const RACES = [
     "paths": [
       "race_path_10040_awakened_gnome",
       "race_path_10044_gnome_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -267,7 +351,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "sk_hunter_step"
     ],
     "strengths": [
       "Flexible growth",
@@ -281,6 +365,20 @@ export const RACES = [
     "paths": [
       "race_path_10048_awakened_fairie",
       "race_path_10052_fairie_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_guard_stance"
+      }
     ]
   },
   {
@@ -305,7 +403,7 @@ export const RACES = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "v50_arcane_1"
     ],
     "strengths": [
       "Mana control",
@@ -326,6 +424,20 @@ export const RACES = [
     "paths": [
       "race_path_10056_awakened_spirit",
       "race_path_10060_spirit_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_arcane_4"
+      }
     ]
   },
   {
@@ -350,7 +462,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -370,6 +482,20 @@ export const RACES = [
     "paths": [
       "race_path_10064_awakened_angel",
       "race_path_10068_angel_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_holy_4"
+      }
     ]
   },
   {
@@ -394,7 +520,7 @@ export const RACES = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "strengths": [
       "Flexible growth",
@@ -413,6 +539,20 @@ export const RACES = [
     "paths": [
       "race_path_10072_awakened_demons_devil",
       "race_path_10076_demons_devil_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -437,7 +577,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Speed",
@@ -453,6 +593,20 @@ export const RACES = [
     "paths": [
       "race_path_10080_awakened_beastmen_beastkin",
       "race_path_10084_beastmen_beastkin_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -477,7 +631,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Speed",
@@ -493,6 +647,20 @@ export const RACES = [
     "paths": [
       "race_path_10088_awakened_catfolk_nekomimi",
       "race_path_10092_catfolk_nekomimi_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -517,7 +685,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Speed",
@@ -533,6 +701,20 @@ export const RACES = [
     "paths": [
       "race_path_10096_awakened_dogfolk_inumimi",
       "race_path_10100_dogfolk_inumimi_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -557,7 +739,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Speed",
@@ -573,6 +755,20 @@ export const RACES = [
     "paths": [
       "race_path_10104_awakened_foxfolk_kitsune",
       "race_path_10108_foxfolk_kitsune_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -597,7 +793,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Speed",
@@ -613,6 +809,20 @@ export const RACES = [
     "paths": [
       "race_path_10112_awakened_rabbitfolk",
       "race_path_10116_rabbitfolk_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -637,7 +847,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Speed",
@@ -653,6 +863,20 @@ export const RACES = [
     "paths": [
       "race_path_10120_awakened_bearfolk",
       "race_path_10124_bearfolk_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -677,7 +901,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Speed",
@@ -693,6 +917,20 @@ export const RACES = [
     "paths": [
       "race_path_10128_awakened_lionfolk",
       "race_path_10132_lionfolk_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -717,7 +955,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Speed",
@@ -733,6 +971,20 @@ export const RACES = [
     "paths": [
       "race_path_10136_awakened_tigerfolk",
       "race_path_10140_tigerfolk_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -760,7 +1012,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Flexible growth",
@@ -774,6 +1026,20 @@ export const RACES = [
     "paths": [
       "race_path_10144_awakened_birdfolk_harpie",
       "race_path_10148_birdfolk_harpie_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -798,7 +1064,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_predator_instinct"
     ],
     "strengths": [
       "High HP",
@@ -818,6 +1084,20 @@ export const RACES = [
     "paths": [
       "race_path_10152_awakened_lizardfolk",
       "race_path_10156_lizardfolk_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -842,7 +1122,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "strengths": [
       "High HP",
@@ -862,6 +1142,20 @@ export const RACES = [
     "paths": [
       "race_path_10160_awakened_dragonfolk_dragonewt",
       "race_path_10164_dragonfolk_dragonewt_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_fire_2"
+      }
     ]
   },
   {
@@ -889,7 +1183,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Flexible growth",
@@ -903,6 +1197,20 @@ export const RACES = [
     "paths": [
       "race_path_10168_awakened_snakefolk_lamia",
       "race_path_10172_snakefolk_lamia_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -930,7 +1238,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Flexible growth",
@@ -944,6 +1252,20 @@ export const RACES = [
     "paths": [
       "race_path_10176_awakened_minotaur",
       "race_path_10180_minotaur_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -967,7 +1289,7 @@ export const RACES = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Durability",
@@ -983,6 +1305,20 @@ export const RACES = [
     "paths": [
       "race_path_10184_awakened_centaur",
       "race_path_10188_centaur_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -1007,7 +1343,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Flexible growth",
@@ -1025,6 +1361,20 @@ export const RACES = [
     "paths": [
       "race_path_10192_awakened_merfolk_mermaid",
       "race_path_10196_merfolk_mermaid_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_water_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_water_2"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_water_3"
+      }
     ]
   },
   {
@@ -1049,7 +1399,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Flexible growth",
@@ -1067,6 +1417,20 @@ export const RACES = [
     "paths": [
       "race_path_10200_awakened_fishmen",
       "race_path_10204_fishmen_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -1091,7 +1455,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Speed",
@@ -1107,6 +1471,20 @@ export const RACES = [
     "paths": [
       "race_path_10208_awakened_mink",
       "race_path_10212_mink_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -1134,7 +1512,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "in_predator_instinct"
     ],
     "strengths": [
       "Flexible growth",
@@ -1148,6 +1526,20 @@ export const RACES = [
     "paths": [
       "race_path_10216_awakened_arachne",
       "race_path_10220_arachne_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
     ]
   },
   {
@@ -1175,7 +1567,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -1189,6 +1581,20 @@ export const RACES = [
     "paths": [
       "race_path_10224_awakened_goblin",
       "race_path_10228_goblin_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -1216,7 +1622,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -1230,6 +1636,20 @@ export const RACES = [
     "paths": [
       "race_path_10232_awakened_hobgoblin",
       "race_path_10236_hobgoblin_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -1257,7 +1677,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -1271,6 +1691,20 @@ export const RACES = [
     "paths": [
       "race_path_10240_awakened_orc",
       "race_path_10244_orc_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -1298,7 +1732,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_heavy_weapon_1"
     ],
     "strengths": [
       "Flexible growth",
@@ -1312,6 +1746,20 @@ export const RACES = [
     "paths": [
       "race_path_10248_awakened_ogre",
       "race_path_10252_ogre_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_heavy_weapon_4"
+      }
     ]
   },
   {
@@ -1336,7 +1784,7 @@ export const RACES = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "strengths": [
       "Flexible growth",
@@ -1355,6 +1803,20 @@ export const RACES = [
     "paths": [
       "race_path_10256_awakened_oni",
       "race_path_10260_oni_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -1382,7 +1844,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -1396,6 +1858,20 @@ export const RACES = [
     "paths": [
       "race_path_10264_awakened_troll",
       "race_path_10268_troll_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -1423,7 +1899,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "v50_heavy_weapon_1"
     ],
     "strengths": [
       "Flexible growth",
@@ -1437,6 +1913,20 @@ export const RACES = [
     "paths": [
       "race_path_10272_awakened_giant",
       "race_path_10276_giant_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_heavy_weapon_4"
+      }
     ]
   },
   {
@@ -1464,7 +1954,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -1478,6 +1968,20 @@ export const RACES = [
     "paths": [
       "race_path_10280_awakened_cyclope",
       "race_path_10284_cyclope_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -1501,7 +2005,7 @@ export const RACES = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "in_adaptive_body"
     ],
     "strengths": [
       "Durability",
@@ -1517,6 +2021,20 @@ export const RACES = [
     "paths": [
       "race_path_10288_awakened_slime",
       "race_path_10292_slime_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -1540,7 +2058,7 @@ export const RACES = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Durability",
@@ -1556,6 +2074,20 @@ export const RACES = [
     "paths": [
       "race_path_10296_awakened_treants_ent",
       "race_path_10300_treants_ent_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -1579,7 +2111,7 @@ export const RACES = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_guard_stance"
     ],
     "strengths": [
       "Durability",
@@ -1600,6 +2132,20 @@ export const RACES = [
     "paths": [
       "race_path_10304_awakened_golem",
       "race_path_10308_golem_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_shield_bash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_kings_guard"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_aegis_last_king"
+      }
     ]
   },
   {
@@ -1623,7 +2169,7 @@ export const RACES = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -1637,6 +2183,20 @@ export const RACES = [
     "paths": [
       "race_path_10312_awakened_homunculi",
       "race_path_10316_homunculi_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -1660,7 +2220,7 @@ export const RACES = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Durability",
@@ -1681,6 +2241,20 @@ export const RACES = [
     "paths": [
       "race_path_10320_awakened_automata_living_doll",
       "race_path_10324_automata_living_doll_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -1705,7 +2279,7 @@ export const RACES = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "strengths": [
       "Dark resistance",
@@ -1726,6 +2300,20 @@ export const RACES = [
     "paths": [
       "race_path_10328_awakened_undead",
       "race_path_10332_undead_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -1750,7 +2338,7 @@ export const RACES = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "strengths": [
       "Dark resistance",
@@ -1771,6 +2359,20 @@ export const RACES = [
     "paths": [
       "race_path_10336_awakened_skeleton",
       "race_path_10340_skeleton_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -1795,7 +2397,7 @@ export const RACES = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "strengths": [
       "Dark resistance",
@@ -1816,6 +2418,20 @@ export const RACES = [
     "paths": [
       "race_path_10344_awakened_zombie",
       "race_path_10348_zombie_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -1840,7 +2456,7 @@ export const RACES = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "strengths": [
       "Dark resistance",
@@ -1861,6 +2477,20 @@ export const RACES = [
     "paths": [
       "race_path_10352_awakened_liche",
       "race_path_10356_liche_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -1885,7 +2515,7 @@ export const RACES = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "strengths": [
       "Dark resistance",
@@ -1906,6 +2536,20 @@ export const RACES = [
     "paths": [
       "race_path_10360_awakened_vampire",
       "race_path_10364_vampire_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_dark_3"
+      }
     ]
   },
   {
@@ -1933,7 +2577,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -1947,6 +2591,20 @@ export const RACES = [
     "paths": [
       "race_path_10368_awakened_werewolve",
       "race_path_10372_werewolve_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -1971,7 +2629,7 @@ export const RACES = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "strengths": [
       "Dark resistance",
@@ -1992,6 +2650,20 @@ export const RACES = [
     "paths": [
       "race_path_10376_awakened_wraiths_ghost",
       "race_path_10380_wraiths_ghost_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_twin_fang_rush"
+      }
     ]
   },
   {
@@ -2019,7 +2691,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -2033,6 +2705,20 @@ export const RACES = [
     "paths": [
       "race_path_10384_awakened_yokai",
       "race_path_10388_yokai_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2060,7 +2746,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -2074,6 +2760,20 @@ export const RACES = [
     "paths": [
       "race_path_10392_awakened_kitsune",
       "race_path_10396_kitsune_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2098,7 +2798,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -2112,6 +2812,20 @@ export const RACES = [
     "paths": [
       "race_path_10400_awakened_tanuki",
       "race_path_10404_tanuki_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2136,7 +2850,7 @@ export const RACES = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Mana control",
@@ -2157,6 +2871,20 @@ export const RACES = [
     "paths": [
       "race_path_10408_awakened_tengu",
       "race_path_10412_tengu_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2181,7 +2909,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -2199,6 +2927,20 @@ export const RACES = [
     "paths": [
       "race_path_10416_awakened_kappa",
       "race_path_10420_kappa_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2226,7 +2968,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -2240,6 +2982,20 @@ export const RACES = [
     "paths": [
       "race_path_10424_awakened_yuki_onna",
       "race_path_10428_yuki_onna_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2264,7 +3020,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Speed",
@@ -2280,6 +3036,20 @@ export const RACES = [
     "paths": [
       "race_path_10432_awakened_nekomata_bakeneko",
       "race_path_10436_nekomata_bakeneko_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2307,7 +3077,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -2321,6 +3091,20 @@ export const RACES = [
     "paths": [
       "race_path_10440_awakened_tsukumogami",
       "race_path_10444_tsukumogami_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2348,7 +3132,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -2362,6 +3146,20 @@ export const RACES = [
     "paths": [
       "race_path_10448_awakened_shikigami",
       "race_path_10452_shikigami_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2386,7 +3184,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Healing",
@@ -2406,6 +3204,20 @@ export const RACES = [
     "paths": [
       "race_path_10456_awakened_kami",
       "race_path_10460_kami_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2430,7 +3242,7 @@ export const RACES = [
       "str": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -2444,6 +3256,20 @@ export const RACES = [
     "paths": [
       "race_path_10464_awakened_ayakashi",
       "race_path_10468_ayakashi_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2468,7 +3294,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "strengths": [
       "High HP",
@@ -2488,6 +3314,20 @@ export const RACES = [
     "paths": [
       "race_path_10472_awakened_dragon",
       "race_path_10476_dragon_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_fire_2"
+      }
     ]
   },
   {
@@ -2512,7 +3352,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "strengths": [
       "High HP",
@@ -2532,6 +3372,20 @@ export const RACES = [
     "paths": [
       "race_path_10480_awakened_dragonkin",
       "race_path_10484_dragonkin_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_fire_2"
+      }
     ]
   },
   {
@@ -2556,7 +3410,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "strengths": [
       "Healing",
@@ -2576,6 +3430,20 @@ export const RACES = [
     "paths": [
       "race_path_10488_awakened_celestial",
       "race_path_10492_celestial_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 15,
+        "skillId": "v50_holy_4"
+      }
     ]
   },
   {
@@ -2600,7 +3468,7 @@ export const RACES = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Healing",
@@ -2620,6 +3488,20 @@ export const RACES = [
     "paths": [
       "race_path_10496_awakened_immortal",
       "race_path_10500_immortal_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2644,7 +3526,7 @@ export const RACES = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -2663,6 +3545,20 @@ export const RACES = [
     "paths": [
       "race_path_10504_awakened_asura",
       "race_path_10508_asura_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2687,7 +3583,7 @@ export const RACES = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -2706,6 +3602,20 @@ export const RACES = [
     "paths": [
       "race_path_10512_awakened_rakshasa",
       "race_path_10516_rakshasa_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2730,7 +3640,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "strengths": [
       "High HP",
@@ -2750,6 +3660,20 @@ export const RACES = [
     "paths": [
       "race_path_10520_awakened_naga",
       "race_path_10524_naga_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2774,7 +3698,7 @@ export const RACES = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Mana control",
@@ -2795,6 +3719,20 @@ export const RACES = [
     "paths": [
       "race_path_10528_awakened_garuda",
       "race_path_10532_garuda_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2822,7 +3760,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "strengths": [
       "Flexible growth",
@@ -2836,6 +3774,20 @@ export const RACES = [
     "paths": [
       "race_path_10536_awakened_yaksha",
       "race_path_10540_yaksha_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
     ]
   },
   {
@@ -2860,7 +3812,7 @@ export const RACES = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "strengths": [
       "High HP",
@@ -2876,6 +3828,20 @@ export const RACES = [
     "paths": [
       "race_path_10544_awakened_qilin_kirin",
       "race_path_10548_qilin_kirin_bloodline"
+    ],
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 15,
+        "skillId": "sk_power_strike"
+      }
     ]
   }
 ];
@@ -2907,7 +3873,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -2920,7 +3886,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_human_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10001_elder_human",
@@ -2948,7 +3928,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -2961,7 +3941,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_human_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10002_human_sovereign",
@@ -2989,7 +3983,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -3002,7 +3996,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_human_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10003_origin_human",
@@ -3030,7 +4038,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -3045,7 +4053,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_human_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10004_human_bloodline",
@@ -3073,7 +4095,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -3086,7 +4108,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_human_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10005_mythic_human",
@@ -3114,7 +4150,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -3127,7 +4163,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_human_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10006_ancient_human_avatar",
@@ -3155,7 +4205,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -3168,7 +4218,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_human_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10007_world_born_human",
@@ -3196,7 +4260,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -3211,7 +4275,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_human_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10008_awakened_elve",
@@ -3239,7 +4317,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 15
@@ -3252,7 +4330,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "race_path_10009_elder_elve",
@@ -3280,7 +4372,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 10
@@ -3293,7 +4385,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "race_path_10010_elve_sovereign",
@@ -3321,7 +4427,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 10
@@ -3334,7 +4440,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "race_path_10011_origin_elve",
@@ -3362,7 +4482,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 5,
@@ -3377,7 +4497,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "race_path_10012_elve_bloodline",
@@ -3405,7 +4539,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 15
@@ -3418,7 +4552,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "race_path_10013_mythic_elve",
@@ -3446,7 +4594,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 10
@@ -3459,7 +4607,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "race_path_10014_ancient_elve_avatar",
@@ -3487,7 +4649,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 10
@@ -3500,7 +4662,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "race_path_10015_world_born_elve",
@@ -3528,7 +4704,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 5,
@@ -3543,7 +4719,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      }
+    ]
   },
   {
     "id": "race_path_10016_awakened_dark_elve",
@@ -3571,7 +4761,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 15
@@ -3584,7 +4774,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_dark_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10017_elder_dark_elve",
@@ -3612,7 +4816,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 10
@@ -3625,7 +4829,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_dark_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10018_dark_elve_sovereign",
@@ -3653,7 +4871,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 10
@@ -3666,7 +4884,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_dark_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10019_origin_dark_elve",
@@ -3694,7 +4926,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 5,
@@ -3709,7 +4941,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_dark_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10020_dark_elve_bloodline",
@@ -3737,7 +4983,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 15
@@ -3750,7 +4996,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_dark_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10021_mythic_dark_elve",
@@ -3778,7 +5038,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 10
@@ -3791,7 +5051,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_dark_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10022_ancient_dark_elve_avatar",
@@ -3819,7 +5093,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 10
@@ -3832,7 +5106,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_dark_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10023_world_born_dark_elve",
@@ -3860,7 +5148,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "elf_spark"
+      "in_arcane_sight"
     ],
     "requirements": {
       "classLevel": 5,
@@ -3875,7 +5163,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_dark_elves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10024_awakened_dwarve",
@@ -3903,7 +5205,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -3916,7 +5218,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_dwarves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10025_elder_dwarve",
@@ -3944,7 +5260,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -3957,7 +5273,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_dwarves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10026_dwarve_sovereign",
@@ -3985,7 +5315,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -3998,7 +5328,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_dwarves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10027_origin_dwarve",
@@ -4026,7 +5370,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -4041,7 +5385,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_dwarves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10028_dwarve_bloodline",
@@ -4069,7 +5427,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -4082,7 +5440,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_dwarves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10029_mythic_dwarve",
@@ -4110,7 +5482,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -4123,7 +5495,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_dwarves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10030_ancient_dwarve_avatar",
@@ -4151,7 +5537,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -4164,7 +5550,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_dwarves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10031_world_born_dwarve",
@@ -4192,7 +5592,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -4207,7 +5607,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_dwarves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10032_awakened_halfling",
@@ -4232,7 +5646,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -4245,7 +5659,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_halflings_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10033_elder_halfling",
@@ -4270,7 +5698,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -4283,7 +5711,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_halflings_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10034_halfling_sovereign",
@@ -4308,7 +5750,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -4321,7 +5763,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_halflings_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10035_origin_halfling",
@@ -4346,7 +5802,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -4361,7 +5817,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_halflings_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10036_halfling_bloodline",
@@ -4386,7 +5856,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -4399,7 +5869,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_halflings_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10037_mythic_halfling",
@@ -4424,7 +5908,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -4437,7 +5921,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_halflings_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10038_ancient_halfling_avatar",
@@ -4462,7 +5960,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -4475,7 +5973,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_halflings_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10039_world_born_halfling",
@@ -4500,7 +6012,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -4515,7 +6027,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_halflings_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10040_awakened_gnome",
@@ -4540,7 +6066,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -4553,7 +6079,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_gnomes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10041_elder_gnome",
@@ -4578,7 +6118,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -4591,7 +6131,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_gnomes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10042_gnome_sovereign",
@@ -4616,7 +6170,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -4629,7 +6183,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_gnomes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10043_origin_gnome",
@@ -4654,7 +6222,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -4669,7 +6237,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_gnomes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10044_gnome_bloodline",
@@ -4694,7 +6276,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -4707,7 +6289,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_gnomes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10045_mythic_gnome",
@@ -4732,7 +6328,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -4745,7 +6341,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_gnomes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10046_ancient_gnome_avatar",
@@ -4770,7 +6380,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -4783,7 +6393,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_gnomes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10047_world_born_gnome",
@@ -4808,7 +6432,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "dwarf_guard"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -4823,7 +6447,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_gnomes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10048_awakened_fairie",
@@ -4851,7 +6489,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 15
@@ -4864,7 +6502,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_fairies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10049_elder_fairie",
@@ -4892,7 +6544,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 10
@@ -4905,7 +6557,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_fairies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10050_fairie_sovereign",
@@ -4933,7 +6599,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "elf_spark"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 10
@@ -4946,7 +6612,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_fairies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10051_origin_fairie",
@@ -4974,7 +6654,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "elf_spark"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 5,
@@ -4989,7 +6669,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_fairies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10052_fairie_bloodline",
@@ -5017,7 +6711,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 15
@@ -5030,7 +6724,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_fairies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10053_mythic_fairie",
@@ -5058,7 +6766,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "elf_spark"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 10
@@ -5071,7 +6779,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_fairies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10054_ancient_fairie_avatar",
@@ -5099,7 +6821,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "elf_spark"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 10
@@ -5112,7 +6834,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_fairies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10055_world_born_fairie",
@@ -5140,7 +6876,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "elf_spark"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 5,
@@ -5155,7 +6891,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_fairies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10056_awakened_spirit",
@@ -5180,7 +6930,7 @@ export const RACE_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "v50_arcane_1"
     ],
     "requirements": {
       "classLevel": 15
@@ -5193,7 +6943,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_spirits_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_4"
+      }
+    ]
   },
   {
     "id": "race_path_10057_elder_spirit",
@@ -5218,7 +6982,7 @@ export const RACE_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "v50_arcane_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -5231,7 +6995,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_spirits_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_4"
+      }
+    ]
   },
   {
     "id": "race_path_10058_spirit_sovereign",
@@ -5256,7 +7034,7 @@ export const RACE_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "v50_arcane_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -5269,7 +7047,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_spirits_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_4"
+      }
+    ]
   },
   {
     "id": "race_path_10059_origin_spirit",
@@ -5294,7 +7086,7 @@ export const RACE_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "v50_arcane_1"
     ],
     "requirements": {
       "classLevel": 5,
@@ -5309,7 +7101,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_spirits_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_4"
+      }
+    ]
   },
   {
     "id": "race_path_10060_spirit_bloodline",
@@ -5334,7 +7140,7 @@ export const RACE_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "v50_arcane_1"
     ],
     "requirements": {
       "classLevel": 15
@@ -5347,7 +7153,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_spirits_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_4"
+      }
+    ]
   },
   {
     "id": "race_path_10061_mythic_spirit",
@@ -5372,7 +7192,7 @@ export const RACE_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "v50_arcane_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -5385,7 +7205,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_spirits_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_arcane_4"
+      }
+    ]
   },
   {
     "id": "race_path_10062_ancient_spirit_avatar",
@@ -5410,7 +7244,7 @@ export const RACE_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "v50_arcane_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -5423,7 +7257,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_spirits_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_4"
+      }
+    ]
   },
   {
     "id": "race_path_10063_world_born_spirit",
@@ -5448,7 +7296,7 @@ export const RACE_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "v50_arcane_1"
     ],
     "requirements": {
       "classLevel": 5,
@@ -5463,7 +7311,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_spirits_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_arcane_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_arcane_4"
+      }
+    ]
   },
   {
     "id": "race_path_10064_awakened_angel",
@@ -5488,7 +7350,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 15
@@ -5501,7 +7363,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_angels_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10065_elder_angel",
@@ -5526,7 +7402,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -5539,7 +7415,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_angels_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10066_angel_sovereign",
@@ -5564,7 +7454,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -5577,7 +7467,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_angels_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10067_origin_angel",
@@ -5602,7 +7506,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 5,
@@ -5617,7 +7521,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_angels_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10068_angel_bloodline",
@@ -5642,7 +7560,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 15
@@ -5655,7 +7573,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_angels_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10069_mythic_angel",
@@ -5680,7 +7612,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -5693,7 +7625,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_angels_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10070_ancient_angel_avatar",
@@ -5718,7 +7664,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -5731,7 +7677,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_angels_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10071_world_born_angel",
@@ -5756,7 +7716,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 5,
@@ -5771,7 +7731,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_angels_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10072_awakened_demons_devil",
@@ -5796,7 +7770,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 15
@@ -5809,7 +7783,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_demons_devils_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10073_elder_demons_devil",
@@ -5834,7 +7822,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 10
@@ -5847,7 +7835,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_demons_devils_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10074_demons_devil_sovereign",
@@ -5872,7 +7874,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 10
@@ -5885,7 +7887,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_demons_devils_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10075_origin_demons_devil",
@@ -5910,7 +7926,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 5,
@@ -5925,7 +7941,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_demons_devils_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10076_demons_devil_bloodline",
@@ -5950,7 +7980,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 15
@@ -5963,7 +7993,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_demons_devils_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10077_mythic_demons_devil",
@@ -5988,7 +8032,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 10
@@ -6001,7 +8045,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_demons_devils_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10078_ancient_demons_devil_avatar",
@@ -6026,7 +8084,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 10
@@ -6039,7 +8097,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_demons_devils_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10079_world_born_demons_devil",
@@ -6064,7 +8136,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 5,
@@ -6079,7 +8151,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_demons_devils_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10080_awakened_beastmen_beastkin",
@@ -6104,7 +8190,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -6117,7 +8203,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_beastmen_beastkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10081_elder_beastmen_beastkin",
@@ -6142,7 +8242,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -6155,7 +8255,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_beastmen_beastkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10082_beastmen_beastkin_sovereign",
@@ -6180,7 +8294,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -6193,7 +8307,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_beastmen_beastkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10083_origin_beastmen_beastkin",
@@ -6218,7 +8346,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -6233,7 +8361,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_beastmen_beastkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10084_beastmen_beastkin_bloodline",
@@ -6258,7 +8400,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -6271,7 +8413,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_beastmen_beastkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10085_mythic_beastmen_beastkin",
@@ -6296,7 +8452,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -6309,7 +8465,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_beastmen_beastkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10086_ancient_beastmen_beastkin_avatar",
@@ -6334,7 +8504,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -6347,7 +8517,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_beastmen_beastkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10087_world_born_beastmen_beastkin",
@@ -6372,7 +8556,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -6387,7 +8571,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_beastmen_beastkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10088_awakened_catfolk_nekomimi",
@@ -6412,7 +8610,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -6425,7 +8623,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_catfolk_nekomimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10089_elder_catfolk_nekomimi",
@@ -6450,7 +8662,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -6463,7 +8675,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_catfolk_nekomimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10090_catfolk_nekomimi_sovereign",
@@ -6488,7 +8714,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -6501,7 +8727,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_catfolk_nekomimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10091_origin_catfolk_nekomimi",
@@ -6526,7 +8766,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -6541,7 +8781,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_catfolk_nekomimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10092_catfolk_nekomimi_bloodline",
@@ -6566,7 +8820,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -6579,7 +8833,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_catfolk_nekomimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10093_mythic_catfolk_nekomimi",
@@ -6604,7 +8872,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -6617,7 +8885,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_catfolk_nekomimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10094_ancient_catfolk_nekomimi_avatar",
@@ -6642,7 +8924,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -6655,7 +8937,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_catfolk_nekomimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10095_world_born_catfolk_nekomimi",
@@ -6680,7 +8976,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -6695,7 +8991,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_catfolk_nekomimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10096_awakened_dogfolk_inumimi",
@@ -6720,7 +9030,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -6733,7 +9043,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_dogfolk_inumimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10097_elder_dogfolk_inumimi",
@@ -6758,7 +9082,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -6771,7 +9095,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_dogfolk_inumimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10098_dogfolk_inumimi_sovereign",
@@ -6796,7 +9134,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -6809,7 +9147,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_dogfolk_inumimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10099_origin_dogfolk_inumimi",
@@ -6834,7 +9186,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -6849,7 +9201,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_dogfolk_inumimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10100_dogfolk_inumimi_bloodline",
@@ -6874,7 +9240,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -6887,7 +9253,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_dogfolk_inumimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10101_mythic_dogfolk_inumimi",
@@ -6912,7 +9292,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -6925,7 +9305,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_dogfolk_inumimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10102_ancient_dogfolk_inumimi_avatar",
@@ -6950,7 +9344,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -6963,7 +9357,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_dogfolk_inumimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10103_world_born_dogfolk_inumimi",
@@ -6988,7 +9396,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -7003,7 +9411,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_dogfolk_inumimi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10104_awakened_foxfolk_kitsune",
@@ -7028,7 +9450,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -7041,7 +9463,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_foxfolk_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10105_elder_foxfolk_kitsune",
@@ -7066,7 +9502,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -7079,7 +9515,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_foxfolk_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10106_foxfolk_kitsune_sovereign",
@@ -7104,7 +9554,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -7117,7 +9567,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_foxfolk_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10107_origin_foxfolk_kitsune",
@@ -7142,7 +9606,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -7157,7 +9621,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_foxfolk_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10108_foxfolk_kitsune_bloodline",
@@ -7182,7 +9660,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -7195,7 +9673,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_foxfolk_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10109_mythic_foxfolk_kitsune",
@@ -7220,7 +9712,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -7233,7 +9725,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_foxfolk_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10110_ancient_foxfolk_kitsune_avatar",
@@ -7258,7 +9764,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -7271,7 +9777,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_foxfolk_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10111_world_born_foxfolk_kitsune",
@@ -7296,7 +9816,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -7311,7 +9831,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_foxfolk_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_hunter_step"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      }
+    ]
   },
   {
     "id": "race_path_10112_awakened_rabbitfolk",
@@ -7336,7 +9870,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -7349,7 +9883,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_rabbitfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10113_elder_rabbitfolk",
@@ -7374,7 +9922,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -7387,7 +9935,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_rabbitfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10114_rabbitfolk_sovereign",
@@ -7412,7 +9974,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -7425,7 +9987,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_rabbitfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10115_origin_rabbitfolk",
@@ -7450,7 +10026,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -7465,7 +10041,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_rabbitfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10116_rabbitfolk_bloodline",
@@ -7490,7 +10080,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -7503,7 +10093,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_rabbitfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10117_mythic_rabbitfolk",
@@ -7528,7 +10132,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -7541,7 +10145,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_rabbitfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10118_ancient_rabbitfolk_avatar",
@@ -7566,7 +10184,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -7579,7 +10197,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_rabbitfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10119_world_born_rabbitfolk",
@@ -7604,7 +10236,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -7619,7 +10251,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_rabbitfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10120_awakened_bearfolk",
@@ -7644,7 +10290,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -7657,7 +10303,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_bearfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10121_elder_bearfolk",
@@ -7682,7 +10342,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -7695,7 +10355,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_bearfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10122_bearfolk_sovereign",
@@ -7720,7 +10394,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -7733,7 +10407,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_bearfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10123_origin_bearfolk",
@@ -7758,7 +10446,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -7773,7 +10461,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_bearfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10124_bearfolk_bloodline",
@@ -7798,7 +10500,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -7811,7 +10513,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_bearfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10125_mythic_bearfolk",
@@ -7836,7 +10552,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -7849,7 +10565,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_bearfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10126_ancient_bearfolk_avatar",
@@ -7874,7 +10604,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -7887,7 +10617,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_bearfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10127_world_born_bearfolk",
@@ -7912,7 +10656,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -7927,7 +10671,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_bearfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10128_awakened_lionfolk",
@@ -7952,7 +10710,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -7965,7 +10723,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_lionfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10129_elder_lionfolk",
@@ -7990,7 +10762,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -8003,7 +10775,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_lionfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10130_lionfolk_sovereign",
@@ -8028,7 +10814,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -8041,7 +10827,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_lionfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10131_origin_lionfolk",
@@ -8066,7 +10866,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -8081,7 +10881,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_lionfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10132_lionfolk_bloodline",
@@ -8106,7 +10920,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -8119,7 +10933,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_lionfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10133_mythic_lionfolk",
@@ -8144,7 +10972,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -8157,7 +10985,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_lionfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10134_ancient_lionfolk_avatar",
@@ -8182,7 +11024,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -8195,7 +11037,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_lionfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10135_world_born_lionfolk",
@@ -8220,7 +11076,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -8235,7 +11091,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_lionfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10136_awakened_tigerfolk",
@@ -8260,7 +11130,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -8273,7 +11143,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_tigerfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10137_elder_tigerfolk",
@@ -8298,7 +11182,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -8311,7 +11195,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_tigerfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10138_tigerfolk_sovereign",
@@ -8336,7 +11234,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -8349,7 +11247,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_tigerfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10139_origin_tigerfolk",
@@ -8374,7 +11286,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -8389,7 +11301,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_tigerfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10140_tigerfolk_bloodline",
@@ -8414,7 +11340,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -8427,7 +11353,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_tigerfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10141_mythic_tigerfolk",
@@ -8452,7 +11392,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -8465,7 +11405,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_tigerfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10142_ancient_tigerfolk_avatar",
@@ -8490,7 +11444,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -8503,7 +11457,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_tigerfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10143_world_born_tigerfolk",
@@ -8528,7 +11496,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -8543,7 +11511,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_tigerfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10144_awakened_birdfolk_harpie",
@@ -8571,7 +11553,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 15
@@ -8584,7 +11566,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_birdfolk_harpies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10145_elder_birdfolk_harpie",
@@ -8612,7 +11608,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 10
@@ -8625,7 +11621,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_birdfolk_harpies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10146_birdfolk_harpie_sovereign",
@@ -8653,7 +11663,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 10
@@ -8666,7 +11676,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_birdfolk_harpies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10147_origin_birdfolk_harpie",
@@ -8694,7 +11718,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 5,
@@ -8709,7 +11733,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_birdfolk_harpies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10148_birdfolk_harpie_bloodline",
@@ -8737,7 +11775,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 15
@@ -8750,7 +11788,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_birdfolk_harpies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10149_mythic_birdfolk_harpie",
@@ -8778,7 +11830,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 10
@@ -8791,7 +11843,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_birdfolk_harpies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10150_ancient_birdfolk_harpie_avatar",
@@ -8819,7 +11885,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 10
@@ -8832,7 +11898,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_birdfolk_harpies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10151_world_born_birdfolk_harpie",
@@ -8860,7 +11940,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_hunter_step"
     ],
     "requirements": {
       "classLevel": 5,
@@ -8875,7 +11955,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_birdfolk_harpies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_phantom_step_art"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_thousand_step_godspeed_reversal"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_guard_stance"
+      }
+    ]
   },
   {
     "id": "race_path_10152_awakened_lizardfolk",
@@ -8900,7 +11994,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -8913,7 +12007,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_lizardfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10153_elder_lizardfolk",
@@ -8938,7 +12046,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -8951,7 +12059,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_lizardfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10154_lizardfolk_sovereign",
@@ -8976,7 +12098,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -8989,7 +12111,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_lizardfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10155_origin_lizardfolk",
@@ -9014,7 +12150,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -9029,7 +12165,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_lizardfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10156_lizardfolk_bloodline",
@@ -9054,7 +12204,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 15
@@ -9067,7 +12217,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_lizardfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10157_mythic_lizardfolk",
@@ -9092,7 +12256,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -9105,7 +12269,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_lizardfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10158_ancient_lizardfolk_avatar",
@@ -9130,7 +12308,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 10
@@ -9143,7 +12321,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_lizardfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10159_world_born_lizardfolk",
@@ -9168,7 +12360,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_predator_instinct"
     ],
     "requirements": {
       "classLevel": 5,
@@ -9183,7 +12375,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_lizardfolk_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10160_awakened_dragonfolk_dragonewt",
@@ -9208,7 +12414,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 15
@@ -9221,7 +12427,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_dragonfolk_dragonewts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10161_elder_dragonfolk_dragonewt",
@@ -9246,7 +12466,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -9259,7 +12479,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_dragonfolk_dragonewts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10162_dragonfolk_dragonewt_sovereign",
@@ -9284,7 +12518,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -9297,7 +12531,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_dragonfolk_dragonewts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10163_origin_dragonfolk_dragonewt",
@@ -9322,7 +12570,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 5,
@@ -9337,7 +12585,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_dragonfolk_dragonewts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10164_dragonfolk_dragonewt_bloodline",
@@ -9362,7 +12624,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 15
@@ -9375,7 +12637,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_dragonfolk_dragonewts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10165_mythic_dragonfolk_dragonewt",
@@ -9400,7 +12676,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -9413,7 +12689,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_dragonfolk_dragonewts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10166_ancient_dragonfolk_dragonewt_avatar",
@@ -9438,7 +12728,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -9451,7 +12741,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_dragonfolk_dragonewts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10167_world_born_dragonfolk_dragonewt",
@@ -9476,7 +12780,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 5,
@@ -9491,7 +12795,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_dragonfolk_dragonewts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10168_awakened_snakefolk_lamia",
@@ -9519,7 +12837,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -9532,7 +12850,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_snakefolk_lamia_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10169_elder_snakefolk_lamia",
@@ -9560,7 +12892,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -9573,7 +12905,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_snakefolk_lamia_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10170_snakefolk_lamia_sovereign",
@@ -9601,7 +12947,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -9614,7 +12960,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_snakefolk_lamia_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10171_origin_snakefolk_lamia",
@@ -9642,7 +13002,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -9657,7 +13017,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_snakefolk_lamia_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10172_snakefolk_lamia_bloodline",
@@ -9685,7 +13059,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -9698,7 +13072,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_snakefolk_lamia_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10173_mythic_snakefolk_lamia",
@@ -9726,7 +13114,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -9739,7 +13127,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_snakefolk_lamia_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10174_ancient_snakefolk_lamia_avatar",
@@ -9767,7 +13169,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -9780,7 +13182,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_snakefolk_lamia_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10175_world_born_snakefolk_lamia",
@@ -9808,7 +13224,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -9823,7 +13239,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_snakefolk_lamia_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10176_awakened_minotaur",
@@ -9851,7 +13281,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -9864,7 +13294,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_minotaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10177_elder_minotaur",
@@ -9892,7 +13336,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -9905,7 +13349,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_minotaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10178_minotaur_sovereign",
@@ -9933,7 +13391,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -9946,7 +13404,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_minotaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10179_origin_minotaur",
@@ -9974,7 +13446,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -9989,7 +13461,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_minotaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10180_minotaur_bloodline",
@@ -10017,7 +13503,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -10030,7 +13516,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_minotaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10181_mythic_minotaur",
@@ -10058,7 +13558,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -10071,7 +13571,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_minotaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10182_ancient_minotaur_avatar",
@@ -10099,7 +13613,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -10112,7 +13626,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_minotaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10183_world_born_minotaur",
@@ -10140,7 +13668,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -10155,7 +13683,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_minotaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10184_awakened_centaur",
@@ -10179,7 +13721,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -10192,7 +13734,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_centaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10185_elder_centaur",
@@ -10216,7 +13772,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -10229,7 +13785,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_centaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10186_centaur_sovereign",
@@ -10253,7 +13823,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -10266,7 +13836,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_centaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10187_origin_centaur",
@@ -10290,7 +13874,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -10305,7 +13889,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_centaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10188_centaur_bloodline",
@@ -10329,7 +13927,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -10342,7 +13940,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_centaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10189_mythic_centaur",
@@ -10366,7 +13978,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -10379,7 +13991,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_centaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10190_ancient_centaur_avatar",
@@ -10403,7 +14029,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -10416,7 +14042,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_centaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10191_world_born_centaur",
@@ -10440,7 +14080,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -10455,7 +14095,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_centaurs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10192_awakened_merfolk_mermaid",
@@ -10480,7 +14134,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_water_1"
     ],
     "requirements": {
       "classLevel": 15
@@ -10493,7 +14147,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_merfolk_mermaids_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_water_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_water_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_water_4"
+      }
+    ]
   },
   {
     "id": "race_path_10193_elder_merfolk_mermaid",
@@ -10518,7 +14186,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_water_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -10531,7 +14199,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_merfolk_mermaids_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_water_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_water_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_water_4"
+      }
+    ]
   },
   {
     "id": "race_path_10194_merfolk_mermaid_sovereign",
@@ -10556,7 +14238,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_water_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -10569,7 +14251,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_merfolk_mermaids_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_water_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_water_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_water_4"
+      }
+    ]
   },
   {
     "id": "race_path_10195_origin_merfolk_mermaid",
@@ -10594,7 +14290,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_water_1"
     ],
     "requirements": {
       "classLevel": 5,
@@ -10609,7 +14305,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_merfolk_mermaids_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_water_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_water_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_water_4"
+      }
+    ]
   },
   {
     "id": "race_path_10196_merfolk_mermaid_bloodline",
@@ -10634,7 +14344,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_water_1"
     ],
     "requirements": {
       "classLevel": 15
@@ -10647,7 +14357,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_merfolk_mermaids_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_water_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_water_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_water_4"
+      }
+    ]
   },
   {
     "id": "race_path_10197_mythic_merfolk_mermaid",
@@ -10672,7 +14396,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_water_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -10685,7 +14409,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_merfolk_mermaids_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_water_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_water_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_water_4"
+      }
+    ]
   },
   {
     "id": "race_path_10198_ancient_merfolk_mermaid_avatar",
@@ -10710,7 +14448,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_water_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -10723,7 +14461,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_merfolk_mermaids_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_water_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_water_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_water_4"
+      }
+    ]
   },
   {
     "id": "race_path_10199_world_born_merfolk_mermaid",
@@ -10748,7 +14500,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "v50_water_1"
     ],
     "requirements": {
       "classLevel": 5,
@@ -10763,7 +14515,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_merfolk_mermaids_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_water_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_water_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_water_4"
+      }
+    ]
   },
   {
     "id": "race_path_10200_awakened_fishmen",
@@ -10788,7 +14554,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -10801,7 +14567,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_fishmen_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10201_elder_fishmen",
@@ -10826,7 +14606,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -10839,7 +14619,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_fishmen_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10202_fishmen_sovereign",
@@ -10864,7 +14658,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -10877,7 +14671,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_fishmen_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10203_origin_fishmen",
@@ -10902,7 +14710,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -10917,7 +14725,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_fishmen_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10204_fishmen_bloodline",
@@ -10942,7 +14764,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -10955,7 +14777,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_fishmen_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10205_mythic_fishmen",
@@ -10980,7 +14816,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -10993,7 +14829,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_fishmen_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10206_ancient_fishmen_avatar",
@@ -11018,7 +14868,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -11031,7 +14881,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_fishmen_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10207_world_born_fishmen",
@@ -11056,7 +14920,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -11071,7 +14935,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_fishmen_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10208_awakened_mink",
@@ -11096,7 +14974,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -11109,7 +14987,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_minks_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10209_elder_mink",
@@ -11134,7 +15026,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -11147,7 +15039,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_minks_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10210_mink_sovereign",
@@ -11172,7 +15078,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -11185,7 +15091,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_minks_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10211_origin_mink",
@@ -11210,7 +15130,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -11225,7 +15145,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_minks_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10212_mink_bloodline",
@@ -11250,7 +15184,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -11263,7 +15197,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_minks_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10213_mythic_mink",
@@ -11288,7 +15236,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -11301,7 +15249,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_minks_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10214_ancient_mink_avatar",
@@ -11326,7 +15288,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -11339,7 +15301,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_minks_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10215_world_born_mink",
@@ -11364,7 +15340,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -11379,7 +15355,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_minks_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10216_awakened_arachne",
@@ -11407,7 +15397,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -11420,7 +15410,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_arachne_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10217_elder_arachne",
@@ -11448,7 +15452,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -11461,7 +15465,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_arachne_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10218_arachne_sovereign",
@@ -11489,7 +15507,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -11502,7 +15520,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_arachne_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10219_origin_arachne",
@@ -11530,7 +15562,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -11545,7 +15577,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_arachne_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10220_arachne_bloodline",
@@ -11573,7 +15619,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -11586,7 +15632,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_arachne_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10221_mythic_arachne",
@@ -11614,7 +15674,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -11627,7 +15687,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_arachne_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10222_ancient_arachne_avatar",
@@ -11655,7 +15729,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -11668,7 +15742,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_arachne_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10223_world_born_arachne",
@@ -11696,7 +15784,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -11711,7 +15799,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_arachne_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10224_awakened_goblin",
@@ -11739,7 +15841,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -11752,7 +15854,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_goblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10225_elder_goblin",
@@ -11780,7 +15896,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -11793,7 +15909,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_goblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10226_goblin_sovereign",
@@ -11821,7 +15951,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -11834,7 +15964,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_goblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10227_origin_goblin",
@@ -11862,7 +16006,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -11877,7 +16021,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_goblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10228_goblin_bloodline",
@@ -11905,7 +16063,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -11918,7 +16076,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_goblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10229_mythic_goblin",
@@ -11946,7 +16118,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -11959,7 +16131,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_goblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10230_ancient_goblin_avatar",
@@ -11987,7 +16173,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -12000,7 +16186,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_goblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10231_world_born_goblin",
@@ -12028,7 +16228,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -12043,7 +16243,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_goblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10232_awakened_hobgoblin",
@@ -12071,7 +16285,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -12084,7 +16298,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_hobgoblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10233_elder_hobgoblin",
@@ -12112,7 +16340,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -12125,7 +16353,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_hobgoblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10234_hobgoblin_sovereign",
@@ -12153,7 +16395,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -12166,7 +16408,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_hobgoblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10235_origin_hobgoblin",
@@ -12194,7 +16450,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -12209,7 +16465,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_hobgoblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10236_hobgoblin_bloodline",
@@ -12237,7 +16507,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -12250,7 +16520,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_hobgoblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10237_mythic_hobgoblin",
@@ -12278,7 +16562,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -12291,7 +16575,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_hobgoblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10238_ancient_hobgoblin_avatar",
@@ -12319,7 +16617,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -12332,7 +16630,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_hobgoblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10239_world_born_hobgoblin",
@@ -12360,7 +16672,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -12375,7 +16687,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_hobgoblins_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10240_awakened_orc",
@@ -12403,7 +16729,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -12416,7 +16742,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_orcs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10241_elder_orc",
@@ -12444,7 +16784,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -12457,7 +16797,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_orcs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10242_orc_sovereign",
@@ -12485,7 +16839,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -12498,7 +16852,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_orcs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10243_origin_orc",
@@ -12526,7 +16894,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -12541,7 +16909,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_orcs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10244_orc_bloodline",
@@ -12569,7 +16951,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -12582,7 +16964,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_orcs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10245_mythic_orc",
@@ -12610,7 +17006,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -12623,7 +17019,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_orcs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10246_ancient_orc_avatar",
@@ -12651,7 +17061,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -12664,7 +17074,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_orcs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10247_world_born_orc",
@@ -12692,7 +17116,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -12707,7 +17131,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_orcs_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10248_awakened_ogre",
@@ -12735,7 +17173,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 15
@@ -12748,7 +17186,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_ogres_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10249_elder_ogre",
@@ -12776,7 +17228,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -12789,7 +17241,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_ogres_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10250_ogre_sovereign",
@@ -12817,7 +17283,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -12830,7 +17296,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_ogres_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10251_origin_ogre",
@@ -12858,7 +17338,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 5,
@@ -12873,7 +17353,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_ogres_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10252_ogre_bloodline",
@@ -12901,7 +17395,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 15
@@ -12914,7 +17408,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_ogres_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10253_mythic_ogre",
@@ -12942,7 +17450,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -12955,7 +17463,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_ogres_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10254_ancient_ogre_avatar",
@@ -12983,7 +17505,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -12996,7 +17518,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_ogres_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10255_world_born_ogre",
@@ -13024,7 +17560,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 5,
@@ -13039,7 +17575,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_ogres_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10256_awakened_oni",
@@ -13064,7 +17614,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 15
@@ -13077,7 +17627,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_oni_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10257_elder_oni",
@@ -13102,7 +17666,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 10
@@ -13115,7 +17679,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_oni_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10258_oni_sovereign",
@@ -13140,7 +17718,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 10
@@ -13153,7 +17731,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_oni_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10259_origin_oni",
@@ -13178,7 +17770,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 5,
@@ -13193,7 +17785,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_oni_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10260_oni_bloodline",
@@ -13218,7 +17824,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 15
@@ -13231,7 +17837,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_oni_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10261_mythic_oni",
@@ -13256,7 +17876,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 10
@@ -13269,7 +17889,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_oni_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10262_ancient_oni_avatar",
@@ -13294,7 +17928,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 10
@@ -13307,7 +17941,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_oni_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10263_world_born_oni",
@@ -13332,7 +17980,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "in_hellfire_affinity"
     ],
     "requirements": {
       "classLevel": 5,
@@ -13347,7 +17995,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_oni_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10264_awakened_troll",
@@ -13375,7 +18037,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -13388,7 +18050,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_trolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10265_elder_troll",
@@ -13416,7 +18092,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -13429,7 +18105,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_trolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10266_troll_sovereign",
@@ -13457,7 +18147,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -13470,7 +18160,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_trolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10267_origin_troll",
@@ -13498,7 +18202,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -13513,7 +18217,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_trolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10268_troll_bloodline",
@@ -13541,7 +18259,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -13554,7 +18272,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_trolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10269_mythic_troll",
@@ -13582,7 +18314,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -13595,7 +18327,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_trolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10270_ancient_troll_avatar",
@@ -13623,7 +18369,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -13636,7 +18382,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_trolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10271_world_born_troll",
@@ -13664,7 +18424,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -13679,7 +18439,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_trolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10272_awakened_giant",
@@ -13707,7 +18481,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 15
@@ -13720,7 +18494,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_giants_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10273_elder_giant",
@@ -13748,7 +18536,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -13761,7 +18549,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_giants_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10274_giant_sovereign",
@@ -13789,7 +18591,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -13802,7 +18604,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_giants_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10275_origin_giant",
@@ -13830,7 +18646,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 5,
@@ -13845,7 +18661,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_giants_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10276_giant_bloodline",
@@ -13873,7 +18703,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 15
@@ -13886,7 +18716,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_giants_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10277_mythic_giant",
@@ -13914,7 +18758,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -13927,7 +18771,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_giants_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10278_ancient_giant_avatar",
@@ -13955,7 +18813,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -13968,7 +18826,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_giants_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10279_world_born_giant",
@@ -13996,7 +18868,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "v50_heavy_weapon_1"
     ],
     "requirements": {
       "classLevel": 5,
@@ -14011,7 +18883,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_giants_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_heavy_weapon_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_heavy_weapon_4"
+      }
+    ]
   },
   {
     "id": "race_path_10280_awakened_cyclope",
@@ -14039,7 +18925,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -14052,7 +18938,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_cyclopes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10281_elder_cyclope",
@@ -14080,7 +18980,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -14093,7 +18993,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_cyclopes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10282_cyclope_sovereign",
@@ -14121,7 +19035,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -14134,7 +19048,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_cyclopes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10283_origin_cyclope",
@@ -14162,7 +19090,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -14177,7 +19105,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_cyclopes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10284_cyclope_bloodline",
@@ -14205,7 +19147,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -14218,7 +19160,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_cyclopes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10285_mythic_cyclope",
@@ -14246,7 +19202,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -14259,7 +19215,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_cyclopes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10286_ancient_cyclope_avatar",
@@ -14287,7 +19257,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -14300,7 +19270,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_cyclopes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10287_world_born_cyclope",
@@ -14328,7 +19312,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -14343,7 +19327,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_cyclopes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10288_awakened_slime",
@@ -14367,7 +19365,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "in_adaptive_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -14380,7 +19378,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_slimes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10289_elder_slime",
@@ -14404,7 +19416,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "in_adaptive_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -14417,7 +19429,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_slimes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10290_slime_sovereign",
@@ -14441,7 +19467,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "stone_slam"
+      "in_adaptive_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -14454,7 +19480,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_slimes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10291_origin_slime",
@@ -14478,7 +19518,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "stone_slam"
+      "in_adaptive_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -14493,7 +19533,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_slimes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10292_slime_bloodline",
@@ -14517,7 +19571,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "in_adaptive_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -14530,7 +19584,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_slimes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10293_mythic_slime",
@@ -14554,7 +19622,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "in_adaptive_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -14567,7 +19635,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_slimes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10294_ancient_slime_avatar",
@@ -14591,7 +19673,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "stone_slam"
+      "in_adaptive_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -14604,7 +19686,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_slimes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10295_world_born_slime",
@@ -14628,7 +19724,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "stone_slam"
+      "in_adaptive_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -14643,7 +19739,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_slimes_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10296_awakened_treants_ent",
@@ -14667,7 +19777,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -14680,7 +19790,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_treants_ents_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10297_elder_treants_ent",
@@ -14704,7 +19828,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -14717,7 +19841,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_treants_ents_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10298_treants_ent_sovereign",
@@ -14741,7 +19879,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -14754,7 +19892,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_treants_ents_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10299_origin_treants_ent",
@@ -14778,7 +19930,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -14793,7 +19945,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_treants_ents_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10300_treants_ent_bloodline",
@@ -14817,7 +19983,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -14830,7 +19996,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_treants_ents_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10301_mythic_treants_ent",
@@ -14854,7 +20034,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -14867,7 +20047,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_treants_ents_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10302_ancient_treants_ent_avatar",
@@ -14891,7 +20085,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -14904,7 +20098,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_treants_ents_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10303_world_born_treants_ent",
@@ -14928,7 +20136,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -14943,7 +20151,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_treants_ents_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10304_awakened_golem",
@@ -14967,7 +20189,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_guard_stance"
     ],
     "requirements": {
       "classLevel": 15
@@ -14980,7 +20202,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_golems_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_shield_bash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_kings_guard"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_aegis_last_king"
+      }
+    ]
   },
   {
     "id": "race_path_10305_elder_golem",
@@ -15004,7 +20240,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_guard_stance"
     ],
     "requirements": {
       "classLevel": 10
@@ -15017,7 +20253,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_golems_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_shield_bash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_kings_guard"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_aegis_last_king"
+      }
+    ]
   },
   {
     "id": "race_path_10306_golem_sovereign",
@@ -15041,7 +20291,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_guard_stance"
     ],
     "requirements": {
       "classLevel": 10
@@ -15054,7 +20304,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_golems_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_shield_bash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_kings_guard"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_aegis_last_king"
+      }
+    ]
   },
   {
     "id": "race_path_10307_origin_golem",
@@ -15078,7 +20342,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_guard_stance"
     ],
     "requirements": {
       "classLevel": 5,
@@ -15093,7 +20357,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_golems_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_shield_bash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_kings_guard"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_aegis_last_king"
+      }
+    ]
   },
   {
     "id": "race_path_10308_golem_bloodline",
@@ -15117,7 +20395,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_guard_stance"
     ],
     "requirements": {
       "classLevel": 15
@@ -15130,7 +20408,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_golems_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_shield_bash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_kings_guard"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_aegis_last_king"
+      }
+    ]
   },
   {
     "id": "race_path_10309_mythic_golem",
@@ -15154,7 +20446,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_guard_stance"
     ],
     "requirements": {
       "classLevel": 10
@@ -15167,7 +20459,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_golems_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_shield_bash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_kings_guard"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_aegis_last_king"
+      }
+    ]
   },
   {
     "id": "race_path_10310_ancient_golem_avatar",
@@ -15191,7 +20497,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_guard_stance"
     ],
     "requirements": {
       "classLevel": 10
@@ -15204,7 +20510,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_golems_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_shield_bash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_kings_guard"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_aegis_last_king"
+      }
+    ]
   },
   {
     "id": "race_path_10311_world_born_golem",
@@ -15228,7 +20548,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_guard_stance"
     ],
     "requirements": {
       "classLevel": 5,
@@ -15243,7 +20563,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_golems_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_shield_bash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_kings_guard"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_aegis_last_king"
+      }
+    ]
   },
   {
     "id": "race_path_10312_awakened_homunculi",
@@ -15267,7 +20601,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -15280,7 +20614,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_homunculi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10313_elder_homunculi",
@@ -15304,7 +20652,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -15317,7 +20665,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_homunculi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10314_homunculi_sovereign",
@@ -15341,7 +20703,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -15354,7 +20716,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_homunculi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10315_origin_homunculi",
@@ -15378,7 +20754,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -15393,7 +20769,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_homunculi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10316_homunculi_bloodline",
@@ -15417,7 +20807,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -15430,7 +20820,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_homunculi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10317_mythic_homunculi",
@@ -15454,7 +20858,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -15467,7 +20871,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_homunculi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10318_ancient_homunculi_avatar",
@@ -15491,7 +20909,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -15504,7 +20922,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_homunculi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10319_world_born_homunculi",
@@ -15528,7 +20960,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -15543,7 +20975,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_homunculi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10320_awakened_automata_living_doll",
@@ -15567,7 +21013,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -15580,7 +21026,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_automata_living_dolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10321_elder_automata_living_doll",
@@ -15604,7 +21064,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -15617,7 +21077,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_automata_living_dolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10322_automata_living_doll_sovereign",
@@ -15641,7 +21115,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -15654,7 +21128,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_automata_living_dolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10323_origin_automata_living_doll",
@@ -15678,7 +21166,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -15693,7 +21181,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_automata_living_dolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10324_automata_living_doll_bloodline",
@@ -15717,7 +21219,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -15730,7 +21232,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_automata_living_dolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10325_mythic_automata_living_doll",
@@ -15754,7 +21270,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -15767,7 +21283,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_automata_living_dolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10326_ancient_automata_living_doll_avatar",
@@ -15791,7 +21321,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -15804,7 +21334,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_automata_living_dolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10327_world_born_automata_living_doll",
@@ -15828,7 +21372,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "stone_slam"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -15843,7 +21387,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_automata_living_dolls_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10328_awakened_undead",
@@ -15868,7 +21426,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -15881,7 +21439,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_undead_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10329_elder_undead",
@@ -15906,7 +21478,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -15919,7 +21491,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_undead_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10330_undead_sovereign",
@@ -15944,7 +21530,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -15957,7 +21543,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_undead_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10331_origin_undead",
@@ -15982,7 +21582,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -15997,7 +21597,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_undead_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10332_undead_bloodline",
@@ -16022,7 +21636,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -16035,7 +21649,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_undead_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10333_mythic_undead",
@@ -16060,7 +21688,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -16073,7 +21701,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_undead_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10334_ancient_undead_avatar",
@@ -16098,7 +21740,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -16111,7 +21753,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_undead_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10335_world_born_undead",
@@ -16136,7 +21792,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -16151,7 +21807,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_undead_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10336_awakened_skeleton",
@@ -16176,7 +21846,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -16189,7 +21859,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_skeletons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10337_elder_skeleton",
@@ -16214,7 +21898,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -16227,7 +21911,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_skeletons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10338_skeleton_sovereign",
@@ -16252,7 +21950,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -16265,7 +21963,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_skeletons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10339_origin_skeleton",
@@ -16290,7 +22002,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -16305,7 +22017,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_skeletons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10340_skeleton_bloodline",
@@ -16330,7 +22056,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -16343,7 +22069,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_skeletons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10341_mythic_skeleton",
@@ -16368,7 +22108,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -16381,7 +22121,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_skeletons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10342_ancient_skeleton_avatar",
@@ -16406,7 +22160,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -16419,7 +22173,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_skeletons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10343_world_born_skeleton",
@@ -16444,7 +22212,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -16459,7 +22227,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_skeletons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10344_awakened_zombie",
@@ -16484,7 +22266,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -16497,7 +22279,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_zombies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10345_elder_zombie",
@@ -16522,7 +22318,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -16535,7 +22331,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_zombies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10346_zombie_sovereign",
@@ -16560,7 +22370,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -16573,7 +22383,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_zombies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10347_origin_zombie",
@@ -16598,7 +22422,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -16613,7 +22437,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_zombies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10348_zombie_bloodline",
@@ -16638,7 +22476,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -16651,7 +22489,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_zombies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10349_mythic_zombie",
@@ -16676,7 +22528,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -16689,7 +22541,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_zombies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10350_ancient_zombie_avatar",
@@ -16714,7 +22580,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -16727,7 +22593,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_zombies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10351_world_born_zombie",
@@ -16752,7 +22632,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -16767,7 +22647,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_zombies_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10352_awakened_liche",
@@ -16792,7 +22686,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -16805,7 +22699,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_liches_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10353_elder_liche",
@@ -16830,7 +22738,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -16843,7 +22751,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_liches_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10354_liche_sovereign",
@@ -16868,7 +22790,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -16881,7 +22803,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_liches_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10355_origin_liche",
@@ -16906,7 +22842,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -16921,7 +22857,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_liches_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10356_liche_bloodline",
@@ -16946,7 +22896,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -16959,7 +22909,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_liches_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10357_mythic_liche",
@@ -16984,7 +22948,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -16997,7 +22961,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_liches_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10358_ancient_liche_avatar",
@@ -17022,7 +23000,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -17035,7 +23013,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_liches_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10359_world_born_liche",
@@ -17060,7 +23052,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -17075,7 +23067,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_liches_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10360_awakened_vampire",
@@ -17100,7 +23106,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -17113,7 +23119,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_vampires_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10361_elder_vampire",
@@ -17138,7 +23158,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -17151,7 +23171,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_vampires_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10362_vampire_sovereign",
@@ -17176,7 +23210,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -17189,7 +23223,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_vampires_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10363_origin_vampire",
@@ -17214,7 +23262,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -17229,7 +23277,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_vampires_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10364_vampire_bloodline",
@@ -17254,7 +23316,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -17267,7 +23329,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_vampires_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10365_mythic_vampire",
@@ -17292,7 +23368,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -17305,7 +23381,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_vampires_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10366_ancient_vampire_avatar",
@@ -17330,7 +23420,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -17343,7 +23433,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_vampires_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10367_world_born_vampire",
@@ -17368,7 +23472,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -17383,7 +23487,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_vampires_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_dark_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_dark_3"
+      }
+    ]
   },
   {
     "id": "race_path_10368_awakened_werewolve",
@@ -17411,7 +23529,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -17424,7 +23542,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_werewolves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10369_elder_werewolve",
@@ -17452,7 +23584,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -17465,7 +23597,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_werewolves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10370_werewolve_sovereign",
@@ -17493,7 +23639,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -17506,7 +23652,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_werewolves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10371_origin_werewolve",
@@ -17534,7 +23694,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -17549,7 +23709,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_werewolves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10372_werewolve_bloodline",
@@ -17577,7 +23751,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -17590,7 +23764,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_werewolves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10373_mythic_werewolve",
@@ -17618,7 +23806,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -17631,7 +23819,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_werewolves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10374_ancient_werewolve_avatar",
@@ -17659,7 +23861,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -17672,7 +23874,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_werewolves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10375_world_born_werewolve",
@@ -17700,7 +23916,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -17715,7 +23931,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_werewolves_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10376_awakened_wraiths_ghost",
@@ -17740,7 +23970,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -17753,7 +23983,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_wraiths_ghosts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10377_elder_wraiths_ghost",
@@ -17778,7 +24022,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -17791,7 +24035,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_wraiths_ghosts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10378_wraiths_ghost_sovereign",
@@ -17816,7 +24074,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -17829,7 +24087,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_wraiths_ghosts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10379_origin_wraiths_ghost",
@@ -17854,7 +24126,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -17869,7 +24141,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_wraiths_ghosts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10380_wraiths_ghost_bloodline",
@@ -17894,7 +24180,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 15
@@ -17907,7 +24193,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_wraiths_ghosts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10381_mythic_wraiths_ghost",
@@ -17932,7 +24232,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -17945,7 +24245,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_wraiths_ghosts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10382_ancient_wraiths_ghost_avatar",
@@ -17970,7 +24284,7 @@ export const RACE_PATHS = [
       "con": 3
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 10
@@ -17983,7 +24297,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_wraiths_ghosts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10383_world_born_wraiths_ghost",
@@ -18008,7 +24336,7 @@ export const RACE_PATHS = [
       "con": 4
     },
     "startingSkills": [
-      "grave_drain"
+      "in_deathless_body"
     ],
     "requirements": {
       "classLevel": 5,
@@ -18023,7 +24351,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_wraiths_ghosts_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      }
+    ]
   },
   {
     "id": "race_path_10384_awakened_yokai",
@@ -18051,7 +24393,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -18064,7 +24406,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_y_kai_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10385_elder_yokai",
@@ -18092,7 +24448,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -18105,7 +24461,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_y_kai_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10386_yokai_sovereign",
@@ -18133,7 +24503,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -18146,7 +24516,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_y_kai_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10387_origin_yokai",
@@ -18174,7 +24558,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -18189,7 +24573,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_y_kai_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10388_yokai_bloodline",
@@ -18217,7 +24615,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -18230,7 +24628,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_y_kai_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10389_mythic_yokai",
@@ -18258,7 +24670,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -18271,7 +24683,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_y_kai_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10390_ancient_yokai_avatar",
@@ -18299,7 +24725,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -18312,7 +24738,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_y_kai_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10391_world_born_yokai",
@@ -18340,7 +24780,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -18355,7 +24795,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_y_kai_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10392_awakened_kitsune",
@@ -18383,7 +24837,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -18396,7 +24850,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10393_elder_kitsune",
@@ -18424,7 +24892,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -18437,7 +24905,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10394_kitsune_sovereign",
@@ -18465,7 +24947,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -18478,7 +24960,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10395_origin_kitsune",
@@ -18506,7 +25002,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -18521,7 +25017,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10396_kitsune_bloodline",
@@ -18549,7 +25059,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -18562,7 +25072,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10397_mythic_kitsune",
@@ -18590,7 +25114,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -18603,7 +25127,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10398_ancient_kitsune_avatar",
@@ -18631,7 +25169,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -18644,7 +25182,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10399_world_born_kitsune",
@@ -18672,7 +25224,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -18687,7 +25239,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_kitsune_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10400_awakened_tanuki",
@@ -18712,7 +25278,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -18725,7 +25291,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_tanuki_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10401_elder_tanuki",
@@ -18750,7 +25330,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -18763,7 +25343,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_tanuki_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10402_tanuki_sovereign",
@@ -18788,7 +25382,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -18801,7 +25395,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_tanuki_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10403_origin_tanuki",
@@ -18826,7 +25434,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -18841,7 +25449,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_tanuki_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10404_tanuki_bloodline",
@@ -18866,7 +25488,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -18879,7 +25501,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_tanuki_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10405_mythic_tanuki",
@@ -18904,7 +25540,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -18917,7 +25553,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_tanuki_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10406_ancient_tanuki_avatar",
@@ -18942,7 +25592,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -18955,7 +25605,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_tanuki_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10407_world_born_tanuki",
@@ -18980,7 +25644,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -18995,7 +25659,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_tanuki_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10408_awakened_tengu",
@@ -19020,7 +25698,7 @@ export const RACE_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -19033,7 +25711,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_tengu_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10409_elder_tengu",
@@ -19058,7 +25750,7 @@ export const RACE_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -19071,7 +25763,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_tengu_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10410_tengu_sovereign",
@@ -19096,7 +25802,7 @@ export const RACE_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -19109,7 +25815,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_tengu_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10411_origin_tengu",
@@ -19134,7 +25854,7 @@ export const RACE_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -19149,7 +25869,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_tengu_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10412_tengu_bloodline",
@@ -19174,7 +25908,7 @@ export const RACE_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -19187,7 +25921,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_tengu_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10413_mythic_tengu",
@@ -19212,7 +25960,7 @@ export const RACE_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -19225,7 +25973,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_tengu_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10414_ancient_tengu_avatar",
@@ -19250,7 +26012,7 @@ export const RACE_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -19263,7 +26025,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_tengu_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10415_world_born_tengu",
@@ -19288,7 +26064,7 @@ export const RACE_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -19303,7 +26079,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_tengu_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10416_awakened_kappa",
@@ -19328,7 +26118,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -19341,7 +26131,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_kappa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10417_elder_kappa",
@@ -19366,7 +26170,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -19379,7 +26183,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_kappa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10418_kappa_sovereign",
@@ -19404,7 +26222,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -19417,7 +26235,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_kappa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10419_origin_kappa",
@@ -19442,7 +26274,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -19457,7 +26289,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_kappa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10420_kappa_bloodline",
@@ -19482,7 +26328,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -19495,7 +26341,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_kappa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10421_mythic_kappa",
@@ -19520,7 +26380,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -19533,7 +26393,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_kappa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10422_ancient_kappa_avatar",
@@ -19558,7 +26432,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -19571,7 +26445,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_kappa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10423_world_born_kappa",
@@ -19596,7 +26484,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -19611,7 +26499,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_kappa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10424_awakened_yuki_onna",
@@ -19639,7 +26541,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -19652,7 +26554,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_yuki_onna_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10425_elder_yuki_onna",
@@ -19680,7 +26596,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -19693,7 +26609,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_yuki_onna_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10426_yuki_onna_sovereign",
@@ -19721,7 +26651,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -19734,7 +26664,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_yuki_onna_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10427_origin_yuki_onna",
@@ -19762,7 +26706,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -19777,7 +26721,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_yuki_onna_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10428_yuki_onna_bloodline",
@@ -19805,7 +26763,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -19818,7 +26776,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_yuki_onna_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10429_mythic_yuki_onna",
@@ -19846,7 +26818,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -19859,7 +26831,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_yuki_onna_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10430_ancient_yuki_onna_avatar",
@@ -19887,7 +26873,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -19900,7 +26886,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_yuki_onna_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10431_world_born_yuki_onna",
@@ -19928,7 +26928,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -19943,7 +26943,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_yuki_onna_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10432_awakened_nekomata_bakeneko",
@@ -19968,7 +26982,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -19981,7 +26995,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_nekomata_bakeneko_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10433_elder_nekomata_bakeneko",
@@ -20006,7 +27034,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -20019,7 +27047,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_nekomata_bakeneko_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10434_nekomata_bakeneko_sovereign",
@@ -20044,7 +27086,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -20057,7 +27099,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_nekomata_bakeneko_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10435_origin_nekomata_bakeneko",
@@ -20082,7 +27138,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -20097,7 +27153,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_nekomata_bakeneko_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10436_nekomata_bakeneko_bloodline",
@@ -20122,7 +27192,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -20135,7 +27205,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_nekomata_bakeneko_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10437_mythic_nekomata_bakeneko",
@@ -20160,7 +27244,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -20173,7 +27257,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_nekomata_bakeneko_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10438_ancient_nekomata_bakeneko_avatar",
@@ -20198,7 +27296,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -20211,7 +27309,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_nekomata_bakeneko_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10439_world_born_nekomata_bakeneko",
@@ -20236,7 +27348,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "beast_claw"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -20251,7 +27363,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_nekomata_bakeneko_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10440_awakened_tsukumogami",
@@ -20279,7 +27405,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -20292,7 +27418,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_tsukumogami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10441_elder_tsukumogami",
@@ -20320,7 +27460,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -20333,7 +27473,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_tsukumogami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10442_tsukumogami_sovereign",
@@ -20361,7 +27515,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -20374,7 +27528,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_tsukumogami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10443_origin_tsukumogami",
@@ -20402,7 +27570,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -20417,7 +27585,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_tsukumogami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10444_tsukumogami_bloodline",
@@ -20445,7 +27627,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -20458,7 +27640,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_tsukumogami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10445_mythic_tsukumogami",
@@ -20486,7 +27682,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -20499,7 +27695,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_tsukumogami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10446_ancient_tsukumogami_avatar",
@@ -20527,7 +27737,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -20540,7 +27750,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_tsukumogami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10447_world_born_tsukumogami",
@@ -20568,7 +27792,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -20583,7 +27807,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_tsukumogami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10448_awakened_shikigami",
@@ -20611,7 +27849,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -20624,7 +27862,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_shikigami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10449_elder_shikigami",
@@ -20652,7 +27904,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -20665,7 +27917,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_shikigami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10450_shikigami_sovereign",
@@ -20693,7 +27959,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -20706,7 +27972,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_shikigami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10451_origin_shikigami",
@@ -20734,7 +28014,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -20749,7 +28029,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_shikigami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10452_shikigami_bloodline",
@@ -20777,7 +28071,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -20790,7 +28084,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_shikigami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10453_mythic_shikigami",
@@ -20818,7 +28126,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -20831,7 +28139,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_shikigami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10454_ancient_shikigami_avatar",
@@ -20859,7 +28181,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -20872,7 +28194,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_shikigami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10455_world_born_shikigami",
@@ -20900,7 +28236,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -20915,7 +28251,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_shikigami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10456_awakened_kami",
@@ -20940,7 +28290,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -20953,7 +28303,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_kami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10457_elder_kami",
@@ -20978,7 +28342,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -20991,7 +28355,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_kami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10458_kami_sovereign",
@@ -21016,7 +28394,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -21029,7 +28407,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_kami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10459_origin_kami",
@@ -21054,7 +28446,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -21069,7 +28461,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_kami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10460_kami_bloodline",
@@ -21094,7 +28500,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -21107,7 +28513,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_kami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10461_mythic_kami",
@@ -21132,7 +28552,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -21145,7 +28565,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_kami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10462_ancient_kami_avatar",
@@ -21170,7 +28604,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -21183,7 +28617,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_kami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10463_world_born_kami",
@@ -21208,7 +28656,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -21223,7 +28671,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_kami_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10464_awakened_ayakashi",
@@ -21248,7 +28710,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -21261,7 +28723,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_ayakashi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10465_elder_ayakashi",
@@ -21286,7 +28762,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -21299,7 +28775,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_ayakashi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10466_ayakashi_sovereign",
@@ -21324,7 +28814,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -21337,7 +28827,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_ayakashi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10467_origin_ayakashi",
@@ -21362,7 +28866,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -21377,7 +28881,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_ayakashi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10468_ayakashi_bloodline",
@@ -21402,7 +28920,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -21415,7 +28933,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_ayakashi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10469_mythic_ayakashi",
@@ -21440,7 +28972,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -21453,7 +28985,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_ayakashi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10470_ancient_ayakashi_avatar",
@@ -21478,7 +29024,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -21491,7 +29037,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_ayakashi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10471_world_born_ayakashi",
@@ -21516,7 +29076,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -21531,7 +29091,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_ayakashi_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10472_awakened_dragon",
@@ -21556,7 +29130,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 15
@@ -21569,7 +29143,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_dragons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10473_elder_dragon",
@@ -21594,7 +29182,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -21607,7 +29195,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_dragons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10474_dragon_sovereign",
@@ -21632,7 +29234,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -21645,7 +29247,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_dragons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10475_origin_dragon",
@@ -21670,7 +29286,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 5,
@@ -21685,7 +29301,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_dragons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10476_dragon_bloodline",
@@ -21710,7 +29340,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 15
@@ -21723,7 +29353,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_dragons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10477_mythic_dragon",
@@ -21748,7 +29392,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -21761,7 +29405,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_dragons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10478_ancient_dragon_avatar",
@@ -21786,7 +29444,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -21799,7 +29457,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_dragons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10479_world_born_dragon",
@@ -21824,7 +29496,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 5,
@@ -21839,7 +29511,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_dragons_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10480_awakened_dragonkin",
@@ -21864,7 +29550,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 15
@@ -21877,7 +29563,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_dragonkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10481_elder_dragonkin",
@@ -21902,7 +29602,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -21915,7 +29615,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_dragonkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10482_dragonkin_sovereign",
@@ -21940,7 +29654,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -21953,7 +29667,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_dragonkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10483_origin_dragonkin",
@@ -21978,7 +29706,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 5,
@@ -21993,7 +29721,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_dragonkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10484_dragonkin_bloodline",
@@ -22018,7 +29760,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 15
@@ -22031,7 +29773,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_dragonkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10485_mythic_dragonkin",
@@ -22056,7 +29812,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -22069,7 +29825,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_dragonkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10486_ancient_dragonkin_avatar",
@@ -22094,7 +29864,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -22107,7 +29877,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_dragonkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10487_world_born_dragonkin",
@@ -22132,7 +29916,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 5,
@@ -22147,7 +29931,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_dragonkin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_1"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_fire_2"
+      }
+    ]
   },
   {
     "id": "race_path_10488_awakened_celestial",
@@ -22172,7 +29970,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 15
@@ -22185,7 +29983,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_celestials_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10489_elder_celestial",
@@ -22210,7 +30022,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -22223,7 +30035,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_celestials_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10490_celestial_sovereign",
@@ -22248,7 +30074,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -22261,7 +30087,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_celestials_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10491_origin_celestial",
@@ -22286,7 +30126,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 5,
@@ -22301,7 +30141,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_celestials_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10492_celestial_bloodline",
@@ -22326,7 +30180,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 15
@@ -22339,7 +30193,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_celestials_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10493_mythic_celestial",
@@ -22364,7 +30232,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -22377,7 +30245,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_celestials_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 10,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10494_ancient_celestial_avatar",
@@ -22402,7 +30284,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 10
@@ -22415,7 +30297,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_celestials_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10495_world_born_celestial",
@@ -22440,7 +30336,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "v50_holy_1"
     ],
     "requirements": {
       "classLevel": 5,
@@ -22455,7 +30351,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_celestials_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "v50_holy_2"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_3"
+      },
+      {
+        "level": 5,
+        "skillId": "v50_holy_4"
+      }
+    ]
   },
   {
     "id": "race_path_10496_awakened_immortal",
@@ -22480,7 +30390,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -22493,7 +30403,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_immortals_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10497_elder_immortal",
@@ -22518,7 +30442,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -22531,7 +30455,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_immortals_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10498_immortal_sovereign",
@@ -22556,7 +30494,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -22569,7 +30507,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_immortals_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10499_origin_immortal",
@@ -22594,7 +30546,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -22609,7 +30561,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_immortals_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10500_immortal_bloodline",
@@ -22634,7 +30600,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -22647,7 +30613,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_immortals_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10501_mythic_immortal",
@@ -22672,7 +30652,7 @@ export const RACE_PATHS = [
       "con": 1
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -22685,7 +30665,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_immortals_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10502_ancient_immortal_avatar",
@@ -22710,7 +30704,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -22723,7 +30717,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_immortals_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10503_world_born_immortal",
@@ -22748,7 +30756,7 @@ export const RACE_PATHS = [
       "con": 2
     },
     "startingSkills": [
-      "star_mend"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -22763,7 +30771,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_immortals_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10504_awakened_asura",
@@ -22788,7 +30810,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -22801,7 +30823,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_asura_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10505_elder_asura",
@@ -22826,7 +30862,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -22839,7 +30875,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_asura_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10506_asura_sovereign",
@@ -22864,7 +30914,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -22877,7 +30927,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_asura_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10507_origin_asura",
@@ -22902,7 +30966,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -22917,7 +30981,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_asura_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10508_asura_bloodline",
@@ -22942,7 +31020,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -22955,7 +31033,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_asura_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10509_mythic_asura",
@@ -22980,7 +31072,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -22993,7 +31085,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_asura_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10510_ancient_asura_avatar",
@@ -23018,7 +31124,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -23031,7 +31137,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_asura_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10511_world_born_asura",
@@ -23056,7 +31176,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -23071,7 +31191,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_asura_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10512_awakened_rakshasa",
@@ -23096,7 +31230,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -23109,7 +31243,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_rakshasa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10513_elder_rakshasa",
@@ -23134,7 +31282,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -23147,7 +31295,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_rakshasa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10514_rakshasa_sovereign",
@@ -23172,7 +31334,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -23185,7 +31347,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_rakshasa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10515_origin_rakshasa",
@@ -23210,7 +31386,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -23225,7 +31401,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_rakshasa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10516_rakshasa_bloodline",
@@ -23250,7 +31440,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -23263,7 +31453,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_rakshasa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10517_mythic_rakshasa",
@@ -23288,7 +31492,7 @@ export const RACE_PATHS = [
       "str": 1
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -23301,7 +31505,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_rakshasa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10518_ancient_rakshasa_avatar",
@@ -23326,7 +31544,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -23339,7 +31557,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_rakshasa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10519_world_born_rakshasa",
@@ -23364,7 +31596,7 @@ export const RACE_PATHS = [
       "str": 2
     },
     "startingSkills": [
-      "impish_hex"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -23379,7 +31611,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_rakshasa_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10520_awakened_naga",
@@ -23404,7 +31650,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -23417,7 +31663,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_naga_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10521_elder_naga",
@@ -23442,7 +31702,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -23455,7 +31715,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_naga_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10522_naga_sovereign",
@@ -23480,7 +31754,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -23493,7 +31767,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_naga_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10523_origin_naga",
@@ -23518,7 +31806,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -23533,7 +31821,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_naga_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10524_naga_bloodline",
@@ -23558,7 +31860,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -23571,7 +31873,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_naga_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10525_mythic_naga",
@@ -23596,7 +31912,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -23609,7 +31925,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_naga_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10526_ancient_naga_avatar",
@@ -23634,7 +31964,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -23647,7 +31977,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_naga_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10527_world_born_naga",
@@ -23672,7 +32016,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -23687,7 +32031,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_naga_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10528_awakened_garuda",
@@ -23712,7 +32070,7 @@ export const RACE_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -23725,7 +32083,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_garuda_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10529_elder_garuda",
@@ -23750,7 +32122,7 @@ export const RACE_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -23763,7 +32135,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_garuda_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10530_garuda_sovereign",
@@ -23788,7 +32174,7 @@ export const RACE_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -23801,7 +32187,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_garuda_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10531_origin_garuda",
@@ -23826,7 +32226,7 @@ export const RACE_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -23841,7 +32241,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_garuda_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10532_garuda_bloodline",
@@ -23866,7 +32280,7 @@ export const RACE_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -23879,7 +32293,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_garuda_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10533_mythic_garuda",
@@ -23904,7 +32332,7 @@ export const RACE_PATHS = [
       "wis": 1
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -23917,7 +32345,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_garuda_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10534_ancient_garuda_avatar",
@@ -23942,7 +32384,7 @@ export const RACE_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -23955,7 +32397,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_garuda_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10535_world_born_garuda",
@@ -23980,7 +32436,7 @@ export const RACE_PATHS = [
       "wis": 2
     },
     "startingSkills": [
-      "gale_cut"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -23995,7 +32451,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_garuda_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10536_awakened_yaksha",
@@ -24023,7 +32493,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -24036,7 +32506,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_yaksha_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10537_elder_yaksha",
@@ -24064,7 +32548,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -24077,7 +32561,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_yaksha_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10538_yaksha_sovereign",
@@ -24105,7 +32603,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -24118,7 +32616,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_yaksha_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10539_origin_yaksha",
@@ -24146,7 +32658,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -24161,7 +32673,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_yaksha_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10540_yaksha_bloodline",
@@ -24189,7 +32715,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 15
@@ -24202,7 +32728,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_yaksha_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10541_mythic_yaksha",
@@ -24230,7 +32770,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -24243,7 +32783,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_yaksha_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10542_ancient_yaksha_avatar",
@@ -24271,7 +32825,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 10
@@ -24284,7 +32838,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_yaksha_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10543_world_born_yaksha",
@@ -24312,7 +32880,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "human_resolve"
+      "sk_quick_slash"
     ],
     "requirements": {
       "classLevel": 5,
@@ -24327,7 +32895,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_yaksha_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "sk_power_strike"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_twin_fang_rush"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_heaven_splitting_lion_art"
+      }
+    ]
   },
   {
     "id": "race_path_10544_awakened_qilin_kirin",
@@ -24352,7 +32934,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 15
@@ -24365,7 +32947,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 0,
       "keySkill": "race_qilin_kirin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      }
+    ]
   },
   {
     "id": "race_path_10545_elder_qilin_kirin",
@@ -24390,7 +32986,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -24403,7 +32999,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 0,
       "keySkill": "race_qilin_kirin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      }
+    ]
   },
   {
     "id": "race_path_10546_qilin_kirin_sovereign",
@@ -24428,7 +33038,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -24441,7 +33051,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 0,
       "keySkill": "race_qilin_kirin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      }
+    ]
   },
   {
     "id": "race_path_10547_origin_qilin_kirin",
@@ -24466,7 +33090,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 5,
@@ -24481,7 +33105,21 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 0,
       "keySkill": "race_qilin_kirin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      }
+    ]
   },
   {
     "id": "race_path_10548_qilin_kirin_bloodline",
@@ -24506,7 +33144,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 15
@@ -24519,7 +33157,21 @@ export const RACE_PATHS = [
       "stage": 0,
       "branch": 1,
       "keySkill": "race_qilin_kirin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      }
+    ]
   },
   {
     "id": "race_path_10549_mythic_qilin_kirin",
@@ -24544,7 +33196,7 @@ export const RACE_PATHS = [
       "cha": 1
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -24557,7 +33209,21 @@ export const RACE_PATHS = [
       "stage": 1,
       "branch": 1,
       "keySkill": "race_qilin_kirin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 5,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 10,
+        "skillId": "sk_power_strike"
+      }
+    ]
   },
   {
     "id": "race_path_10550_ancient_qilin_kirin_avatar",
@@ -24582,7 +33248,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 10
@@ -24595,7 +33261,21 @@ export const RACE_PATHS = [
       "stage": 2,
       "branch": 1,
       "keySkill": "race_qilin_kirin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      }
+    ]
   },
   {
     "id": "race_path_10551_world_born_qilin_kirin",
@@ -24620,7 +33300,7 @@ export const RACE_PATHS = [
       "cha": 2
     },
     "startingSkills": [
-      "ember_breath"
+      "in_dragon_scales"
     ],
     "requirements": {
       "classLevel": 5,
@@ -24635,6 +33315,20 @@ export const RACE_PATHS = [
       "stage": 3,
       "branch": 1,
       "keySkill": "race_qilin_kirin_limit_15"
-    }
+    },
+    "learns": [
+      {
+        "level": 3,
+        "skillId": "in_dragon_breath"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_quick_slash"
+      },
+      {
+        "level": 5,
+        "skillId": "sk_power_strike"
+      }
+    ]
   }
 ];
