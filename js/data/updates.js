@@ -1,5 +1,17 @@
 export const UPDATE_NOTES = [
   {
+    version: "v0.6.0 — Balance Pass",
+    date: "2026-05-05",
+    notes: [
+      "Generated category-based stat templates for imported races, race evolutions, jobs, and job paths.",
+      "Rebalanced every imported race/job using its category, tier, and name keywords.",
+      "Added unique descriptions, strengths, and weaknesses for every race/job entry.",
+      "Added duplicate/overlap cleanup metadata so exact duplicate classes are hidden from normal selection and registry browsing.",
+      "Added achievement title bonuses with stronger stat rewards for harder achievements.",
+      "Updated Status and Achievements screens to show equipped title bonuses."
+    ]
+  },
+  {
     version: "v0.5.1 — Shop Filter & Ability Description Fix",
     date: "2026-05-04",
     notes: [

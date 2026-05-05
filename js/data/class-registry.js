@@ -17,7 +17,13 @@ function withKind(kind, track, entry) {
     weaknesses: entry.weaknesses ?? [],
     startingSkills: entry.startingSkills ?? [],
     requirements: entry.requirements ?? {},
-    registryRequirement: entry.registryRequirement ?? null
+    registryRequirement: entry.registryRequirement ?? null,
+    deprecatedOverlap: Boolean(entry.deprecatedOverlap),
+    duplicateOf: entry.duplicateOf ?? "",
+    registryVisible: entry.registryVisible !== false,
+    balanceTemplate: entry.balanceTemplate ?? "",
+    overlapGroup: entry.overlapGroup ?? "",
+    roleIdentity: entry.roleIdentity ?? ""
   };
 }
 

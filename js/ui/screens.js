@@ -10,7 +10,7 @@ import { UPDATE_NOTES } from "../data/updates.js";
 import { CLASS_REGISTRY, REGISTRY_TOTALS, REGISTRY_CATEGORIES, REGISTRY_KINDS, REGISTRY_TIERS } from "../data/class-registry.js";
 import { getSaveSlots } from "../core/save.js";
 import { byId, titleCase, formatStat } from "../core/utils.js";
-import { computeStats, computeCreationPreview, getTotalLevel, xpToNext, getAvailableAdvancements, getActiveSynergies, getEquippedSetBonuses } from "../systems/leveling.js";
+import { computeStats, computeCreationPreview, getTotalLevel, xpToNext, getAvailableAdvancements, getActiveSynergies, getEquippedSetBonuses, getEquippedTitleBonus } from "../systems/leveling.js";
 import { canSeeRegistryEntry, getRequirementText, getUnlockRequirementMarkup, getUnlockStatus, getVisibleTreeForPlayer } from "../systems/unlocks.js";
 import { isAchievementUnlocked } from "../systems/achievements.js";
 import { prepareRecruitOffer } from "../systems/party.js";
@@ -217,6 +217,7 @@ function filterCreationChoices(list, filters, type) {
   const tier = filters[`${prefix}Tier`] ?? "all";
   const focus = filters[`${prefix}Focus`] ?? "all";
   return list.filter(item => {
+    if (item.registryVisible === false || item.deprecatedOverlap) return false;
     if (category !== "all" && item.category !== category) return false;
     if (tier !== "all" && item.tier !== tier) return false;
     if (focus !== "all" && getBuildFocus(item) !== focus) return false;
@@ -338,13 +339,14 @@ export function statusScreen(state) {
   const p = state.player;
   const stats = computeStats(p);
   const synergies = getActiveSynergies(p);
+  const titleBonus = getEquippedTitleBonus(p);
   const raceAdv = getAvailableAdvancements(state, "race");
   const jobAdv = getAvailableAdvancements(state, "job");
   return `<section class="screen">${nav(state)}
     <div class="hero"><h1>Status / Race & Job Progression</h1><p class="subtitle">Overall Level ${getTotalLevel(p)} = ${p.raceLevels.reduce((a,c)=>a+c.level,0)} race levels + ${p.jobLevels.reduce((a,c)=>a+c.level,0)} job levels. Unspent class levels: <span class="kpi">${p.unspentClassLevels}</span>.</p></div>
     <section class="grid two">
       <div class="card"><h2>${escapeHtml(p.title)} ${escapeHtml(p.name)}</h2>${resourceBars(p, stats)}<p>Status: ${statusPills(p.statusEffects)}</p></div>
-      <div class="card"><h2>Stats</h2>${statGrid(stats)}</div>
+      <div class="card"><h2>Stats</h2>${statGrid(stats)}${titleBonus ? `<p class="small"><strong>Equipped title bonus:</strong> ${escapeHtml(titleBonus.title)} (${escapeHtml(titleCase(titleBonus.difficulty))}) · ${escapeHtml(statsText(titleBonus.stats))}</p>` : `<p class="small"><strong>Equipped title bonus:</strong> None yet.</p>`}</div>
     </section>
     <section class="card"><h2>Current Build</h2>${classRows(p.raceLevels, "Race")}${classRows(p.jobLevels, "Job")}</section>
     <section class="card"><h2>Build Synergies</h2>${synergies.length ? synergies.map(s => `<article class="mini-card"><h3>${s.name}</h3><p>${s.description}</p><p class="small">Bonus: ${statsText(s.stats)}</p></article>`).join("") : `<p class="small">No active race/job synergy yet.</p>`}</section>
@@ -370,7 +372,7 @@ function classRows(classes, label) {
       ...(data?.startingSkills ?? []),
       ...(data?.learns ?? []).map(learn => learn.skillId)
     ].slice(0, 5).map(id => byId(SKILLS, id)?.name ?? titleCase(id)).join(", ");
-    return `<div class="class-row"><div><strong>${cls.name}</strong> <span class="pill">${cls.tier}</span><div class="small">Level ${cls.level}/${cls.maxLevel}</div><div class="small"><strong>Linked abilities:</strong> ${escapeHtml(abilityNames || "None")}</div></div></div>`;
+    return `<div class="class-row"><div><strong>${cls.name}</strong> <span class="pill">${cls.tier}</span> ${data?.balanceTemplate ? `<span class="pill">${escapeHtml(data.balanceTemplate)}</span>` : ""}<div class="small">Level ${cls.level}/${cls.maxLevel}</div><div class="small">${escapeHtml(data?.description ?? "")}</div><div class="small"><strong>Strong:</strong> ${escapeHtml((data?.strengths ?? []).join("; ") || "None listed")}</div><div class="small"><strong>Weak:</strong> ${escapeHtml((data?.weaknesses ?? []).join("; ") || "None listed")}</div><div class="small"><strong>Linked abilities:</strong> ${escapeHtml(abilityNames || "None")}</div></div></div>`;
   }).join("")}`;
 }
 
@@ -478,7 +480,7 @@ export function classRegistryScreen(state) {
   const visible = filtered.slice(0, 120);
   const backTarget = state.player ? "hub" : "main-menu";
   return `<section class="screen">${nav(state)}
-    <div class="hero"><h1>Class Registry</h1><p class="subtitle">Excel import loaded: <span class="kpi">${REGISTRY_TOTALS.races}</span> races, <span class="kpi">${REGISTRY_TOTALS.racePaths}</span> race evolutions, <span class="kpi">${REGISTRY_TOTALS.baseJobs}</span> base jobs, and <span class="kpi">${REGISTRY_TOTALS.jobPaths}</span> job paths. Showing ${visible.length} of ${filtered.length} matching entries. Hidden/secret classes stay concealed until their unlock requirements are met. Concealed hidden entries: <span class="kpi">${hiddenTotal}</span>.</p></div>
+    <div class="hero"><h1>Class Registry</h1><p class="subtitle">Excel import loaded: <span class="kpi">${REGISTRY_TOTALS.races}</span> races, <span class="kpi">${REGISTRY_TOTALS.racePaths}</span> race evolutions, <span class="kpi">${REGISTRY_TOTALS.baseJobs}</span> base jobs, and <span class="kpi">${REGISTRY_TOTALS.jobPaths}</span> job paths. Showing ${visible.length} of ${filtered.length} matching entries. Hidden/secret classes stay concealed until their unlock requirements are met. Concealed hidden entries: <span class="kpi">${hiddenTotal}</span>. Exact duplicate/overlap cleanup entries are hidden from normal browsing.</p></div>
     <section class="card">
       <h2>Filters</h2>
       <div class="filter-grid">
@@ -629,14 +631,15 @@ export function recruitScreen(state) {
 
 export function achievementsScreen(state) {
   const p = state.player;
-  return `<section class="screen">${nav(state)}<div class="hero"><h1>Achievements & Titles</h1><p class="subtitle">Unlocked achievements grant titles. Current title: <span class="kpi">${escapeHtml(p.title ?? "Wanderer")}</span></p></div>
+  const titleBonus = getEquippedTitleBonus(p);
+  return `<section class="screen">${nav(state)}<div class="hero"><h1>Achievements & Titles</h1><p class="subtitle">Unlocked achievements grant titles with stat bonuses. Harder achievements give stronger title bonuses. Current title: <span class="kpi">${escapeHtml(p.title ?? "Wanderer")}</span>${titleBonus ? ` · Bonus: ${escapeHtml(statsText(titleBonus.stats))}` : ""}</p></div>
     <section class="grid auto">${ACHIEVEMENTS.map(a => achievementCard(p, a)).join("")}</section>
   </section>`;
 }
 
 function achievementCard(player, achievement) {
   const unlocked = isAchievementUnlocked(player, achievement.id);
-  return `<article class="card ${unlocked ? "selected" : "locked-card"}"><h3>${achievement.name}</h3><p>${achievement.description}</p><p><span class="pill">Title: ${achievement.title}</span></p>${unlocked ? button(player.title === achievement.title ? "Equipped" : "Equip Title", "selectTitle", achievement.id, player.title === achievement.title ? "ghost" : "secondary") : `<p class="small">Locked</p>`}</article>`;
+  return `<article class="card ${unlocked ? "selected" : "locked-card"}"><h3>${achievement.name}</h3><p>${achievement.description}</p><p><span class="pill">Title: ${achievement.title}</span> <span class="pill">${titleCase(achievement.difficulty ?? "common")}</span></p><p class="small"><strong>Title Bonus:</strong> ${escapeHtml(statsText(achievement.bonus ?? {}))}</p>${unlocked ? button(player.title === achievement.title ? "Equipped" : "Equip Title", "selectTitle", achievement.id, player.title === achievement.title ? "ghost" : "secondary") : `<p class="small">Locked</p>`}</article>`;
 }
 
 export function updatesScreen(state) {

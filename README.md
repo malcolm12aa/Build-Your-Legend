@@ -136,6 +136,15 @@ Upload/replace the files in your GitHub repository root the same way as before. 
 - Defeat penalty: lose current dungeon run and a little gold
 - Permanent growth: XP, class points, relic dust, boss kill progress
 
+
+## v0.6.0 Balance Pass
+
+- Generated category-based stat templates for imported races and jobs.
+- Rebalanced all imported races, race evolutions, jobs, and job paths by category, tier, and name keywords.
+- Added unique one-of-a-kind descriptions, strengths, and weaknesses for every race/job entry.
+- Added overlap metadata so exact duplicate classes are hidden from normal selection and registry browsing while staying compatible with older saves.
+- Added title bonuses from achievements. Harder achievements provide stronger stat bonuses when their title is equipped.
+
 ## Files to edit later
 
 - `js/data/races.js` — races and race evolution paths

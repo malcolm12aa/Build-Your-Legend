@@ -38,6 +38,10 @@ export function isHiddenPath(path) {
   return tier === "hidden" || tier === "secret" || Boolean(path?.secret || path?.hidden);
 }
 
+export function isDeprecatedOverlap(entry) {
+  return Boolean(entry?.deprecatedOverlap || entry?.registryVisible === false);
+}
+
 function requirementValue(req, ...keys) {
   for (const key of keys) {
     if (req?.[key] !== undefined && req?.[key] !== null && req?.[key] !== "") return req[key];
@@ -178,7 +182,7 @@ export function getUnlockableAdvancements(state, trackName) {
   const paths = getPathList(trackName);
   const result = [];
   for (const cls of track) {
-    const classPaths = paths.filter(path => path.from === cls.id && !getOwnedClass(player, trackName, path.id));
+    const classPaths = paths.filter(path => path.from === cls.id && !getOwnedClass(player, trackName, path.id) && !isDeprecatedOverlap(path));
     for (const path of classPaths) {
       const status = getUnlockStatus(state, trackName, path);
       if (status.met) result.push({ ...path, sourceName: cls.name, canUnlock: true, sourceLevel: cls.level, unlockStatus: status });
@@ -194,7 +198,7 @@ export function getVisibleTreeForPlayer(state, trackName) {
   const ownedIds = new Set(owned.map(cls => cls.id));
   const visible = [];
   for (const cls of owned) {
-    const children = paths.filter(path => path.from === cls.id && !ownedIds.has(path.id)).map(path => {
+    const children = paths.filter(path => path.from === cls.id && !ownedIds.has(path.id) && !isDeprecatedOverlap(path)).map(path => {
       const status = getUnlockStatus(state, trackName, path);
       if (isHiddenPath(path) && !status.met) return { mystery: true, from: cls.id, tier: path.tier, requirement: "Secret requirement not discovered yet." };
       return { ...path, canUnlock: status.met, unlockStatus: status };
@@ -206,6 +210,7 @@ export function getVisibleTreeForPlayer(state, trackName) {
 
 export function canSeeRegistryEntry(state, entry) {
   if (!entry) return false;
+  if (isDeprecatedOverlap(entry) && !isClassOwned(state?.player, entry.id)) return false;
   if (String(entry.tier).toLowerCase() !== "hidden") return true;
   if (!state?.player) return false;
   if (isClassOwned(state.player, entry.id)) return true;

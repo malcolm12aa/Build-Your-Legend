@@ -4,6 +4,7 @@ import { JOBS, JOB_PATHS } from "../data/jobs.js";
 import { ITEMS, SET_BONUSES } from "../data/items.js";
 import { SKILLS } from "../data/skills.js";
 import { SYNERGIES } from "../data/synergies.js";
+import { ACHIEVEMENTS } from "../data/achievements.js";
 import { addLog, byId, clamp } from "../core/utils.js";
 import { canUnlockPath, getUnlockableAdvancements, getUnlockStatus, getClassDataById } from "./unlocks.js";
 
@@ -39,6 +40,20 @@ export function getActiveSynergies(player) {
   );
 }
 
+
+export function getEquippedTitleBonus(player) {
+  if (!player?.title) return null;
+  const achievement = ACHIEVEMENTS.find(item => item.title === player.title);
+  if (!achievement) return null;
+  return {
+    title: achievement.title,
+    achievementId: achievement.id,
+    difficulty: achievement.difficulty ?? "common",
+    stats: achievement.bonus ?? {},
+    description: achievement.description ?? ""
+  };
+}
+
 export function getEquippedSetBonuses(player) {
   const counts = {};
   for (const itemId of Object.values(player?.equipment ?? {})) {
@@ -70,6 +85,8 @@ export function computeStats(player) {
     addStats(stats, item.stats);
   }
   for (const bonus of getEquippedSetBonuses(player)) addStats(stats, bonus.stats ?? {});
+  const titleBonus = getEquippedTitleBonus(player);
+  if (titleBonus) addStats(stats, titleBonus.stats ?? {});
   const overall = getTotalLevel(player);
   stats.maxHp = Math.floor(65 + stats.con * 10 + overall * 5);
   stats.maxMana = Math.floor(35 + stats.int * 7 + stats.wis * 3 + overall * 2);
