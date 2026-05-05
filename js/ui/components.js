@@ -19,6 +19,7 @@ export function nav(state) {
     ${button("Shop", "go", "shop", "secondary")}
     ${button("Map", "go", "map", "secondary")}
     ${button("Achievements", "go", "achievements", "secondary")}
+    ${button("Quests", "go", "quests", "secondary")}
     ${button("Updates", "go", "updates", "secondary")}
     ${button("Save/Load", "openSaveMenu", "", "ghost")}
   </nav>${devMenu(state)}`;

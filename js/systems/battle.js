@@ -6,8 +6,12 @@ import { applyStatus, damageModsFromStatuses, getElementMultiplier, isTurnSkippe
 import { grantBattleRewards } from "./rewards.js";
 import { useItem } from "./inventory.js";
 import { endRunDefeat } from "./run-manager.js";
+import { trackQuestProgress } from "./quests.js";
 
-function createEnemyIntent(enemy) {
+function createEnemyIntent(enemy, combat = null) {
+  if (enemy.bossMechanics && combat?.round && combat.round % 4 === 0) {
+    return { type: "bossCharge", name: "Boss Charge", element: enemy.element ?? "physical", text: `${enemy.name} is charging a boss mechanic. Guard, burst, or exploit a weakness now.` };
+  }
   const skillId = choice(enemy.skills ?? []);
   const skill = byId(SKILLS, skillId);
   if (skill && chance(72)) {
@@ -32,11 +36,14 @@ export function startBattle(state, enemy, battleType = "normal") {
     enemy,
     turn: "player",
     round: 1,
-    enemyIntent: createEnemyIntent(enemy),
+    enemyIntent: createEnemyIntent(enemy, null),
+    modifier: state.run?.battleModifier ?? null,
+    bossPhaseFlags: {},
     message: `${enemy.name} blocks the path!`
   };
   state.screen = "battle";
   addLog(state, `<strong>${battleType.toUpperCase()} battle:</strong> ${enemy.name} appears.`);
+  if (state.combat.modifier) addLog(state, `<strong>Battle Modifier:</strong> ${state.combat.modifier.name} is active.`);
 }
 
 export function playerBasicAttack(state) {
@@ -44,7 +51,7 @@ export function playerBasicAttack(state) {
   const playerStats = computeStats(state.player);
   const enemy = state.combat.enemy;
   const base = randInt(4, 8) + playerStats.attack;
-  const damage = dealDamage(state.player, enemy, base, "physical", playerStats, enemy.stats);
+  const damage = dealDamage(state.player, enemy, base, "physical", playerStats, enemy.stats, state.combat.modifier);
   addLog(state, `<span class="player-name">${state.player.name}</span> attacks for <strong>${damage}</strong> damage.`);
   afterPlayerAction(state);
 }
@@ -81,7 +88,7 @@ function partyAct(state) {
     const skill = byId(SKILLS, member.skill) ?? byId(SKILLS, "power_strike");
     const stats = member.stats;
     const base = Math.floor((skill.power ?? 10) * 0.65 + (stats.str ?? 2) + (stats.dex ?? 2) + (stats.int ?? 0));
-    const damage = dealDamage(member, state.combat.enemy, base, skill.element, stats, state.combat.enemy.stats);
+    const damage = dealDamage(member, state.combat.enemy, base, skill.element, stats, state.combat.enemy.stats, state.combat.modifier);
     addLog(state, `${member.name} uses ${skill.name} for ${damage} damage.`);
     if (skill.effects?.some(e => e.type === "heal") && chance(40)) {
       const playerStats = computeStats(state.player);
@@ -108,13 +115,18 @@ function enemyTurn(state) {
     startPlayerTurn(state);
     return;
   }
-  const intent = state.combat.enemyIntent ?? createEnemyIntent(enemy);
-  if (intent.type === "skill") {
+  applyBossMechanics(state, enemy);
+  const intent = state.combat.enemyIntent ?? createEnemyIntent(enemy, state.combat);
+  if (intent.type === "bossCharge") {
+    const base = randInt(10, 18) + Math.floor((enemy.stats.str ?? enemy.stats.int ?? 4) * 2.2);
+    const damage = dealDamage(enemy, player, base, enemy.element ?? "physical", enemy.stats, playerStats, state.combat.modifier);
+    addLog(state, `<strong>${enemy.name}'s charged mechanic lands</strong> for ${damage} damage.`);
+  } else if (intent.type === "skill") {
     const skill = byId(SKILLS, intent.skillId);
     if (skill) executeSkill(state, enemy, player, skill, false);
   } else {
     const base = randInt(3, 7) + Math.floor((enemy.stats.str ?? 2) * 1.8);
-    let damage = dealDamage(enemy, player, base, "physical", enemy.stats, playerStats);
+    let damage = dealDamage(enemy, player, base, "physical", enemy.stats, playerStats, state.combat.modifier);
     const tank = (player.party ?? []).find(member => member.role === "Tank");
     if (tank && chance(35)) {
       const blocked = Math.max(1, Math.floor(damage * 0.18));
@@ -136,7 +148,7 @@ function startPlayerTurn(state) {
   state.player.stamina = clamp(state.player.stamina + 8, 0, computeStats(state.player).maxStamina);
   state.combat.turn = "player";
   state.combat.round += 1;
-  state.combat.enemyIntent = createEnemyIntent(state.combat.enemy);
+  state.combat.enemyIntent = createEnemyIntent(state.combat.enemy, state.combat);
 }
 
 function executeSkill(state, attacker, defender, skill, isPlayer) {
@@ -146,7 +158,7 @@ function executeSkill(state, attacker, defender, skill, isPlayer) {
   if (skill.power > 0) {
     const offensive = skill.kind === "spell" ? (attackerStats.magic ?? attackerStats.int ?? 3) : (attackerStats.attack ?? attackerStats.str ?? 3);
     const base = randInt(2, 8) + skill.power + Math.floor(offensive * 0.9);
-    totalDamage = dealDamage(attacker, defender, base, skill.element, attackerStats, defenderStats);
+    totalDamage = dealDamage(attacker, defender, base, skill.element, attackerStats, defenderStats, state.combat?.modifier);
     addLog(state, `${attacker.name} uses <strong>${skill.name}</strong> for <strong>${totalDamage}</strong> ${skill.element} damage.`);
   } else {
     addLog(state, `${attacker.name} uses <strong>${skill.name}</strong>.`);
@@ -182,6 +194,37 @@ function executeSkill(state, attacker, defender, skill, isPlayer) {
   }
 }
 
+
+function applyBossMechanics(state, enemy) {
+  if (!enemy.bossMechanics || !state.combat) return;
+  state.combat.bossPhaseFlags ??= {};
+  const hpPct = enemy.hp / Math.max(1, enemy.maxHp ?? 1);
+  if (hpPct <= 0.7 && !state.combat.bossPhaseFlags.shield_phase) {
+    applyStatus(enemy, "guard", 3);
+    state.combat.bossPhaseFlags.shield_phase = true;
+    addLog(state, `<strong>Boss Mechanic:</strong> ${enemy.name} enters Shield Phase.`);
+  }
+  if (hpPct <= 0.5 && !state.combat.bossPhaseFlags.cleanse_phase) {
+    enemy.statusEffects = (enemy.statusEffects ?? []).filter(s => ["guard", "focus", "haste"].includes(s.id));
+    state.combat.bossPhaseFlags.cleanse_phase = true;
+    addLog(state, `<strong>Boss Mechanic:</strong> ${enemy.name} cleanses negative status effects.`);
+  }
+  if (hpPct <= 0.3 && !state.combat.bossPhaseFlags.enrage_phase) {
+    applyStatus(enemy, "focus", 4);
+    state.combat.bossPhaseFlags.enrage_phase = true;
+    addLog(state, `<strong>Boss Mechanic:</strong> ${enemy.name} enters Enrage Phase.`);
+  }
+}
+
+function applyBattleModifierDamage(damage, element, modifier, skillKind = "") {
+  const effects = modifier?.effects ?? {};
+  let mod = 1;
+  if ((effects.elementsBoosted ?? []).includes(element)) mod += 0.18;
+  if ((effects.elementsWeakened ?? []).includes(element)) mod -= 0.18;
+  if (skillKind === "spell" && effects.spellBoost) mod += effects.spellBoost;
+  return Math.max(1, Math.floor(damage * mod));
+}
+
 function payResource(player, skill) {
   if (!skill.resource || skill.resource === "none") return true;
   if ((player[skill.resource] ?? 0) < skill.cost) return false;
@@ -189,11 +232,12 @@ function payResource(player, skill) {
   return true;
 }
 
-function dealDamage(attacker, defender, base, element, attackerStats, defenderStats) {
+function dealDamage(attacker, defender, base, element, attackerStats, defenderStats, modifier = null) {
   const defense = Math.floor((defenderStats.defense ?? defenderStats.con ?? 0) * 0.6);
   let damage = Math.max(1, base - defense);
   damage *= getElementMultiplier(element, defender);
   damage *= damageModsFromStatuses(attacker, defender);
+  damage = applyBattleModifierDamage(damage, element, modifier);
   damage = Math.max(1, Math.floor(damage));
   defender.hp = clamp(defender.hp - damage, 0, defender.maxHp ?? defenderStats.maxHp ?? 9999);
   return damage;
@@ -204,6 +248,9 @@ function checkBattleEnd(state) {
   if (enemy.hp <= 0) {
     addLog(state, `<strong>${enemy.name} defeated.</strong>`);
     state.meta.enemyKills = (state.meta.enemyKills ?? 0) + 1;
+    state.meta.roomsCleared = (state.meta.roomsCleared ?? 0) + 1;
+    trackQuestProgress(state, "enemy", 1);
+    trackQuestProgress(state, "room", 1);
     if (state.combat.type === "elite") state.meta.eliteKills = (state.meta.eliteKills ?? 0) + 1;
     if (state.combat.type === "boss") {
       state.meta.bossKills += 1;

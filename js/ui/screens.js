@@ -7,8 +7,11 @@ import { SHOPS } from "../data/shops.js";
 import { MAPS } from "../data/maps.js";
 import { ACHIEVEMENTS } from "../data/achievements.js";
 import { UPDATE_NOTES } from "../data/updates.js";
+import { QUEST_CATEGORIES } from "../data/quests.js";
 import { CLASS_REGISTRY, REGISTRY_TOTALS, REGISTRY_CATEGORIES, REGISTRY_KINDS, REGISTRY_TIERS } from "../data/class-registry.js";
 import { getSaveSlots } from "../core/save.js";
+import { getRaceIdentity, getJobIdentity, getEnemyIdentity } from "../systems/identity.js";
+import { getQuestBoard } from "../systems/quests.js";
 import { byId, titleCase, formatStat } from "../core/utils.js";
 import { computeStats, computeCreationPreview, getTotalLevel, xpToNext, getAvailableAdvancements, getActiveSynergies, getEquippedSetBonuses, getEquippedTitleBonus } from "../systems/leveling.js";
 import { canSeeRegistryEntry, getRequirementText, getUnlockRequirementMarkup, getUnlockStatus, getVisibleTreeForPlayer } from "../systems/unlocks.js";
@@ -60,7 +63,7 @@ export function mainMenu(state) {
 function newsCard() {
   return `<section class="card">
     <h2>Improvement Build</h2>
-    <p>Total Level = Race Levels + Job Levels. This version adds the Excel race/job data import, 5 save slots, class trees, synergies, set bonuses, achievements, enemy intent, expanded events, recruit personality, update notes, v0.4.0 real unlock conditions, and v0.6.1 polished naming/shop tabs, v0.6.2 Basic Abilities, and v0.6.3 race/job layout polish.</p>
+    <p>Total Level = Race Levels + Job Levels. This version adds the Excel race/job data import, 5 save slots, class trees, synergies, set bonuses, achievements, enemy intent, expanded events, recruit personality, update notes, v0.4.0 real unlock conditions, and v0.6.1 polished naming/shop tabs, v0.6.2 Basic Abilities, and v0.6.3 race/job layout polish, and v0.7.0 quest/identity/boss systems.</p>
   </section>`;
 }
 
@@ -127,15 +130,32 @@ function compactChoiceCard(selectedId, action, type) {
 function classProfileCard(item, { type = "race", selected = false, compact = false, action = "", actionLabel = "Choose", level = null } = {}) {
   const isJob = type === "job" || String(item.kind ?? "").toLowerCase().includes("job");
   const headingLabel = isJob ? "Job" : "Race";
-  const tags = getDisplayTags(item, isJob);
+  const identity = isJob ? getJobIdentity(item) : getRaceIdentity(item);
+  const tags = getDisplayTags(item, isJob, identity);
   const maxLevel = item.maxLevel ?? item.maxLv ?? "?";
   const description = item.description || `${headingLabel} option from the imported class data.`;
   const status = getStatusSummary(item);
-  const weapons = isJob ? getWeaponOptions(item) : "";
+  const weapons = isJob ? (identity.preferredWeapons ?? getWeaponOptions(item).split(", ")).join(", ") : "";
   const strengths = formatTraitList(item.strengths, isJob ? "Specializes in a focused combat role." : "Flexible growth path with clear identity.");
   const weaknesses = formatTraitList(item.weaknesses, isJob ? "Requires the right weapons and resource support." : "Needs careful class pairing to cover weak points.");
   const levelLine = level ? `<span class="pill">Level ${level.level}/${level.maxLevel}</span>` : "";
   const actionButton = action ? button(actionLabel, action, item.id, selected ? "ghost" : "secondary") : "";
+  const identityBlock = isJob
+    ? `<div class="identity-grid">
+        <div class="class-profile-section"><strong>Main Role</strong><p>${escapeHtml(identity.mainRole)}</p></div>
+        <div class="class-profile-section"><strong>Allowed Skill Types</strong><p>${escapeHtml(identity.allowedSkillTypes.join(", "))}</p></div>
+        <div class="class-profile-section"><strong>Preferred Spell Schools</strong><p>${escapeHtml(identity.preferredSpellSchools.join(", "))}</p></div>
+        <div class="class-profile-section"><strong>Passive Mastery Bonus</strong><p>${escapeHtml(identity.passiveMasteryBonus)}</p></div>
+        <div class="class-profile-section"><strong>Upgrade Path</strong><p>${escapeHtml(identity.upgradePath)}</p></div>
+        <div class="class-profile-section"><strong>Signature Ability</strong><p>${escapeHtml(identity.signatureAbility)}</p></div>
+      </div>`
+    : `<div class="identity-grid">
+        <div class="class-profile-section"><strong>Passive Trait</strong><p>${escapeHtml(identity.passiveTrait)}</p></div>
+        <div class="class-profile-section"><strong>Intrinsic Skill / Spell</strong><p>${escapeHtml(identity.intrinsicSkill)}</p></div>
+        <div class="class-profile-section"><strong>Evolution Bonus</strong><p>${escapeHtml(identity.evolutionBonus)}</p></div>
+        <div class="class-profile-section"><strong>Weakness / Limitation</strong><p>${escapeHtml(identity.limitation)}</p></div>
+        <div class="class-profile-section"><strong>Unique Unlock Path</strong><p>${escapeHtml(identity.uniqueUnlockPath)}</p></div>
+      </div>`;
   return `<article class="card class-profile-card ${compact ? "compact-choice" : ""} ${selected ? "selected" : ""}">
     <div class="class-profile-header">
       <div><span class="layout-label">${headingLabel}</span><h3>${escapeHtml(item.name)}</h3></div>
@@ -144,6 +164,7 @@ function classProfileCard(item, { type = "race", selected = false, compact = fal
     <div class="class-profile-section"><strong>Status</strong><p>${escapeHtml(status)}</p></div>
     ${isJob ? `<div class="class-profile-section"><strong>Weapon/s</strong><p>${escapeHtml(weapons)}</p></div>` : ""}
     <div class="class-profile-section"><strong>Tags</strong><p>${tags}</p></div>
+    ${identityBlock}
     <div class="class-profile-section"><strong>Unique Description</strong><p>${escapeHtml(description)}</p></div>
     <div class="class-profile-traits">
       <div><strong>Strengths</strong><ul>${strengths}</ul></div>
@@ -158,7 +179,7 @@ function formatTraitList(list = [], fallback = "None listed.") {
   return (values.length ? values : [fallback]).map(text => `<li>${escapeHtml(text)}</li>`).join("");
 }
 
-function getDisplayTags(item, isJob) {
+function getDisplayTags(item, isJob, identity = null) {
   const tags = [
     item.category ?? "Uncategorized",
     titleCase(item.tier ?? "base"),
@@ -166,7 +187,8 @@ function getDisplayTags(item, isJob) {
     item.balanceTemplate ? `Template: ${titleCase(item.balanceTemplate)}` : "",
     item.roleIdentity ? `Role: ${titleCase(item.roleIdentity)}` : "",
     item.overlapGroup ? `Group: ${titleCase(item.overlapGroup)}` : "",
-    isJob ? "Weapon Locked" : "Bloodline / Species"
+    isJob ? "Weapon Locked" : "Bloodline / Species",
+    ...(identity?.tags ?? [])
   ].filter(Boolean);
   return tags.slice(0, 7).map(tag => `<span class="pill">${escapeHtml(tag)}</span>`).join(" ");
 }
@@ -419,7 +441,7 @@ export function hub(state) {
     <div class="hero"><h1>Guild Hub</h1><p class="subtitle">Prepare, spend class levels, recruit allies, buy supplies, or enter the shifting tower.</p></div>
     <section class="grid two">
       <div class="card"><h2>${escapeHtml(p.title)} ${escapeHtml(p.name)}</h2><p>Total Level <span class="kpi">${getTotalLevel(p)}</span> · Gold <span class="kpi">${p.gold}</span> · Relic Dust <span class="kpi">${state.meta.relicDust}</span></p>${resourceBars(p, stats)}</div>
-      <div class="card"><h2>Next Goal</h2><p>Gain XP in the dungeon, then spend class points on race or job levels. Maxed base classes can unlock advanced paths.</p><p class="small"><strong>Active Synergies:</strong> ${synergies.length ? synergies.map(s => s.name).join(", ") : "None"}</p><div class="actions">${button("Enter Dungeon", "startRun")} ${button("Status / Class", "go", "status", "secondary")}</div></div>
+      <div class="card"><h2>Next Goal</h2><p>Gain XP in the dungeon, then spend class points on race or job levels. Maxed base classes can unlock advanced paths.</p><p class="small"><strong>Active Synergies:</strong> ${synergies.length ? synergies.map(s => s.name).join(", ") : "None"}</p><div class="actions">${button("Enter Dungeon", "startRun")} ${button("Quest Board", "go", "quests", "secondary")} ${button("Status / Class", "go", "status", "secondary")}</div></div>
     </section>
     ${partyCard(p)}
     ${combatLog(state)}
@@ -698,8 +720,9 @@ export function mapScreen(state) {
   if (!state.run) {
     return `<section class="screen">${nav(state)}<div class="hero"><h1>Map / Dungeon</h1><p class="subtitle">No run active. Start a run from the hub.</p></div><div class="actions">${button("Start Run", "startRun")}</div></section>`;
   }
+  const modifier = state.run.battleModifier;
   return `<section class="screen">${nav(state)}<div class="hero"><h1>${map.name}</h1><p class="subtitle">Floor ${state.run.floor}/${map.maxFloor}. Boss floors: ${map.bossFloors.join(", ")}.</p></div>
-    <section class="grid two"><div class="card"><h2>Run Progress</h2><p>Rooms cleared: <span class="kpi">${state.run.roomsCleared}</span></p><p>Possible rooms: battles, elites, bosses, merchants, shrines, portals, traps, lore discoveries, training rooms, and recruit events.</p></div><div class="card"><h2>Actions</h2><div class="actions">${button("Explore Next Floor", "explore")} ${button("Rest Briefly", "rest", "", "secondary")} ${button("Leave Run", "leaveRun", "", "ghost")}</div></div></section>
+    <section class="grid two"><div class="card"><h2>Run Progress</h2><p>Rooms cleared: <span class="kpi">${state.run.roomsCleared}</span></p><p>Possible rooms: battles, elites, bosses, merchants, shrines, portals, traps, lore discoveries, training rooms, and recruit events.</p>${modifier ? `<div class="modifier-card"><h3>Current Battle Modifier</h3><p><strong>${escapeHtml(modifier.name)}</strong> — ${escapeHtml(modifier.description)}</p></div>` : ""}</div><div class="card"><h2>Actions</h2><div class="actions">${button("Explore Next Floor", "explore")} ${button("Rest Briefly", "rest", "", "secondary")} ${button("Leave Run", "leaveRun", "", "ghost")}</div></div></section>
     ${combatLog(state)}
   </section>`;
 }
@@ -712,10 +735,41 @@ export function battleScreen(state) {
   return `<section class="screen">${nav(state)}<div class="hero"><h1>Battle</h1><p class="subtitle">Round ${state.combat.round}. Turn: <span class="kpi">${state.combat.turn}</span></p></div>
     <section class="combat-layout">
       <div class="card"><h2 class="player-name">${p.name}</h2>${resourceBars(p, stats)}<p>${statusPills(p.statusEffects)}</p><div class="actions">${button("Attack", "attack")} ${button("Inventory", "go", "inventory", "secondary")}</div><h3>Skills</h3>${skillList(p, "battle")}</div>
-      <div class="card"><h2 class="enemy-name">${enemy.name}</h2>${bar("HP", enemy.hp, enemy.maxHp, "hp")}<p><span class="pill">${enemy.element}</span> ${statusPills(enemy.statusEffects)}</p><p class="small">Weak: ${(enemy.weaknessesElements ?? []).join(", ") || "Unknown"} · Resist: ${(enemy.resists ?? []).join(", ") || "None"}</p><div class="intent-card"><h3>Enemy Intent</h3><p>${intent?.text ?? "The enemy is watching you."}</p><span class="pill">${intent?.element ?? "unknown"}</span></div><h3>Battle Items</h3>${inventoryList(p, "battle")}</div>
+      <div class="card"><h2 class="enemy-name">${enemy.name}</h2>${bar("HP", enemy.hp, enemy.maxHp, "hp")}<p><span class="pill">${enemy.element}</span> <span class="pill">${escapeHtml(enemy.enemyType ?? "Enemy")}</span> <span class="pill">${escapeHtml(enemy.enemyIdentity?.label ?? getEnemyIdentity(enemy, state.run?.floor ?? 1).label)}</span> ${statusPills(enemy.statusEffects)}</p><p class="small">Weak: ${(enemy.weaknessesElements ?? []).join(", ") || "Unknown"} · Resist: ${(enemy.resists ?? []).join(", ") || "None"}</p>${state.combat.modifier ? `<div class="modifier-card"><h3>Battle Modifier</h3><p><strong>${escapeHtml(state.combat.modifier.name)}</strong> — ${escapeHtml(state.combat.modifier.description)}</p></div>` : ""}${enemy.bossMechanics ? bossMechanicsCard(enemy) : ""}<div class="intent-card"><h3>Enemy Intent</h3><p>${intent?.text ?? "The enemy is watching you."}</p><span class="pill">${intent?.element ?? "unknown"}</span></div><h3>Battle Items</h3>${inventoryList(p, "battle")}</div>
     </section>
     ${combatLog(state)}
   </section>`;
+}
+
+function bossMechanicsCard(enemy) {
+  const mechanics = enemy.bossMechanics ?? [];
+  if (!mechanics.length) return "";
+  return `<div class="boss-mechanics-card"><h3>Boss Mechanics</h3>${mechanics.map(mech => `<p class="small"><strong>${escapeHtml(mech.name)}</strong>: ${escapeHtml(mech.description)}</p>`).join("")}</div>`;
+}
+
+export function questBoardScreen(state) {
+  const filters = state.ui.questFilters ?? { category: "All" };
+  const category = filters.category ?? "All";
+  const categoryOptions = ["All", ...QUEST_CATEGORIES];
+  const quests = getQuestBoard(state, category);
+  const grouped = category === "All" ? QUEST_CATEGORIES.map(cat => [cat, quests.filter(q => q.category === cat)]).filter(([, list]) => list.length) : [[category, quests]];
+  return `<section class="screen">${nav(state)}
+    <div class="hero"><h1>Quest Board</h1><p class="subtitle">Main, side, daily, race, job, recruit, hunting, collection, boss, and secret quests give clear goals and rewards for normal gameplay.</p></div>
+    <section class="card"><h2>Quest Filters</h2><div class="filter-grid">${selectField("Quest Type", "quest.category", categoryOptions, category)}</div></section>
+    ${grouped.map(([cat, list]) => `<section class="card"><div class="row between"><h2>${escapeHtml(cat)}</h2><span class="pill">${list.length} quest(s)</span></div><div class="quest-list">${list.map(questCard).join("")}</div></section>`).join("") || `<section class="card"><h2>No quests shown</h2><p>Change the filter or progress farther in the tower.</p></section>`}
+  </section>`;
+}
+
+function questCard(quest) {
+  const rewardText = Object.entries(quest.rewards ?? {}).map(([key, value]) => `${value} ${titleCase(key)}`).join(" · ") || "No listed reward";
+  const action = quest.claimed ? `<span class="pill active-bonus">Claimed</span>` : quest.progress.complete ? button("Claim Reward", "claimQuest", quest.id) : `<span class="pill">In Progress</span>`;
+  return `<article class="mini-card quest-card ${quest.progress.complete ? "complete" : ""}">
+    <div class="row between"><h3>${escapeHtml(quest.displayName ?? quest.name)}</h3><span class="pill">${escapeHtml(quest.category)}</span></div>
+    <p>${escapeHtml(quest.description)}</p>
+    <div class="ability-meter quest-meter"><span style="width:${quest.progress.pct}%"></span></div>
+    <p class="small">Progress: ${quest.progress.current}/${quest.progress.required} · Rewards: ${escapeHtml(rewardText)}</p>
+    <div class="actions">${action}</div>
+  </article>`;
 }
 
 export function eventScreen(state) {

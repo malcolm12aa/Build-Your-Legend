@@ -10,6 +10,7 @@ import { buyItem, buyAbility } from "../systems/shop.js";
 import { spendClassPoint, addAdvancedClass, gainXp, syncResourcesToStats } from "../systems/leveling.js";
 import { recruitMember, prepareRecruitOffer } from "../systems/party.js";
 import { checkAchievements } from "../systems/achievements.js";
+import { claimQuestReward } from "../systems/quests.js";
 import { ACHIEVEMENTS } from "../data/achievements.js";
 
 export function handleAction(state, action, value) {
@@ -140,6 +141,9 @@ export function handleAction(state, action, value) {
     case "toggleDevMenu":
       state.ui.devMenuOpen = !state.ui.devMenuOpen;
       break;
+    case "claimQuest":
+      claimQuestReward(state, value);
+      break;
     case "devAdjust":
       devAdjust(state, value);
       break;
@@ -156,6 +160,11 @@ export function handleInput(state, name, value) {
     const key = name.split(".")[1];
     state.ui.registryFilters ??= { search: "", kind: "all", category: "all", tier: "all" };
     state.ui.registryFilters[key] = value;
+  }
+  if (name?.startsWith("quest.")) {
+    const key = name.split(".")[1];
+    state.ui.questFilters ??= { category: "All" };
+    state.ui.questFilters[key] = value;
   }
   if (name?.startsWith("ability.")) {
     const key = name.split(".")[1];

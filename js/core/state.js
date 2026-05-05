@@ -27,6 +27,7 @@ export function createInitialState() {
       offeredRecruit: null,
       registryFilters: { search: "", kind: "all", category: "all", tier: "all" },
       abilityFilters: { search: "", library: "all", kind: "all", rank: "all" },
+      questFilters: { category: "All" },
       devMenuOpen: false,
       creationFilters: {
         raceSearch: "", raceCategory: "all", raceTier: "all", raceFocus: "all",
@@ -34,6 +35,7 @@ export function createInitialState() {
       }
     },
     meta: baseMeta(),
+    quests: { claimed: [], daily: { date: new Date().toISOString().slice(0, 10), roomsCleared: 0, enemyKills: 0 } },
     log: []
   };
 }
@@ -103,9 +105,13 @@ export function hydrateState(raw) {
   state.ui = { ...createInitialState().ui, ...(state.ui ?? {}) };
   state.ui.registryFilters = { ...createInitialState().ui.registryFilters, ...(state.ui.registryFilters ?? {}) };
   state.ui.abilityFilters = { ...createInitialState().ui.abilityFilters, ...(state.ui.abilityFilters ?? {}) };
+  state.ui.questFilters = { ...createInitialState().ui.questFilters, ...(state.ui.questFilters ?? {}) };
   state.ui.devMenuOpen ??= false;
   state.ui.creationFilters = { ...createInitialState().ui.creationFilters, ...(state.ui.creationFilters ?? {}) };
   state.meta = { ...baseMeta(), ...(state.meta ?? {}) };
+  state.quests = { claimed: [], daily: { date: new Date().toISOString().slice(0, 10), roomsCleared: 0, enemyKills: 0 }, ...(state.quests ?? {}) };
+  state.quests.claimed ??= [];
+  state.quests.daily ??= { date: new Date().toISOString().slice(0, 10), roomsCleared: 0, enemyKills: 0 };
   if (state.player) {
     state.player.inventory ??= {};
     state.player.cooldowns ??= {};

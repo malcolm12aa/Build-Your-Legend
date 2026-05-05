@@ -1,5 +1,17 @@
 export const UPDATE_NOTES = [
   {
+    version: "v0.7.0 — Quest, Identity, Battle, and Boss Systems",
+    date: "2026-05-05",
+    notes: [
+      "Added a Quest Board with Main, Side, Daily, Race, Job, Recruit, Hunting, Collection, Boss, and Secret quest categories.",
+      "Added race identity text: passive trait, intrinsic skill/spell, evolution bonus, limitation, and unique unlock path.",
+      "Added job identity text: main role, allowed skill types, preferred weapons, spell schools, mastery bonus, upgrade path, and signature ability.",
+      "Added battle modifiers such as rain, darkness, sacred ground, mana storms, and stone pressure.",
+      "Enemies now display type plus race/job-style identity based on their level/floor and behavior.",
+      "Bosses now show and use mechanics such as shield phases, cleanses, enrage phases, and charged attacks."
+    ]
+  },
+  {
     version: "v0.6.3 — Race / Job Text Layout Update",
     date: "2026-05-05",
     notes: [

@@ -552,3 +552,37 @@ pre {
     justify-content: flex-start;
   }
 }
+
+/* v0.7.0 Quest, identity, battle modifier, and boss mechanic UI */
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+}
+.modifier-card,
+.boss-mechanics-card {
+  background: rgba(139,211,255,.10);
+  border: 1px solid rgba(139,211,255,.22);
+  border-radius: 14px;
+  padding: 10px;
+  margin: 10px 0;
+}
+.boss-mechanics-card {
+  background: rgba(255,107,107,.10);
+  border-color: rgba(255,107,107,.25);
+}
+.quest-list {
+  display: grid;
+  gap: 10px;
+}
+.quest-card.complete {
+  border-color: rgba(114,223,159,.35);
+  background: rgba(114,223,159,.08);
+}
+.quest-meter {
+  margin: 8px 0;
+}
+.quest-meter span {
+  background: linear-gradient(90deg, #72df9f, #d9a441);
+}

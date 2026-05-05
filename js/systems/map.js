@@ -2,11 +2,13 @@ import { MAPS } from "../data/maps.js";
 import { ENEMIES, ELITES, BOSSES } from "../data/enemies.js";
 import { EVENTS } from "../data/events.js";
 import { SHOPS } from "../data/shops.js";
+import { BATTLE_MODIFIERS } from "../data/battle-modifiers.js";
 import { byId, choice, deepClone, randInt, weightedChoice, addLog, clamp, chance } from "../core/utils.js";
 import { startBattle } from "./battle.js";
 import { grantEventReward } from "./rewards.js";
 import { applyStatus } from "./effects.js";
 import { gainXp, computeStats } from "./leveling.js";
+import { getEnemyIdentity } from "./identity.js";
 
 export function exploreNextFloor(state) {
   if (!state.run?.active) return;
@@ -23,6 +25,7 @@ export function exploreNextFloor(state) {
 
   if (map.bossFloors.includes(floor)) {
     const boss = createBoss(floor);
+    prepareBattleRoom(state, floor);
     startBattle(state, boss, "boss");
     return;
   }
@@ -38,19 +41,40 @@ export function exploreNextFloor(state) {
     return;
   }
   if (floor % map.eliteEvery === 0) {
+    prepareBattleRoom(state, floor);
     startBattle(state, createElite(floor), "elite");
     return;
   }
 
   const roll = Math.random();
-  if (roll < 0.62) startBattle(state, createEnemyForFloor(floor), "normal");
+  if (roll < 0.62) {
+    prepareBattleRoom(state, floor);
+    startBattle(state, createEnemyForFloor(floor), "normal");
+  }
   else resolveRandomEvent(state);
 }
 
 export function createEnemyForFloor(floor) {
   const choices = ENEMIES.filter(enemy => enemy.minFloor <= floor).map(enemy => ({ ...enemy, weight: enemy.weight ?? 1 }));
   const template = deepClone(weightedChoice(choices));
-  return scaleEnemy(template, floor, 1);
+  const enemy = scaleEnemy(template, floor, 1);
+  enemy.enemyType = pickEnemyType(enemy, floor);
+  return enemy;
+}
+
+function prepareBattleRoom(state, floor) {
+  const modifier = deepClone(weightedChoice(BATTLE_MODIFIERS));
+  state.run.battleModifier = modifier;
+  addLog(state, `<strong>Battlefield:</strong> ${modifier.name} — ${modifier.description}`);
+}
+
+function pickEnemyType(enemy, floor) {
+  const text = `${enemy.name} ${enemy.element}`.toLowerCase();
+  if (floor >= 10) return "Veteran";
+  if (/wisp|mage|lich|arcane|rune/.test(text)) return "Caster";
+  if (/guard|knight|stone|ogre|mauler/.test(text)) return "Armored";
+  if (/wolf|goblin|bandit|imp/.test(text)) return "Skirmisher";
+  return "Monster";
 }
 
 function createElite(floor) {
@@ -61,12 +85,27 @@ function createElite(floor) {
   enemy.name = elite.name;
   enemy.skills = [...new Set([...(enemy.skills ?? []), elite.bonusSkill])];
   enemy.rewardDust = elite.rewardDust;
+  enemy.enemyType = "Elite";
+  enemy.enemyIdentity = getEnemyIdentity(enemy, floor);
   return enemy;
 }
 
 function createBoss(floor) {
   const boss = deepClone(BOSSES.find(b => b.floor === floor) ?? BOSSES.at(-1));
-  return scaleEnemy(boss, floor, 1);
+  const enemy = scaleEnemy(boss, floor, 1);
+  enemy.enemyType = "Boss";
+  enemy.enemyIdentity = getEnemyIdentity(enemy, floor);
+  enemy.bossMechanics ??= defaultBossMechanics(enemy, floor);
+  return enemy;
+}
+
+function defaultBossMechanics(enemy, floor) {
+  return [
+    { id: "shield_phase", name: "Shield Phase", trigger: 0.7, description: "At 70% HP, the boss gains Guard and reduces incoming damage for a short time." },
+    { id: "cleanse_phase", name: "Status Cleanse", trigger: 0.5, description: "At 50% HP, the boss cleanses negative status effects and shifts tactics." },
+    { id: "enrage_phase", name: "Enrage Phase", trigger: 0.3, description: "At 30% HP, the boss gains Focus and its intentions become more aggressive." },
+    { id: "charge_attack", name: "Charge Attack", trigger: "round", description: "Every few rounds, the boss prepares a stronger telegraphed attack." }
+  ];
 }
 
 function scaleEnemy(enemy, floor, multiplier = 1) {
@@ -77,6 +116,8 @@ function scaleEnemy(enemy, floor, multiplier = 1) {
   enemy.xp = Math.floor((enemy.xp ?? 30) * (1 + floor * 0.08) * multiplier);
   enemy.gold = enemy.gold?.map(v => Math.floor(v * (1 + floor * 0.05) * multiplier));
   enemy.statusEffects = [];
+  enemy.enemyIdentity = getEnemyIdentity(enemy, floor);
+  enemy.enemyType ??= pickEnemyType(enemy, floor);
   return enemy;
 }
 
