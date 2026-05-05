@@ -7,6 +7,7 @@ import { SYNERGIES } from "../data/synergies.js";
 import { ACHIEVEMENTS } from "../data/achievements.js";
 import { addLog, byId, clamp } from "../core/utils.js";
 import { canUnlockPath, getUnlockableAdvancements, getUnlockStatus, getClassDataById } from "./unlocks.js";
+import { emptyBasicAbilities, legacyStatsToBasicAbilities, addBasicAbilityPoints, buildBasicAbilityPacket, scaleDerivedStatsFromBasicAbilities } from "./basic-abilities.js";
 
 export function getTotalLevel(player) {
   if (!player) return 0;
@@ -72,50 +73,90 @@ export function getEquippedSetBonuses(player) {
 
 export function computeStats(player) {
   const stats = { ...player.baseStats };
-  for (const cls of [...player.raceLevels, ...player.jobLevels]) {
+  const totalBasic = emptyBasicAbilities();
+  const currentBasic = emptyBasicAbilities();
+  const externalBasic = emptyBasicAbilities();
+
+  // Base body/soul foundation contributes only to hidden stacked power.
+  addBasicAbilityPoints(totalBasic, legacyStatsToBasicAbilities(player.baseStats ?? {}, 0.45));
+
+  const raceTrack = player.raceLevels ?? [];
+  const jobTrack = player.jobLevels ?? [];
+  const currentRace = raceTrack.at(-1)?.id;
+  const currentJob = jobTrack.at(-1)?.id;
+
+  for (const cls of [...raceTrack, ...jobTrack]) {
     const data = getClassData(cls.id);
     if (!data) continue;
+
+    // Keep legacy stats for compatibility with older systems and filters.
     addStats(stats, data.stats ?? {});
     addStats(stats, data.levelGrowth ?? {}, Math.max(0, cls.level - 1));
+
+    // Falna-style Basic Abilities: every class stage has its own visible growth.
+    // Previous stages stay in the hidden stacked total; the current race/job stage is what the Status screen shows.
+    const classLegacy = {};
+    addStats(classLegacy, data.stats ?? {}, 0.35);
+    addStats(classLegacy, data.levelGrowth ?? {}, Math.max(0, cls.level - 1));
+    const classBasic = legacyStatsToBasicAbilities(classLegacy, 0.26);
+    addBasicAbilityPoints(totalBasic, classBasic);
+
+    if (cls.id === currentRace || cls.id === currentJob) {
+      const currentLegacy = {};
+      addStats(currentLegacy, data.levelGrowth ?? {}, Math.max(0, cls.level - 1));
+      addBasicAbilityPoints(currentBasic, legacyStatsToBasicAbilities(currentLegacy, 0.26));
+    }
   }
-  for (const synergy of getActiveSynergies(player)) addStats(stats, synergy.stats ?? {});
+
+  for (const synergy of getActiveSynergies(player)) {
+    addStats(stats, synergy.stats ?? {});
+    addBasicAbilityPoints(externalBasic, legacyStatsToBasicAbilities(synergy.stats ?? {}, 0.7));
+  }
   for (const itemId of Object.values(player.equipment ?? {})) {
     const item = byId(ITEMS, itemId);
     if (!item?.stats) continue;
     addStats(stats, item.stats);
+    addBasicAbilityPoints(externalBasic, legacyStatsToBasicAbilities(item.stats, 0.7));
   }
-  for (const bonus of getEquippedSetBonuses(player)) addStats(stats, bonus.stats ?? {});
+  for (const bonus of getEquippedSetBonuses(player)) {
+    addStats(stats, bonus.stats ?? {});
+    addBasicAbilityPoints(externalBasic, legacyStatsToBasicAbilities(bonus.stats ?? {}, 0.7));
+  }
   const titleBonus = getEquippedTitleBonus(player);
-  if (titleBonus) addStats(stats, titleBonus.stats ?? {});
+  if (titleBonus) {
+    addStats(stats, titleBonus.stats ?? {});
+    addBasicAbilityPoints(externalBasic, legacyStatsToBasicAbilities(titleBonus.stats ?? {}, 0.7));
+  }
+
   const overall = getTotalLevel(player);
-  stats.maxHp = Math.floor(65 + stats.con * 10 + overall * 5);
-  stats.maxMana = Math.floor(35 + stats.int * 7 + stats.wis * 3 + overall * 2);
-  stats.maxStamina = Math.floor(45 + stats.dex * 3 + stats.str * 4 + stats.con * 2 + overall * 2);
-  stats.attack = Math.floor(5 + stats.str * 2 + stats.dex * 0.7);
-  stats.magic = Math.floor(5 + stats.int * 2 + stats.wis * 0.8);
-  stats.defense = Math.floor(2 + stats.con * 1.5 + stats.wis * 0.3);
-  stats.speed = Math.floor(3 + stats.dex * 1.5);
+  const basicAbilities = buildBasicAbilityPacket({ total: totalBasic, current: currentBasic, external: externalBasic });
+  const derived = scaleDerivedStatsFromBasicAbilities(basicAbilities, overall);
+  Object.assign(stats, derived);
+  stats.basicAbilities = basicAbilities;
+  stats.scalingModel = "Basic Abilities";
   return stats;
 }
 
 export function computeCreationPreview(raceId, jobId) {
   const race = byId(RACES, raceId) ?? RACES[0];
   const job = byId(JOBS, jobId) ?? JOBS[0];
-  const stats = { str: 4, dex: 4, int: 4, wis: 4, con: 4, cha: 4 };
-  addStats(stats, race.stats ?? {});
-  addStats(stats, job.stats ?? {});
   const synergies = SYNERGIES.filter(s => (s.raceIds ?? []).includes(race.id) && (s.jobIds ?? []).includes(job.id));
-  for (const synergy of synergies) addStats(stats, synergy.stats ?? {});
   const skillIds = [...new Set([...(race.startingSkills ?? []), ...(job.startingSkills ?? []), ...synergies.flatMap(s => s.skills ?? []), "basic_focus"])]
     .filter(id => id === "basic_focus" || byId(SKILLS, id));
-  const totalLevel = 2;
-  stats.maxHp = Math.floor(65 + stats.con * 10 + totalLevel * 5);
-  stats.maxMana = Math.floor(35 + stats.int * 7 + stats.wis * 3 + totalLevel * 2);
-  stats.maxStamina = Math.floor(45 + stats.dex * 3 + stats.str * 4 + stats.con * 2 + totalLevel * 2);
-  stats.attack = Math.floor(5 + stats.str * 2 + stats.dex * 0.7);
-  stats.magic = Math.floor(5 + stats.int * 2 + stats.wis * 0.8);
-  stats.defense = Math.floor(2 + stats.con * 1.5 + stats.wis * 0.3);
-  stats.speed = Math.floor(3 + stats.dex * 1.5);
+
+  const previewPlayer = {
+    name: "Preview",
+    title: "Wanderer",
+    baseStats: { str: 4, dex: 4, int: 4, wis: 4, con: 4, cha: 4 },
+    raceLevels: [{ id: race.id, name: race.name, tier: race.tier, level: 1, maxLevel: race.maxLevel }],
+    jobLevels: [{ id: job.id, name: job.name, tier: job.tier, level: 1, maxLevel: job.maxLevel }],
+    equipment: {},
+    skills: skillIds,
+    party: [],
+    achievements: [],
+    statusEffects: []
+  };
+  const stats = computeStats(previewPlayer);
   return { race, job, stats, synergies, skillIds };
 }
 

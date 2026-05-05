@@ -1,5 +1,16 @@
 export const UPDATE_NOTES = [
   {
+    version: "v0.6.2 — Basic Abilities / Status Scaling",
+    date: "2026-05-05",
+    notes: [
+      "Changed the visible status system to five Basic Abilities: Strength, Endurance, Dexterity, Agility, and Magic.",
+      "Added rank display from I 0–99 through S 900–999.",
+      "Added hidden background stacking so previous race/job stages keep contributing after visible values reset.",
+      "Visible Basic Abilities now reset to I 0 when a new race evolution or job upgrade stage begins.",
+      "Derived combat stats now scale from Basic Ability totals: HP, mana, stamina, attack, spell power, defense, and speed."
+    ]
+  },
+  {
     version: "v0.6.1 — Naming, Shop Tabs, and Scroll Fix",
     date: "2026-05-05",
     notes: [

@@ -430,3 +430,47 @@ pre {
 .ability-shop .filter-grid {
   margin-top: 10px;
 }
+
+/* v0.6.2 Basic Ability status display */
+.ability-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.ability-card {
+  background: #100d18;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 10px;
+}
+.ability-card p { margin: 7px 0 0; }
+.ability-rank {
+  color: var(--accent);
+  letter-spacing: .02em;
+}
+.ability-meter {
+  height: 12px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.06);
+  margin-top: 8px;
+}
+.ability-meter span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #5d7dff, #f0c96a);
+}
+.rank-key {
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.5;
+  background: rgba(16,13,24,.75);
+  border: 1px dashed rgba(255,255,255,.14);
+  border-radius: 12px;
+  padding: 9px 10px;
+  margin: 8px 0 12px;
+}
+.derived-grid { margin-top: 8px; }

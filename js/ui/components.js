@@ -1,6 +1,7 @@
 import { ITEMS } from "../data/items.js";
 import { SKILLS } from "../data/skills.js";
 import { byId, formatStat, titleCase } from "../core/utils.js";
+import { BASIC_ABILITIES, formatBasicAbility } from "../systems/basic-abilities.js";
 import { STATUS_INFO } from "../systems/effects.js";
 
 export function button(label, action, value = "", cls = "") {
@@ -46,8 +47,31 @@ export function bar(label, current, max, type = "hp") {
 }
 
 export function statGrid(stats) {
-  const keys = ["str", "dex", "int", "wis", "con", "cha", "attack", "magic", "defense", "speed"];
-  return `<div class="stat-grid">${keys.map(key => `<div class="stat"><span>${formatStat(key)}</span><strong>${stats[key] ?? 0}</strong></div>`).join("")}</div>`;
+  const basicRows = stats.basicAbilities?.rows ?? BASIC_ABILITIES.map(ability => ({
+    ...ability,
+    currentValue: 0,
+    currentRank: "I",
+    totalValue: 0,
+    totalDisplay: formatBasicAbility(0)
+  }));
+  const derivedKeys = [
+    ["maxHp", "Max HP"],
+    ["maxMana", "Max Mana"],
+    ["maxStamina", "Max Stamina"],
+    ["attack", "Attack"],
+    ["magic", "Spell Power"],
+    ["defense", "Defense"],
+    ["speed", "Speed"]
+  ];
+  return `<div class="ability-grid">${basicRows.map(row => `<article class="ability-card">
+    <div class="row between"><span>${row.name}</span><strong class="ability-rank">${row.currentRank} ${row.currentValue}</strong></div>
+    <div class="ability-meter"><span style="width:${Math.max(0, Math.min(100, Math.floor((row.currentValue / 999) * 100)))}%"></span></div>
+    <p class="small">Stacked background total: <strong>${row.totalValue}</strong> (${row.totalDisplay})</p>
+    <p class="small">${row.scaling}</p>
+  </article>`).join("")}</div>
+  <div class="rank-key"><strong>Rank Key:</strong> I 0–99 · H 100–199 · G 200–299 · F 300–399 · E 400–499 · D 500–599 · C 600–699 · B 700–799 · A 800–899 · S 900–999</div>
+  <h3>Derived Status Scaling</h3>
+  <div class="stat-grid derived-grid">${derivedKeys.map(([key, label]) => `<div class="stat"><span>${label}</span><strong>${stats[key] ?? 0}</strong></div>`).join("")}</div>`;
 }
 
 export function statusPills(list = []) {

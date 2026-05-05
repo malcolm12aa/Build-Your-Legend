@@ -346,7 +346,7 @@ export function statusScreen(state) {
     <div class="hero"><h1>Status / Race & Job Progression</h1><p class="subtitle">Overall Level ${getTotalLevel(p)} = ${p.raceLevels.reduce((a,c)=>a+c.level,0)} race levels + ${p.jobLevels.reduce((a,c)=>a+c.level,0)} job levels. Unspent class levels: <span class="kpi">${p.unspentClassLevels}</span>.</p></div>
     <section class="grid two">
       <div class="card"><h2>${escapeHtml(p.title)} ${escapeHtml(p.name)}</h2>${resourceBars(p, stats)}<p>Status: ${statusPills(p.statusEffects)}</p></div>
-      <div class="card"><h2>Stats</h2>${statGrid(stats)}${titleBonus ? `<p class="small"><strong>Equipped title bonus:</strong> ${escapeHtml(titleBonus.title)} (${escapeHtml(titleCase(titleBonus.difficulty))}) · ${escapeHtml(statsText(titleBonus.stats))}</p>` : `<p class="small"><strong>Equipped title bonus:</strong> None yet.</p>`}</div>
+      <div class="card"><h2>Basic Abilities</h2><p class="small">Visible values reset to I 0 after each race evolution or job upgrade. Stacked totals stay in the background and power derived combat stats.</p>${statGrid(stats)}${titleBonus ? `<p class="small"><strong>Equipped title bonus:</strong> ${escapeHtml(titleBonus.title)} (${escapeHtml(titleCase(titleBonus.difficulty))}) · ${escapeHtml(statsText(titleBonus.stats))}</p>` : `<p class="small"><strong>Equipped title bonus:</strong> None yet.</p>`}</div>
     </section>
     <section class="card"><h2>Current Build</h2>${classRows(p.raceLevels, "Race")}${classRows(p.jobLevels, "Job")}</section>
     <section class="card"><h2>Build Synergies</h2>${synergies.length ? synergies.map(s => `<article class="mini-card"><h3>${s.name}</h3><p>${s.description}</p><p class="small">Bonus: ${statsText(s.stats)}</p></article>`).join("") : `<p class="small">No active race/job synergy yet.</p>`}</section>
@@ -653,7 +653,20 @@ export function updatesScreen(state) {
 }
 
 function statsText(stats = {}) {
-  return Object.entries(stats).map(([key, value]) => `${value >= 0 ? "+" : ""}${value} ${formatStat(key)}`).join(", ") || "None";
+  const names = {
+    str: "Strength",
+    con: "Endurance",
+    dex: "Dexterity/Agility",
+    int: "Magic",
+    wis: "Magic/Endurance",
+    cha: "Agility/Magic",
+    strength: "Strength",
+    endurance: "Endurance",
+    dexterity: "Dexterity",
+    agility: "Agility",
+    magic: "Magic"
+  };
+  return Object.entries(stats).map(([key, value]) => `${value >= 0 ? "+" : ""}${value} ${names[key] ?? formatStat(key)}`).join(", ") || "None";
 }
 
 export function notFound(state) {

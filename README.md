@@ -178,10 +178,20 @@ Upload/replace the files in your GitHub repository root the same way as before. 
 - Hidden and secret classes are concealed until requirements are met.
 - Source class ownership and class level requirements are enforced before unlocks.
 
-## v0.6.1 Naming, Shop Tabs, and Scroll Fix
+## v0.6.2 Naming, Shop Tabs, and Scroll Fix
 
 - Replaced generic race evolution names like Awakened Race and Race Bloodline with more specific evolution titles.
 - Replaced generic job upgrade names like Job Vanguard and Job Adept with more specific upgrade titles.
 - Renamed skills and spells so higher-rank abilities use more unique, legendary-style naming.
 - Moved Skill / Spell Library into the normal Shop tab row beside Wayfarer's General Store, Old Anvil Blacksmith, Blue Candle Arcanist, and Roadside Outfitter.
 - Removed the forced scroll-to-top behavior that happened after every button click.
+
+
+## v0.6.2 Basic Abilities / Status Scaling
+
+- Replaced the visible status stat grid with five Basic Abilities: Strength, Endurance, Dexterity, Agility, and Magic.
+- Each Basic Ability displays a rank and value from 0-999.
+- Rank ranges: I 0-99, H 100-199, G 200-299, F 300-399, E 400-499, D 500-599, C 600-699, B 700-799, A 800-899, S 900-999.
+- Visible Basic Abilities reset to I 0 when a new race evolution or job upgrade stage starts.
+- Hidden stacked totals remain in the background and power derived combat stats.
+- HP, mana, stamina, attack, spell power, defense, and speed now scale from Basic Ability totals.
