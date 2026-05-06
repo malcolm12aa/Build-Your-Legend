@@ -62,12 +62,13 @@ export function mainMenu(state) {
     ? `${escapeHtml(latestSave.title ? `${latestSave.title} ` : "")}${escapeHtml(latestSave.name)} · Lv ${latestSave.totalLevel} · ${escapeHtml(latestSave.raceName)} / ${escapeHtml(latestSave.jobName)}`
     : "No save found yet. Start a new legend to create your first save slot.";
 
-  return `<section class="screen main-menu-screen">
-    <div class="hero main-menu-hero">
+  return `<section class="screen main-menu-screen dark-guild-title-screen">
+    <div class="hero main-menu-hero title-guildhall">
+      <div class="title-crest">◆</div>
       <p class="version">${CONFIG.version}</p>
       <h1 class="title">${CONFIG.title}</h1>
-      <p class="subtitle">A static web text RPG of race evolutions, job upgrades, roguelike dungeon runs, crafting, loot, quests, and build planning.</p>
-      <div class="main-menu-actions">
+      <p class="subtitle">Forge your race. Master your class. Survive the tower.</p>
+      <div class="main-menu-actions title-actions">
         ${continueButton}
         ${button("New Game", "go", "character-create", "secondary")}
         ${button("Load Game", "openLoadMenu", "", "secondary")}
@@ -107,17 +108,18 @@ function mainMenuCards(hasSave, latestSave) {
 
 function mainMenuFeatureGrid() {
   return `<section class="grid auto main-menu-feature-grid">
-    <article class="card feature-card"><h3>Roguelike Runs</h3><p>Random encounters, map events, bosses, modifiers, loot rarity, affixes, and material drops.</p></article>
-    <article class="card feature-card"><h3>Race & Job Growth</h3><p>Total Level = Race Levels + Job Levels, with evolutions, upgrades, hidden paths, and Basic Ability scaling.</p></article>
-    <article class="card feature-card"><h3>Crafting & Loot</h3><p>Forge equipment, add rune slots, craft potions, brew bombs, and build toward set bonuses.</p></article>
-    <article class="card feature-card"><h3>Build Planning</h3><p>Use the Build Summary and Unlock Tracker after starting a character to plan future upgrades.</p></article>
+    <article class="card feature-card guild-feature"><span>Adventure</span><h3>Roguelike Runs</h3><p>Random encounters, map events, bosses, modifiers, loot rarity, affixes, and material drops.</p></article>
+    <article class="card feature-card guild-feature"><span>Character</span><h3>Race & Job Growth</h3><p>Total Level = Race Levels + Job Levels, with evolutions, upgrades, hidden paths, and Basic Ability scaling.</p></article>
+    <article class="card feature-card guild-feature"><span>Town</span><h3>Crafting & Loot</h3><p>Forge equipment, add rune slots, craft potions, brew bombs, and build toward set bonuses.</p></article>
+    <article class="card feature-card guild-feature"><span>Planning</span><h3>Build Planning</h3><p>Use the Build Summary and Unlock Tracker after starting a character to plan future upgrades.</p></article>
   </section>`;
 }
 
 function newsCard() {
-  return `<section class="card main-menu-news">
+  return `<section class="card main-menu-news guild-notice">
+    <span class="layout-label">Dark Guild Interface</span>
     <h2>Latest Build</h2>
-    <p>This version keeps the full character builder available, but moves all race/job filtering out of the title screen for a cleaner main menu experience.</p>
+    <p>A cleaner dark fantasy guild UI: grouped navigation, stronger title screen, parchment-style cards, arcane ability panels, dungeon warning accents, and mobile-friendly stacked layouts.</p>
   </section>`;
 }
 
@@ -767,15 +769,36 @@ function abilityShopSection(state) {
 function abilityShopCard(skill, player) {
   const known = player.skills?.includes(skill.id);
   const price = Number(skill.price ?? 0);
-  const tags = (skill.tags ?? []).slice(0, 4).map(tag => `<span class="pill">${escapeHtml(tag)}</span>`).join(" ");
-  return `<article class="card skill-shop-card ${known ? "selected" : ""}">
-    <h3>${escapeHtml(skill.name)}</h3>
-    <p><span class="pill">${escapeHtml(skill.kind)}</span> <span class="pill">${escapeHtml(skill.rank)}</span> <span class="pill">${escapeHtml(skill.element)}</span> <span class="pill">${escapeHtml(skill.origin ?? "shop")}</span> <span class="pill">${escapeHtml(skill.acquisition ?? "Shop")}</span> <span class="pill">${price} gold</span></p>
-    <p>${escapeHtml(skill.description)}</p>
-    <p class="small">Cost: ${skill.resource === "none" ? "Passive" : `${skill.cost} ${skill.resource}`} · Cooldown: ${skill.cooldown} · Source: ${escapeHtml(skill.source ?? "Ability Library")}</p>
-    <p class="small">${tags}</p>
-    ${known ? `<span class="pill">Known</span>` : button(player.gold >= price ? "Buy Ability" : "Too Expensive", "buyAbility", skill.id, player.gold >= price ? "" : "ghost")}
+  const tags = (skill.tags ?? []).slice(0, 5).map(tag => `<span class="pill ability-tag">${escapeHtml(tag)}</span>`).join(" ");
+  const cost = skill.resource === "none" ? "Passive" : `${skill.cost} ${skill.resource}`;
+  return `<article class="card skill-shop-card ability-card rank-${String(skill.rank ?? "common").toLowerCase()} ${known ? "selected" : ""}">
+    <div class="ability-card-head">
+      <div class="ability-icon">${abilityShopIcon(skill)}</div>
+      <div><h3>${escapeHtml(skill.name)}</h3><p class="small">${escapeHtml(skill.rank)} · ${escapeHtml(skill.kind)} · ${escapeHtml(skill.element)}</p></div>
+    </div>
+    <p class="ability-description">${escapeHtml(skill.description)}</p>
+    <div class="ability-shop-meta">
+      <div><span>Cost</span><strong>${escapeHtml(cost)}</strong></div>
+      <div><span>Cooldown</span><strong>${skill.cooldown}</strong></div>
+      <div><span>Price</span><strong>${price} gold</strong></div>
+      <div><span>Source</span><strong>${escapeHtml(skill.origin ?? "Shop")}</strong></div>
+    </div>
+    <p class="small"><strong>Unlock:</strong> ${escapeHtml(skill.acquisition ?? "Shop")} · ${escapeHtml(skill.source ?? "Ability Library")}</p>
+    ${tags ? `<div class="ability-tags">${tags}</div>` : ""}
+    ${known ? `<span class="pill passive-pill">Known</span>` : button(player.gold >= price ? "Buy Ability" : "Too Expensive", "buyAbility", skill.id, player.gold >= price ? "" : "ghost")}
   </article>`;
+}
+
+function abilityShopIcon(skill = {}) {
+  const text = `${skill.name ?? ""} ${skill.element ?? ""} ${skill.kind ?? ""}`.toLowerCase();
+  if (text.includes("fire") || text.includes("flame") || text.includes("burn")) return "🔥";
+  if (text.includes("ice") || text.includes("frost")) return "❄️";
+  if (text.includes("storm") || text.includes("lightning")) return "⚡";
+  if (text.includes("heal") || text.includes("light") || text.includes("holy")) return "✚";
+  if (text.includes("dark") || text.includes("shadow") || text.includes("curse")) return "☾";
+  if (text.includes("resist") || text.includes("guard")) return "🛡";
+  if (text.includes("ultimate")) return "👑";
+  return "✦";
 }
 
 function shopItem(itemId, gold) {

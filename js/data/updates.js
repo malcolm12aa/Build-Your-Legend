@@ -1,5 +1,16 @@
 export const UPDATE_NOTES = [
   {
+    version: "v0.9.3 — Dark Guild Interface UI Update",
+    date: "2026-05-06",
+    notes: [
+      "Changed the visual style into a cleaner Dark Guild Interface with dark stone panels, warm bronze trim, parchment text accents, and subtle arcane highlights.",
+      "Grouped navigation into Character, Adventure, and Town sections so the game feels less crowded.",
+      "Upgraded the main menu into a stronger fantasy title screen with a crest, clean action buttons, feature cards, and latest-save text.",
+      "Rebuilt known ability cards and shop ability cards with icons, rank styling, cost/cooldown/power rows, tags, and better spacing.",
+      "Added responsive mobile styling so cards stack cleanly and navigation stays usable on phones."
+    ]
+  },
+  {
     version: "v0.9.1 — Main Menu Cleanup",
     date: "2026-05-06",
     notes: [

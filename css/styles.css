@@ -713,3 +713,390 @@ pre {
     grid-template-columns: 1fr;
   }
 }
+
+/* v0.9.3 — Dark Guild Interface UI Update */
+:root {
+  --bg: #08070b;
+  --bg-2: #111018;
+  --panel: rgba(20, 18, 25, 0.94);
+  --panel-2: rgba(30, 26, 36, 0.96);
+  --panel-3: rgba(42, 36, 45, 0.96);
+  --stone: #1b1a20;
+  --parchment: #e8d9b8;
+  --parchment-dim: #cdbb92;
+  --text: #fbf3dd;
+  --muted: #c6bda7;
+  --accent: #d8a84b;
+  --accent-2: #77d7d0;
+  --bronze: #8f6230;
+  --danger: #ff6f5e;
+  --ember: #e9833c;
+  --good: #79d28b;
+  --mana: #7c9cff;
+  --stamina: #eec36d;
+  --shadow: 0 22px 64px rgba(0,0,0,.48);
+  --radius: 18px;
+  --gap: 12px;
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(216,168,75,.20), transparent 34rem),
+    radial-gradient(circle at 80% 15%, rgba(119,215,208,.13), transparent 30rem),
+    radial-gradient(circle at 50% 100%, rgba(233,131,60,.12), transparent 32rem),
+    linear-gradient(180deg, #09080d 0%, #0f0d14 45%, #070609 100%);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.014) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(circle at center, black, transparent 82%);
+}
+
+button {
+  background: linear-gradient(180deg, #f2cd76, #be7f29);
+  border: 1px solid rgba(255, 224, 154, .32);
+  border-bottom-color: rgba(60, 34, 9, .65);
+  box-shadow: 0 10px 22px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.25);
+  letter-spacing: .01em;
+}
+button.secondary {
+  background: linear-gradient(180deg, #292631, #17141e);
+  border-color: rgba(216,168,75,.22);
+  color: var(--text);
+}
+button.ghost {
+  border-color: rgba(119,215,208,.25);
+  color: #dff9f6;
+  background: rgba(119,215,208,.055);
+}
+button.danger {
+  background: linear-gradient(180deg, #ff8a69, #a83226);
+  color: #230806;
+}
+input, select {
+  background: rgba(8, 7, 11, .72);
+  border-color: rgba(216,168,75,.20);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.025);
+}
+
+.app-shell { width: min(1240px, 100%); }
+.screen { gap: 14px; }
+.hero {
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(36,31,40,.96), rgba(12,10,16,.98)),
+    radial-gradient(circle at top right, rgba(119,215,208,.10), transparent 20rem);
+  border: 1px solid rgba(216,168,75,.22);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,.05);
+}
+.card {
+  background:
+    linear-gradient(180deg, rgba(29,26,33,.96), rgba(17,15,22,.98));
+  border: 1px solid rgba(216,168,75,.16);
+  box-shadow: 0 14px 34px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.035);
+}
+.card h2, .card h3, .card h4 { color: #fff2cf; }
+.card p, .small, ul { color: var(--muted); }
+.card.selected {
+  outline: 1px solid rgba(119,215,208,.55);
+  background: linear-gradient(180deg, rgba(37,34,45,.98), rgba(19,17,25,.98));
+}
+.pill {
+  background: rgba(216,168,75,.11);
+  border: 1px solid rgba(216,168,75,.18);
+  color: #e7d6ad;
+}
+.kpi { color: var(--accent-2); text-shadow: 0 0 14px rgba(119,215,208,.25); }
+.layout-label {
+  display: inline-flex;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  margin-bottom: 5px;
+}
+
+/* Title screen */
+.dark-guild-title-screen .main-menu-hero,
+.title-guildhall {
+  min-height: 430px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at center 16%, rgba(216,168,75,.25), transparent 17rem),
+    radial-gradient(circle at 78% 22%, rgba(119,215,208,.14), transparent 19rem),
+    linear-gradient(180deg, rgba(31,27,33,.98), rgba(8,7,11,.98));
+}
+.title-guildhall::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(216,168,75,.17);
+  border-radius: 22px;
+  pointer-events: none;
+}
+.title-guildhall::after {
+  content: "";
+  position: absolute;
+  inset: auto 8% 0;
+  height: 150px;
+  background: radial-gradient(ellipse at center, rgba(216,168,75,.18), transparent 70%);
+  pointer-events: none;
+}
+.title-crest {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, #332a33, #111018);
+  border: 1px solid rgba(216,168,75,.42);
+  color: var(--accent);
+  font-size: 1.9rem;
+  box-shadow: 0 0 34px rgba(216,168,75,.16);
+}
+.title-crest::first-letter { transform: rotate(-45deg); }
+.main-menu-hero .title {
+  font-size: clamp(2.8rem, 8vw, 5.9rem);
+  color: #fff3ce;
+  text-shadow: 0 0 30px rgba(216,168,75,.18), 0 5px 26px rgba(0,0,0,.52);
+}
+.title-actions {
+  width: min(680px, 100%);
+  justify-content: center;
+}
+.title-actions button { flex: 1 1 150px; }
+.main-menu-save-line {
+  max-width: 70ch;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.22);
+  border: 1px solid rgba(216,168,75,.12);
+}
+.primary-menu-card,
+.guild-feature,
+.guild-notice {
+  position: relative;
+  overflow: hidden;
+}
+.primary-menu-card::before,
+.guild-feature::before,
+.guild-notice::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), transparent);
+}
+.guild-feature span {
+  color: var(--accent-2);
+  font-size: .72rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+/* Grouped navigation */
+.dark-guild-nav {
+  display: grid;
+  grid-template-columns: auto repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 10px;
+  padding: 10px;
+  border-color: rgba(216,168,75,.18);
+  background: rgba(8,7,11,.82);
+}
+.nav-group {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(255,255,255,.05);
+}
+.nav-group > span {
+  color: var(--accent);
+  font-size: .68rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: .13em;
+}
+.nav-group > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.nav-group button,
+.dark-guild-nav > button {
+  flex: 1 1 auto;
+  min-height: 36px;
+  padding: 7px 9px;
+  font-size: .86rem;
+}
+.nav-home {
+  min-width: 82px;
+  align-self: stretch;
+  background: linear-gradient(180deg, #f2cd76, #b97828);
+}
+
+/* Guild dashboard cards */
+.bar { height: 14px; background: rgba(255,255,255,.06); }
+.bar span { box-shadow: 0 0 18px rgba(255,255,255,.12); }
+.bar.hp span { background: linear-gradient(90deg, #b9292e, #ff7866); }
+.bar.mp span { background: linear-gradient(90deg, #3f67d7, #8eb4ff); }
+.bar.stamina span { background: linear-gradient(90deg, #b98225, #f3ce71); }
+.bar.xp span { background: linear-gradient(90deg, #60c4bd, #d7b25b); }
+.stat, .mini-card, .tree-node, .tree-child, .filter-count {
+  background: rgba(8, 7, 11, .55);
+  border-color: rgba(216,168,75,.11);
+}
+.intent-card, .modifier-card, .boss-mechanics-card {
+  background: linear-gradient(180deg, rgba(92,38,31,.28), rgba(20,16,22,.86));
+  border: 1px solid rgba(233,131,60,.25);
+  border-radius: 16px;
+  padding: 12px;
+}
+.boss-mechanics-card { border-color: rgba(255,111,94,.34); }
+
+/* Ability cards */
+.ability-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.ability-card,
+.skill-shop-card.ability-card {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  border-radius: 18px;
+  padding: 14px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(24,22,30,.98), rgba(11,10,15,.98));
+  border: 1px solid rgba(119,215,208,.14);
+}
+.ability-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, #858585, transparent);
+}
+.ability-card-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
+}
+.ability-card-head h3 { margin: 0; line-height: 1.15; }
+.ability-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: rgba(216,168,75,.12);
+  border: 1px solid rgba(216,168,75,.22);
+  box-shadow: inset 0 0 20px rgba(216,168,75,.055);
+  font-size: 1.4rem;
+}
+.ability-description { margin: 0; line-height: 1.45; }
+.ability-stat-row,
+.ability-shop-meta > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 9px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.035);
+  color: var(--muted);
+}
+.ability-stat-row strong,
+.ability-shop-meta strong { color: var(--text); }
+.ability-shop-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.ability-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.ability-tag { font-size: .78rem; }
+.passive-pill { justify-self: start; }
+.rank-intrinsic::before { background: linear-gradient(90deg, #5ee2d0, transparent); }
+.rank-common::before { background: linear-gradient(90deg, #a0a0a0, transparent); }
+.rank-extra::before { background: linear-gradient(90deg, #5e91ff, transparent); }
+.rank-unique::before { background: linear-gradient(90deg, #b56dff, transparent); }
+.rank-ultimate::before { background: linear-gradient(90deg, #ffe08a, #ff854c, transparent); }
+.rank-resist::before { background: linear-gradient(90deg, #72df9f, transparent); }
+.rank-ultimate .ability-icon { border-color: rgba(255,224,138,.5); box-shadow: 0 0 28px rgba(255,224,138,.13); }
+.rank-unique .ability-icon { border-color: rgba(181,109,255,.42); }
+
+/* Shop / crafting / quest boards */
+.shop-tabs button { border-color: rgba(216,168,75,.22); }
+.ability-shop, .ability-evolution-lab { border-color: rgba(119,215,208,.20); }
+.quest-card, .unlock-tracker-card, .evolution-card {
+  border-color: rgba(216,168,75,.16);
+}
+.quest-meter, .ability-meter { background: rgba(255,255,255,.07); }
+.ability-meter span { background: linear-gradient(90deg, var(--accent-2), var(--accent)); }
+
+/* Class profile cards */
+.class-profile-card {
+  border-color: rgba(216,168,75,.14);
+}
+.class-profile-header {
+  border-bottom: 1px solid rgba(216,168,75,.10);
+  padding-bottom: 9px;
+  margin-bottom: 8px;
+}
+.class-profile-section {
+  background: rgba(255,255,255,.024);
+  border: 1px solid rgba(255,255,255,.045);
+  border-radius: 12px;
+  padding: 9px;
+  margin: 8px 0;
+}
+.class-profile-section strong { color: #f1d58f; }
+.identity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
+.class-profile-traits { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.class-profile-traits > div {
+  background: rgba(8,7,11,.40);
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,.04);
+}
+
+/* Mobile: clean stacked guild cards */
+@media (max-width: 900px) {
+  .dark-guild-nav {
+    grid-template-columns: 1fr;
+    position: sticky;
+    top: 0;
+    max-height: 48svh;
+    overflow: auto;
+  }
+  .nav-group > div { flex-wrap: nowrap; overflow-x: auto; }
+  .nav-group button { flex: 0 0 auto; }
+  .title-guildhall { min-height: 360px; }
+  .grid.three, .grid.two, .combat-layout { grid-template-columns: 1fr; }
+  .ability-shop-meta, .class-profile-traits { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .app-shell { padding: 10px; }
+  .main-menu-hero .title { font-size: 2.55rem; }
+  .title-actions { display: grid; grid-template-columns: 1fr; }
+  .ability-card-grid { grid-template-columns: 1fr; }
+  .ability-card-head { grid-template-columns: 42px 1fr; }
+  .ability-icon { width: 42px; height: 42px; }
+}

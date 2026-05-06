@@ -8,23 +8,32 @@ export function button(label, action, value = "", cls = "") {
   return `<button class="${cls}" data-action="${action}" data-value="${value}">${label}</button>`;
 }
 
+function navGroup(title, items) {
+  return `<div class="nav-group"><span>${title}</span><div>${items.join("")}</div></div>`;
+}
+
 export function nav(state) {
   if (!state.player) return "";
-  return `<nav class="navbar">
-    ${button("Hub", "go", "hub", "secondary")}
-    ${button("Status / Class", "go", "status", "secondary")}
-    ${button("Registry", "go", "class-registry", "secondary")}
-    ${button("Skills", "go", "skills", "secondary")}
-    ${button("Inventory", "go", "inventory", "secondary")}
-    ${button("Shop", "go", "shop", "secondary")}
-    ${button("Crafting", "go", "crafting", "secondary")}
-    ${button("Map", "go", "map", "secondary")}
-    ${button("Build", "go", "build-summary", "secondary")}
-    ${button("Tracker", "go", "unlock-tracker", "secondary")}
-    ${button("Achievements", "go", "achievements", "secondary")}
-    ${button("Quests", "go", "quests", "secondary")}
-    ${button("Updates", "go", "updates", "secondary")}
-    ${button("Save/Load", "openSaveMenu", "", "ghost")}
+  return `<nav class="navbar dark-guild-nav" aria-label="Game navigation">
+    ${button("Hub", "go", "hub", "nav-home")}
+    ${navGroup("Character", [
+      button("Status / Class", "go", "status", "secondary"),
+      button("Skills", "go", "skills", "secondary"),
+      button("Inventory", "go", "inventory", "secondary"),
+      button("Build", "go", "build-summary", "secondary")
+    ])}
+    ${navGroup("Adventure", [
+      button("Map", "go", "map", "secondary"),
+      button("Quests", "go", "quests", "secondary"),
+      button("Tracker", "go", "unlock-tracker", "secondary"),
+      button("Achievements", "go", "achievements", "secondary")
+    ])}
+    ${navGroup("Town", [
+      button("Shop", "go", "shop", "secondary"),
+      button("Crafting", "go", "crafting", "secondary"),
+      button("Registry", "go", "class-registry", "secondary"),
+      button("Save/Load", "openSaveMenu", "", "ghost")
+    ])}
   </nav>${devMenu(state)}`;
 }
 
@@ -101,20 +110,40 @@ export function inventoryList(player, mode = "normal") {
 export function skillList(player, mode = "normal") {
   const skills = (player.skills ?? []).map(id => byId(SKILLS, id)).filter(Boolean);
   if (!skills.length) return `<p class="small">No skills learned yet.</p>`;
-  return skills.map(skill => {
+  return `<div class="ability-card-grid">${skills.map(skill => {
     const cd = player.cooldowns?.[skill.id] ?? 0;
     const disabled = mode === "battle" && cd > 0 ? "disabled" : "";
     const isPassive = skill.kind === "passive" || skill.resource === "none";
     const cost = isPassive ? "Passive" : (skill.resource ? `${skill.cost} ${skill.resource}` : "Free");
-    return `<div class="skill-row card">
-      <div>
-        <strong>${skill.name}</strong> <span class="pill">${skill.rank}</span> <span class="pill">${skill.element}</span>
-        <p>${skill.description}</p>
-        <div class="small">Cost: ${cost} · Cooldown: ${skill.cooldown} ${cd ? `· Current: ${cd}` : ""}</div>
+    const icon = abilityIcon(skill);
+    const tags = (skill.tags ?? []).slice(0, 5).map(tag => `<span class="pill ability-tag">${tag}</span>`).join(" ");
+    return `<article class="ability-card rank-${String(skill.rank ?? "common").toLowerCase()} ${isPassive ? "passive-card" : ""}">
+      <div class="ability-card-head">
+        <div class="ability-icon">${icon}</div>
+        <div><h3>${skill.name}</h3><p class="small">${skill.rank ?? "Common"} · ${skill.kind ?? "ability"} · ${skill.element ?? "neutral"}</p></div>
       </div>
-      ${mode === "battle" && !isPassive ? `<button ${disabled} data-action="skill" data-value="${skill.id}">Use</button>` : (isPassive ? `<span class="pill">Passive</span>` : "")}
-    </div>`;
-  }).join("");
+      <p class="ability-description">${skill.description}</p>
+      <div class="ability-stat-row"><span>Cost</span><strong>${cost}</strong></div>
+      <div class="ability-stat-row"><span>Cooldown</span><strong>${skill.cooldown ?? 0}${cd ? ` · ${cd} left` : ""}</strong></div>
+      <div class="ability-stat-row"><span>Power</span><strong>${skill.power ?? 0}</strong></div>
+      ${tags ? `<div class="ability-tags">${tags}</div>` : ""}
+      ${mode === "battle" && !isPassive ? `<button ${disabled} data-action="skill" data-value="${skill.id}">${cd ? "Cooldown" : "Use Ability"}</button>` : (isPassive ? `<span class="pill passive-pill">Passive</span>` : "")}
+    </article>`;
+  }).join("")}</div>`;
+}
+
+function abilityIcon(skill = {}) {
+  const text = `${skill.name ?? ""} ${skill.element ?? ""} ${skill.kind ?? ""}`.toLowerCase();
+  if (text.includes("fire") || text.includes("flame") || text.includes("burn")) return "🔥";
+  if (text.includes("ice") || text.includes("frozen") || text.includes("frost")) return "❄️";
+  if (text.includes("lightning") || text.includes("storm") || text.includes("thunder")) return "⚡";
+  if (text.includes("heal") || text.includes("mend") || text.includes("holy")) return "✚";
+  if (text.includes("dark") || text.includes("shadow") || text.includes("curse")) return "☾";
+  if (text.includes("poison") || text.includes("venom") || text.includes("toxic")) return "☠";
+  if (text.includes("resist") || text.includes("guard") || text.includes("shield")) return "🛡";
+  if (text.includes("ultimate")) return "👑";
+  if (text.includes("spell") || text.includes("mana") || text.includes("arcane")) return "✦";
+  return "◆";
 }
 
 export function combatLog(state) {
